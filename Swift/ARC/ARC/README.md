@@ -25,3 +25,5 @@ are defined using nonoptional types.
 for checking that code for safety. If you try to access an unsafe unowned reference
 after the instance that it refers to is deallocated, your program will try to
 access the memory location where the instance used to be, which is an unsafe operation.
+
+Read more [here](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html#//apple_ref/doc/uid/TP40014097-CH20-ID48).
