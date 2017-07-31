@@ -6,7 +6,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
         let todosEndpoint = "https://jsonplaceholder.typicode.com/todos"
         
         guard let todosURL = URL(string: todosEndpoint) else {
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
             // parse the result as JSON
             do {
                 guard let todo = try JSONSerialization.jsonObject(with: responseData, options: []) as? [String: Any] else {
-                    print("Error: failed to convert data to JSON")
+                    print("Error: failed to convert data to [String: Any]")
                     return
                 }
                 
@@ -68,10 +68,5 @@ class ViewController: UIViewController {
         }
         
         task.resume()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
