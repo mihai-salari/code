@@ -7,6 +7,11 @@ when the other instance can be deallocated first.
 In contrast, use an _unowned reference_ when the other instance has the same lifetime
 or a longer lifetime.
 
+#### Weak Reference ####
+
+A weak reference is a reference that does not keep a strong hold on to the instance 
+it refers to, and so does not stop ARC from disposing of the referenced instance.
+
 #### Unowned Reference ####
 
 An unowned reference is expected to always have a value. As a result, ARC never
