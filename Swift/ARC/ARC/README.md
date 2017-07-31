@@ -42,3 +42,9 @@ Read more [here](https://developer.apple.com/library/content/documentation/Swift
 
 A SRC can also occur if you assign a closure to a property of a class instance, and
 the body of that closure captures the instance.
+
+__Capture List__
+
+Define a capture in a closure as an unowned reference when the closure and the instance
+it captures will always refer to each other, and will always be deallocated at the
+same time.
