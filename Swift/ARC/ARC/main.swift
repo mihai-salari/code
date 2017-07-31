@@ -96,6 +96,11 @@ print(paragraph!.asHTML())
 
 paragraph = nil // not able to deallocate due to strong reference cycle
 
+// using capture list to break strong reference cycle
+var paragraph2: UnownedHTMLElement? = UnownedHTMLElement(name: "p", text: "hello, world")
+print(paragraph2!.asHTML())
+paragraph2 = nil
+
 /*
  
  /Users/choonsiong/Code/Swift/ARC/ARC/main.swift: John Appleseed is being initialized
@@ -109,11 +114,23 @@ paragraph = nil // not able to deallocate due to strong reference cycle
  /Users/choonsiong/Code/Swift/ARC/ARC/WeakReference.swift: Mark Appleseed is being deinitialized
  /Users/choonsiong/Code/Swift/ARC/ARC/main.swift: Mark Appleseed is being deinitialized
  /Users/choonsiong/Code/Swift/ARC/ARC/WeakReference.swift: Apartment 10A is being deinitialized
- ===== unowned reference test =====
+ ===== safe unowned reference test =====
  /Users/choonsiong/Code/Swift/ARC/ARC/UnownedReference.swift: Andy Appleseed is being initialized
  /Users/choonsiong/Code/Swift/ARC/ARC/UnownedReference.swift: card 1234567888888888 is being initialized for customer Andy Appleseed
  /Users/choonsiong/Code/Swift/ARC/ARC/UnownedReference.swift: Andy Appleseed is being deinitialized
  /Users/choonsiong/Code/Swift/ARC/ARC/UnownedReference.swift: card 1234567888888888 is being deinitialized
+ ===== unowned reference with implicitly unwrapped optional test =====
+ /Users/choonsiong/Code/Swift/ARC/ARC/UnownedAndImplicit.swift: city Ottawa is being initialized for Canada
+ /Users/choonsiong/Code/Swift/ARC/ARC/UnownedAndImplicit.swift: country Canada is being initialized with capital city Ottawa
+ ===== strong reference cycle for closures test =====
+ /Users/choonsiong/Code/Swift/ARC/ARC/StrongReferenceCycleClosure.swift: h1 is being initialized
+ <h1 />
+ <h1>hello html</h1>
+ /Users/choonsiong/Code/Swift/ARC/ARC/StrongReferenceCycleClosure.swift: p is being initialized
+ <p>hello, world</p>
+ /Users/choonsiong/Code/Swift/ARC/ARC/CaptureListClosure.swift: p is being initialized
+ <p>hello, world</p>
+ /Users/choonsiong/Code/Swift/ARC/ARC/CaptureListClosure.swift: p is being deinitialized
  Program ended with exit code: 0
  
  */
