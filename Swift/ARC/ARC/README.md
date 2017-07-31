@@ -1,5 +1,5 @@
 Swift provides two way to resolve strong reference cycles when you work with
-properties of class type: weak references and unowned references.
+properties of class type: __weak references__ and __unowned references__.
 
 Use a _weak reference_ when the other instance has a shorter lifetime - that is, 
 when the other instance can be deallocated first.

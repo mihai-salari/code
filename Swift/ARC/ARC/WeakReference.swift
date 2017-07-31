@@ -4,7 +4,7 @@ class PersonWithWeakApartment: Person {
     var apartmentWeak: ApartmentWithWeakPerson?
     
     deinit {
-        print("\(name) is being deinitialized")
+        print("\(#file): \(name) is being deinitialized")
     }
 }
 
@@ -14,10 +14,10 @@ class ApartmentWithWeakPerson {
     
     init(unit: String) {
         self.unit = unit
-        print("\(unit) is being initialized")
+        print("\(#file): \(unit) is being initialized")
     }
     
     deinit {
-        print("Apartment \(unit) is being deinitialized")
+        print("\(#file): Apartment \(unit) is being deinitialized")
     }
 }

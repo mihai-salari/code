@@ -5,11 +5,11 @@ class Person {
     
     init(name: String) {
         self.name = name
-        print("\(name) is being initialized")
+        print("\(#file): \(name) is being initialized")
     }
     
     deinit {
-        print("\(name) is being deinitialized")
+        print("\(#file): \(name) is being deinitialized")
     }
 }
 
@@ -57,3 +57,4 @@ mark!.apartmentWeak = unit10A
 unit10A!.tenant = mark
 
 mark = nil
+unit10A = nil
