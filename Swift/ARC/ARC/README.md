@@ -36,8 +36,6 @@ for checking that code for safety. If you try to access an unsafe unowned refere
 after the instance that it refers to is deallocated, your program will try to
 access the memory location where the instance used to be, which is an unsafe operation.
 
-Read more [here](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html#//apple_ref/doc/uid/TP40014097-CH20-ID48).
-
 #### Strong Reference Cycles for Closures ####
 
 A SRC can also occur if you assign a closure to a property of a class instance, and
@@ -58,3 +56,7 @@ This enables you to check for their existence within the closure's body.
 >
 > If the captured reference will never become nil, it should always be captured
 > as an unowned reference, rather than a weak reference.
+
+- - -
+
+Read more [here](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html#//apple_ref/doc/uid/TP40014097-CH20-ID48).
