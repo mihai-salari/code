@@ -16,3 +16,6 @@ are defined using nonoptional types.
 > IMPORTANT
 > Use an unowned reference only when you are sure that the reference always refers
 > to an instance that has not been deallocated.
+>
+> If you try to access the value of an unowned reference after that instance has
+> been deallocated, you'll get a runtime error.
