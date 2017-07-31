@@ -1,0 +1,1 @@
+*/10 * * * * /root/lee/mail_repl/bin/mail_repl.sh > /root/lee/mail_repl/log/mail_repl.out 2> /root/lee/mail_repl/log/mail_repl.err
