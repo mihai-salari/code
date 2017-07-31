@@ -59,6 +59,17 @@ unit10A!.tenant = mark
 mark = nil
 unit10A = nil
 
+// MARK: - Safe Unowned Reference
+
+print("===== safe unowned reference test =====")
+
+var andy: Customer?
+
+andy = Customer(name: "Andy Appleseed")
+andy!.card = CreditCard(number: 1234_5678_8888_8888, customer: andy!)
+
+andy = nil
+
 /*
  
  /Users/choonsiong/Code/Swift/ARC/ARC/main.swift: John Appleseed is being initialized
@@ -72,17 +83,11 @@ unit10A = nil
  /Users/choonsiong/Code/Swift/ARC/ARC/WeakReference.swift: Mark Appleseed is being deinitialized
  /Users/choonsiong/Code/Swift/ARC/ARC/main.swift: Mark Appleseed is being deinitialized
  /Users/choonsiong/Code/Swift/ARC/ARC/WeakReference.swift: Apartment 10A is being deinitialized
+ ===== unowned reference test =====
+ /Users/choonsiong/Code/Swift/ARC/ARC/UnownedReference.swift: Andy Appleseed is being initialized
+ /Users/choonsiong/Code/Swift/ARC/ARC/UnownedReference.swift: card 1234567888888888 is being initialized for customer Andy Appleseed
+ /Users/choonsiong/Code/Swift/ARC/ARC/UnownedReference.swift: Andy Appleseed is being deinitialized
+ /Users/choonsiong/Code/Swift/ARC/ARC/UnownedReference.swift: card 1234567888888888 is being deinitialized
  Program ended with exit code: 0
  
  */
-
-// MARK: - Safe Unowned Reference
-
-print("===== safe unowned reference test =====")
-
-var andy: Customer?
-
-andy = Customer(name: "Andy Appleseed")
-andy!.card = CreditCard(number: 1234_5678_8888_8888, customer: andy!)
-
-andy = nil
