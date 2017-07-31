@@ -50,4 +50,11 @@ it captures will always refer to each other, and will always be deallocated at t
 same time.
 
 Conversely, define a capture as a weak reference when the captured reference may
-become `nil` at some point in the future. Weak references are always
+become `nil` at some point in the future. Weak references are always of an optional
+type, and automatically become `nil` when the instance they reference is deallocated.
+This enables you to check for their existence within the closure's body.
+
+> NOTE
+>
+> If the captured reference will never become nil, it should always be captured
+> as an unowned reference, rather than a weak reference.
