@@ -58,3 +58,20 @@ unit10A!.tenant = mark
 
 mark = nil
 unit10A = nil
+
+/*
+ 
+ /Users/choonsiong/Code/Swift/ARC/ARC/main.swift: John Appleseed is being initialized
+ /Users/choonsiong/Code/Swift/ARC/ARC/main.swift: John Appleseed is being deinitialized
+ ===== strong reference cycle test =====
+ /Users/choonsiong/Code/Swift/ARC/ARC/main.swift: John Appleseed is being initialized
+ /Users/choonsiong/Code/Swift/ARC/ARC/StrongReferenceCycle.swift: 4A is being initialized
+ ===== weak reference test =====
+ /Users/choonsiong/Code/Swift/ARC/ARC/main.swift: Mark Appleseed is being initialized
+ /Users/choonsiong/Code/Swift/ARC/ARC/WeakReference.swift: 10A is being initialized
+ /Users/choonsiong/Code/Swift/ARC/ARC/WeakReference.swift: Mark Appleseed is being deinitialized
+ /Users/choonsiong/Code/Swift/ARC/ARC/main.swift: Mark Appleseed is being deinitialized
+ /Users/choonsiong/Code/Swift/ARC/ARC/WeakReference.swift: Apartment 10A is being deinitialized
+ Program ended with exit code: 0
+ 
+ */
