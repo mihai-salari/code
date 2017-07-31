@@ -48,3 +48,6 @@ __Capture List__
 Define a capture in a closure as an unowned reference when the closure and the instance
 it captures will always refer to each other, and will always be deallocated at the
 same time.
+
+Conversely, define a capture as a weak reference when the captured reference may
+become `nil` at some point in the future. Weak references are always
