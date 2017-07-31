@@ -12,6 +12,11 @@ or a longer lifetime.
 A weak reference is a reference that does not keep a strong hold on to the instance 
 it refers to, and so does not stop ARC from disposing of the referenced instance.
 
+ARC automatically sets a weak reference to `nil` when the instance that it refers
+to is deallocated. And, because weak references need to allow their value to be
+changed to `nil` at runtime, they are always declared as variables, rather than
+constants, of an optional type.
+
 #### Unowned Reference ####
 
 An unowned reference is expected to always have a value. As a result, ARC never
