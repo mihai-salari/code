@@ -70,6 +70,12 @@ andy!.card = CreditCard(number: 1234_5678_8888_8888, customer: andy!)
 
 andy = nil
 
+// MARK: - Unowned Reference with Implicit Unwrapped Optional
+
+print("===== unowned reference with implicitly unwrapped optional test =====")
+
+var country = Country(name: "Canada", capitalName: "Ottawa")
+
 /*
  
  /Users/choonsiong/Code/Swift/ARC/ARC/main.swift: John Appleseed is being initialized
