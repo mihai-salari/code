@@ -1,0 +1,7 @@
+CREATE TABLE post (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	post_header VARCHAR(255),
+    post_body TEXT NOT NULL,
+	post_author VARCHAR(255),
+    post_date DATE NOT NULL
+) DEFAULT CHARACTER SET utf8 ENGINE=INNODB;
