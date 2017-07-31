@@ -20,3 +20,8 @@ are defined using nonoptional types.
 >
 > If you try to access the value of an unowned reference after that instance has
 > been deallocated, you'll get a runtime error.
+
+`unowned(unsafe)` - runtime safety checks disable, and you take on the responsibility
+for checking that code for safety. If you try to access an unsafe unowned reference
+after the instance that it refers to is deallocated, your program will try to
+access the memory location where the instance used to be, which is an unsafe operation.
