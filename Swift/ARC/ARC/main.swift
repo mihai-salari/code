@@ -42,3 +42,18 @@ unit4A!.tenant = john
 
 john = nil
 unit4A = nil
+
+// MARK: - Weak Reference
+
+print("===== weak reference test =====")
+
+var mark: PersonWithWeakApartment?
+var unit10A: ApartmentWithWeakPerson?
+
+mark = PersonWithWeakApartment(name: "Mark Appleseed")
+unit10A = ApartmentWithWeakPerson(unit: "10A")
+
+mark!.apartmentWeak = unit10A
+unit10A!.tenant = mark
+
+mark = nil

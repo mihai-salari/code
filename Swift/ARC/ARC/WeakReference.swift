@@ -1,16 +1,16 @@
 import Foundation
 
-class PersonWithApartment: Person {
-    var apartment: Apartment?
+class PersonWithWeakApartment: Person {
+    var apartmentWeak: ApartmentWithWeakPerson?
     
     deinit {
         print("\(name) is being deinitialized")
     }
 }
 
-class Apartment {
+class ApartmentWithWeakPerson {
     let unit: String
-    var tenant: PersonWithApartment?
+    weak var tenant: PersonWithWeakApartment?
     
     init(unit: String) {
         self.unit = unit
