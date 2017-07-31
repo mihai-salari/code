@@ -21,6 +21,8 @@ class CreditCard {
     init(number: UInt64, customer: Customer) {
         self.number = number
         self.customer = customer
+        
+        print("\(#file): card \(number) is being initialized for customer \(customer.name)")
     }
     
     deinit {

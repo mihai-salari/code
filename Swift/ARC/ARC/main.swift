@@ -75,3 +75,14 @@ unit10A = nil
  Program ended with exit code: 0
  
  */
+
+// MARK: - Safe Unowned Reference
+
+print("===== safe unowned reference test =====")
+
+var andy: Customer?
+
+andy = Customer(name: "Andy Appleseed")
+andy!.card = CreditCard(number: 1234_5678_8888_8888, customer: andy!)
+
+andy = nil
