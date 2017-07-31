@@ -76,6 +76,26 @@ print("===== unowned reference with implicitly unwrapped optional test =====")
 
 var country = Country(name: "Canada", capitalName: "Ottawa")
 
+// MARK: - Strong Reference Cycle for Closures
+
+print("===== strong reference cycle for closures test =====")
+
+let heading = HTMLElement(name: "h1")
+let defaultText = "hello html"
+
+print(heading.asHTML())
+
+heading.asHTML = {
+    return "<\(heading.name)>\(heading.text ?? defaultText)</\(heading.name)>"
+}
+
+print(heading.asHTML())
+
+var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
+print(paragraph!.asHTML())
+
+paragraph = nil // not able to deallocate due to strong reference cycle
+
 /*
  
  /Users/choonsiong/Code/Swift/ARC/ARC/main.swift: John Appleseed is being initialized
