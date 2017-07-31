@@ -1,0 +1,46 @@
+body {
+	/*border: 1px solid black;*/
+	margin: 20px auto;
+	padding: 20px;
+	width: 640px;
+
+	background: #f1f1f1;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+
+	font-size: 13px;
+	line-height: 1.3em;
+}
+
+.page_nav {
+	margin: 0;
+	padding: 0 0 20px 0;
+}
+
+.page_main {
+	/*border: 1px solid blue;*/
+
+	margin: 0;
+	padding: 40px;
+
+	background: white;
+}
+
+.post {
+	/*border: 1px solid red;*/
+
+	margin: 10px;
+	padding: 10px;
+}
+
+.post_date {
+	display: block;
+	padding: 20px;
+	font-size: 10px;
+	color: grey;
+	text-align: right;
+}

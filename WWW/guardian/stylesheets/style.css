@@ -1,0 +1,98 @@
+html, body {
+  height: 100%; /* allow the content to fill the browser or device window*/
+}
+
+body {
+  display: flex; /* body is a flex container now */
+  flex-direction: column; /* flex items layout in column style -- header, .thumbnail-list, .detail-image-container (before we group them further into flex containers), after grouping left only .main-header and .main-content  */
+
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  /*background: rgb(210, 210, 210);*/
+}
+
+.main-header {
+  flex: 0 1 auto; /* do not grow, but shrink if needed */
+
+  background-color: #EEEEEE;
+  padding: 20px;
+
+  font-size: 10px;
+}
+
+.main-content {
+  flex: 1 1 auto; /* grow as much as possible */
+
+  display: flex; /* make it a flex container also */
+  flex-direction: column;
+}
+
+.video-item {
+  display: inline-block;
+  /*min-width: 120px;
+  max-width: 120px;*/
+
+  margin-left: 10px;
+
+  border: 1px solid rgb(100%, 100%, 100%);
+  border: 1px solid rgba(100%, 100%, 100%, 0.8);
+}
+
+/* flex item of .main-content, also a flex container itself */
+.video-list {
+  flex: 0 1 auto;
+  order: 2;
+
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+  padding: 0;
+
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+/* flex item of .main-content */
+.play-video-container {
+  flex: 1 1 auto;
+
+  /* to center the .detail-image-frame */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-video-frame {
+  position: relative; /* to position the image title */
+  text-align: center;
+}
+
+.detail-video {
+  width: 100%;
+}
+
+.detail-video-title {
+  font-size: 12px;
+}
+
+@media all and (orientation: landscape) {
+  .main-content {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .video-list {
+    flex-direction: column;
+    order: 0;
+    margin-left: 20px;
+  }
+
+  .video-item {
+    max-width: 300px;
+  }
+
+  .video-item + .video-item {
+    margin-top: 20px;
+  }
+}

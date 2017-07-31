@@ -1,0 +1,26 @@
+/* The stylesheet below has removed all margins and paddings. */
+
+body {
+	margin: 0;
+	padding: 0;
+	/*width: 960px;*/
+
+	background: #f1f1f1;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.page_main {
+	margin: 0;
+	padding:0;
+	background: #ffffff;
+}
+
+.article {
+	margin: 0;
+	padding: 0;
+}

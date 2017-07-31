@@ -1,0 +1,157 @@
+@font-face {
+  font-family: 'airstreamregular';
+  src: url('fonts/Airstream-webfont.eot');
+  src: url('fonts/Airstream-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Airstream-webfont.woff') format('woff'),
+        url('fonts/Airstream-webfont.ttf') format('truetype'),
+        url('fonts/Airstream-webfont.svg#lakeshore') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lakeshore';
+  src: url('fonts/LAKESHOR-webfont.eot');
+  src: url('fonts/LAKESHOR-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/LAKESHOR-webfont.woff') format('woff'),
+        url('fonts/LAKESHOR-webfont.ttf') format('truetype'),
+        url('fonts/LAKESHOR-webfont.svg#lakeshore') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%; /* allow the content to fill the browser or device window*/
+}
+
+body {
+  display: flex; /* body is a flex container now */
+  flex-direction: column; /* flex items layout in column style -- header, .thumbnail-list, .detail-image-container (before we group them further into flex containers), after grouping left only .main-header and .main-content  */
+
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  background: rgb(149, 194, 215);
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-header {
+  flex: 0 1 auto; /* do not grow, but shrink if needed */
+}
+
+.logo-text {
+  background: white;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-family: lakeshore;
+  font-size: 38px;
+}
+
+.main-content {
+  flex: 1 1 auto; /* grow as much as possible */
+
+  display: flex; /* make it a flex container also */
+  flex-direction: column;
+}
+
+/* used before we move .thumbnail-list to flex container */
+/*.thumbnail-item + .thumbnail-item {
+  margin-top: 10px;
+}*/
+
+.thumbnail-title {
+  display: block;
+  margin: 0;
+  padding: 4px 10px;
+
+  background: rgb(96, 125, 139);
+  color: rgb(202, 238, 255);
+
+  font-size: 18px;
+}
+
+.thumbnail-item {
+  display: inline-block;
+  min-width: 120px;
+  max-width: 120px;
+
+  margin-left: 10px;
+
+  border: 1px solid rgb(100%, 100%, 100%);
+  border: 1px solid rgba(100%, 100%, 100%, 0.8);
+}
+
+/* flex item of .main-content, also a flex container itself */
+.thumbnail-list {
+  flex: 0 1 auto;
+  order: 2;
+
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+  padding: 0;
+
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.thumbnail-image {
+  display: block;
+  width: 100%;
+}
+
+/* flex item of .main-content */
+.detail-image-container {
+  flex: 1 1 auto;
+
+  /* to center the .detail-image-frame */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-image-frame {
+  position: relative; /* to position the image title */
+  text-align: center;
+}
+
+.detail-image {
+  width: 90%;
+}
+
+.detail-image-title {
+  /* to position the image title */
+  position: absolute;
+  bottom: -16px;
+  left: 4px;
+
+  font-family: airstreamregular;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
+  font-size: 40px;
+}
+
+@media all and (orientation: landscape) {
+  .main-content {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .thumbnail-list {
+    flex-direction: column;
+    order: 0;
+    margin-left: 20px;
+  }
+
+  .thumbnail-item {
+    max-width: 260px;
+  }
+
+  .thumbnail-item + .thumbnail-item {
+    margin-top: 20px;
+  }
+}

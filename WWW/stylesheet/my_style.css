@@ -1,0 +1,24 @@
+body {
+	margin: 15px auto;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	width: 960px;
+	background-color: #F0F0F0;
+}
+
+p {
+	font-size: 14px;
+	margin: 0 0 20px 0;
+	line-height: 20px;
+}
+
+time {
+	font-size: 11px;
+}
+
+#page_main {
+	background-color: #FFFFFF;
+}
+
+.post {
+	padding: 5px 10px;
+}
