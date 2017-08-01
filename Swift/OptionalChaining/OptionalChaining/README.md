@@ -6,4 +6,4 @@
 Example (from code listed):
 
 - Subscript: `mark.house?[0].name`
-- Methos: `mark.house?.address?.buildingIdentifier()?.hasPrefix("The")`
+- Method: `mark.house?.address?.buildingIdentifier()?.hasPrefix("The")`
