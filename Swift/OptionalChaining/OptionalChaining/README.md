@@ -7,3 +7,7 @@ Example (from code listed):
 
 - Subscript: `mark.house?[0].name`
 - Method: `mark.house?.address?.buildingIdentifier()?.hasPrefix("The")`
+
+- - -
+
+Read more [here](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/OptionalChaining.html).
