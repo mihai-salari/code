@@ -1,5 +1,5 @@
 <?php
-require_once 'vendor/fzaninotto/faker/src/autoload.php';
+require_once '../vendor/fzaninotto/faker/src/autoload.php';
 
 /*
 	Create example user data for database seeding, without the
