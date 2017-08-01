@@ -28,5 +28,5 @@ print(result)
 
 let base64: Int64 = 1024
 let exponent = 3
-let result64 = base64 ** exponent // exponent is Int, so Swift cast it to Int64 automatically?
+let result64 = base64 ** exponent // exponent is Int, so Swift convert it to Int64 automatically?
 print(result64)
