@@ -3,7 +3,7 @@ require_once '../vendor/fzaninotto/faker/src/autoload.php';
 
 /*
 	Create example user data for database seeding, without the
-	use of Lavarel's Eloquent ORM.
+	use of Laravel's Eloquent ORM.
 */
 
 $faker = Faker\Factory::create();
