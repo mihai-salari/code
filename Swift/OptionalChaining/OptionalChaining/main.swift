@@ -88,6 +88,16 @@ if let markStreet = mark.house?.address?.street {
     print("Unable to retrieve address.")
 }
 
+// Multilevers of chaining on method with optional return value
+
+if let beginsWithThe = mark.house?.address?.buildingIdentifier()?.hasPrefix("The") {
+    if beginsWithThe {
+        print("Mark's house begin with The.")
+    } else {
+        print("Mark's house not begin with The.")
+    }
+}
+
 // Accessing subscripts of optional type
 if let value = persons["Dave"]?[0] {
     print("Value is \(value).")
