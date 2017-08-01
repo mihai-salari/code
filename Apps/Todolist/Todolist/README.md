@@ -1,5 +1,8 @@
 A todo list app.
 
+- All the UIs and autolayouts are created programatically in code without using storyboard file.
+- Cartography is not working for some reason, so I use NSLayoutConstraint instead. 
+
 - - -
 
 ### CocoaPods ###
