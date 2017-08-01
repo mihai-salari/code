@@ -59,4 +59,4 @@ This enables you to check for their existence within the closure's body.
 
 - - -
 
-Read more [here](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html#//apple_ref/doc/uid/TP40014097-CH20-ID48).
+Read more [here](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html).
