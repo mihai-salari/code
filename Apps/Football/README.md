@@ -1,4 +1,4 @@
-Football game
+A football game.
 
 Player tap on two arrow buttons to move the white ball on the green
 field.
