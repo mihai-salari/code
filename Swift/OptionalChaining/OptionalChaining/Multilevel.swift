@@ -1,5 +1,9 @@
 import Foundation
 
+class PersonWithHouse: Person {
+    var house: House?
+}
+
 class House: Property {
     var rooms = [Room]()
     var numberOfRooms: Int {
