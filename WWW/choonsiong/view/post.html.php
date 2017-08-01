@@ -36,7 +36,7 @@
 	  </main>
 
 	  <footer class="main-footer">
-      <a href="https://github.com/choonsiong">Github</a> . <a href="http://choonsiong.com/public/">Public</a> . <a href="https://twitter.com/choonsionglee">Twitter</a>
+      <a href="https://github.com/choonsiong">Github</a> . <a href="http://choonsiong.com/public/">Public</a> . <a href="https://twitter.com/choonsionglee">Twitter</a> | <?php echo $show_all ?>
 	  </footer>
 
   </body>
