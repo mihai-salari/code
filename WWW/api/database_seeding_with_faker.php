@@ -1,6 +1,11 @@
 <?php
 require_once 'vendor/fzaninotto/faker/src/autoload.php';
 
+/*
+	Create example user data for database seeding, without the
+	use of Lavarel's Eloquent ORM.
+*/
+
 $faker = Faker\Factory::create();
 
 for ($i = 0; $i < 10; $i++) {
