@@ -71,3 +71,26 @@ if let firstRoomName = mark.house?[0].name {
 } else {
     print("Unable to retrieve the first room name.")
 }
+
+// Multilevels of chaining
+
+if let markStreet = mark.house?.address?.street {
+    print("Mark's street name is \(markStreet).")
+} else {
+    print("Unable to retrieve address.")
+}
+
+mark.house?.address = houseAddress
+
+if let markStreet = mark.house?.address?.street {
+    print("Mark's street name is \(markStreet).")
+} else {
+    print("Unable to retrieve address.")
+}
+
+// Accessing subscripts of optional type
+if let value = persons["Dave"]?[0] {
+    print("Value is \(value).")
+} else {
+    print("Unable to retrieve value.")
+}
