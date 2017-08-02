@@ -20,7 +20,7 @@
 }
 
 - (void) simulateCoinToss:(BOOL)userCalledHeads {
-    BOOL coinLandedOnHeads = (arc4random() % 2) == 0;
+    BOOL coinLandedOnHeads = (arc4random() % 2) == 0; // generate a random number between 0 and 1
     result.text = coinLandedOnHeads ? @"Heads" : @"Tails";
     
     if (coinLandedOnHeads == userCalledHeads) {
