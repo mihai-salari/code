@@ -1,0 +1,1 @@
+![picture](http://choonsiong.com/public/pic/running_time.png)
