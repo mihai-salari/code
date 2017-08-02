@@ -1,0 +1,74 @@
+class StatCsvFile
+  
+  attr_reader :date, :number_of_events, :number_of_creation, :number_of_deletion, :number_of_calls, :number_of_direct_retrieval_call_corrected, :number_of_direct_retrieval_call_corrected_duration_is_0, :number_of_direct_retrieval_call_corrected_duration_is_not_0, :number_of_outcall, :number_of_active_subscriber, :number_of_message_deposit, :number_of_message_notification, :number_of_message_notification_for_mcn, :number_of_message_notification_for_new_message, :number_of_message_notification_delivered, :number_of_message_notification_delivered_for_mcn, :number_of_message_notification_successfully_delivered_for_mcn, :number_of_message_notification_delivered_for_new_message, :number_of_message_notification_replaced, :number_of_message_notification_replaced_for_mcn, :number_of_message_notification_replaced_for_new_message, :number_of_greeting_changed, :number_of_subscriber, :number_of_subscriber_with_english_language, :number_of_subscriber_with_bahasa_language, :number_of_subscriber_with_tamil_language, :number_of_subscriber_with_mandarin_language, :number_of_prepaid_static, :number_of_postpaid_static, :number_of_prepaid_dynamic, :number_of_postpaid_dynamic, :number_of_fixline, :number_of_prepaid_vvm, :number_of_postpaid_vvm, :number_of_mcn_off, :number_of_mailbox_with_basic_greeting, :number_of_mailbox_with_msisdn_greeting, :number_of_mailbox_with_nametag_greeting, :number_of_mailbox_with_personal_greeting, :number_of_password_or_language_changed, :total_number_of_mailboxes_with_1_to_5_messages, :total_number_of_mailboxes_with_6_to_10_messages, :total_number_of_mailboxes_with_11_to_15_messages, :total_number_of_mailboxes_with_16_or_more_messages, :total_number_of_messages_in_msg_store, :total_number_of_messages_in_msg_store_with_status_save, :total_number_of_messages_in_msg_store_with_status_new, :total_number_of_messages_in_msg_store_with_status_deleted, :license_dynamic_used, :license_static_used, :license_fixline_used, :license_vvm_used, :number_of_call_with_redirection_reason_minus_1, :number_of_call_with_redirection_reason_0, :number_of_call_with_redirection_reason_1, :number_of_call_with_redirection_reason_2, :number_of_call_with_redirection_reason_3, :number_of_call_with_redirection_reason_4, :number_of_call_with_redirection_reason_5, :number_of_call_with_redirection_reason_6
+  
+  def initialize(date, number_of_events, number_of_creation, number_of_deletion, number_of_calls, number_of_direct_retrieval_call_corrected, number_of_direct_retrieval_call_corrected_duration_is_0, number_of_direct_retrieval_call_corrected_duration_is_not_0, number_of_outcall, number_of_active_subscriber, number_of_message_deposit, number_of_message_notification, number_of_message_notification_for_mcn, number_of_message_notification_for_new_message, number_of_message_notification_delivered, number_of_message_notification_delivered_for_mcn, number_of_message_notification_successfully_delivered_for_mcn, number_of_message_notification_delivered_for_new_message, number_of_message_notification_replaced, number_of_message_notification_replaced_for_mcn, number_of_message_notification_replaced_for_new_message, number_of_greeting_changed, number_of_subscriber, number_of_subscriber_with_english_language, number_of_subscriber_with_bahasa_language, number_of_subscriber_with_tamil_language, number_of_subscriber_with_mandarin_language, number_of_prepaid_static, number_of_postpaid_static, number_of_prepaid_dynamic, number_of_postpaid_dynamic, number_of_fixline, number_of_prepaid_vvm, number_of_postpaid_vvm, number_of_mcn_off, number_of_mailbox_with_basic_greeting, number_of_mailbox_with_msisdn_greeting, number_of_mailbox_with_nametag_greeting, number_of_mailbox_with_personal_greeting, number_of_password_or_language_changed, total_number_of_mailboxes_with_1_to_5_messages, total_number_of_mailboxes_with_6_to_10_messages, total_number_of_mailboxes_with_11_to_15_messages, total_number_of_mailboxes_with_16_or_more_messages, total_number_of_messages_in_msg_store, total_number_of_messages_in_msg_store_with_status_save, total_number_of_messages_in_msg_store_with_status_new, total_number_of_messages_in_msg_store_with_status_deleted, license_dynamic_used, license_static_used, license_fixline_used, license_vvm_used, number_of_call_with_redirection_reason_minus_1, number_of_call_with_redirection_reason_0, number_of_call_with_redirection_reason_1, number_of_call_with_redirection_reason_2, number_of_call_with_redirection_reason_3, number_of_call_with_redirection_reason_4, number_of_call_with_redirection_reason_5, number_of_call_with_redirection_reason_6)
+    
+    @date = date
+    @number_of_events = number_of_events
+    @number_of_creation = number_of_creation
+    @number_of_deletion = number_of_deletion
+    @number_of_calls = number_of_calls
+    @number_of_direct_retrieval_call_corrected = number_of_direct_retrieval_call_corrected
+    @number_of_direct_retrieval_call_corrected_duration_is_0 = number_of_direct_retrieval_call_corrected_duration_is_0
+    @number_of_direct_retrieval_call_corrected_duration_is_not_0 = number_of_direct_retrieval_call_corrected_duration_is_not_0
+    @number_of_outcall = number_of_outcall
+    @number_of_active_subscriber = number_of_active_subscriber
+    @number_of_message_deposit = number_of_message_deposit
+    @number_of_message_notification = number_of_message_notification
+    @number_of_message_notification_for_mcn = number_of_message_notification_for_mcn
+    @number_of_message_notification_for_new_message = number_of_message_notification_for_new_message
+    @number_of_message_notification_delivered = number_of_message_notification_delivered
+    @number_of_message_notification_delivered_for_mcn = number_of_message_notification_delivered_for_mcn
+    @number_of_message_notification_successfully_delivered_for_mcn = number_of_message_notification_successfully_delivered_for_mcn
+    @number_of_message_notification_delivered_for_new_message = number_of_message_notification_delivered_for_new_message
+    @number_of_message_notification_replaced = number_of_message_notification_replaced
+    @number_of_message_notification_replaced_for_mcn = number_of_message_notification_replaced_for_mcn
+    @number_of_message_notification_replaced_for_new_message = number_of_message_notification_replaced_for_new_message
+    @number_of_greeting_changed = number_of_greeting_changed
+    @number_of_subscriber = number_of_subscriber
+    @number_of_subscriber_with_english_language = number_of_subscriber_with_english_language
+    @number_of_subscriber_with_bahasa_language = number_of_subscriber_with_bahasa_language
+    @number_of_subscriber_with_tamil_language = number_of_subscriber_with_tamil_language
+    @number_of_subscriber_with_mandarin_language = number_of_subscriber_with_mandarin_language
+    @number_of_prepaid_static = number_of_prepaid_static
+    @number_of_postpaid_static = number_of_postpaid_static
+    @number_of_prepaid_dynamic = number_of_prepaid_dynamic
+    @number_of_postpaid_dynamic = number_of_postpaid_dynamic
+    @number_of_fixline = number_of_fixline
+    @number_of_prepaid_vvm = number_of_prepaid_vvm
+    @number_of_postpaid_vvm = number_of_postpaid_vvm
+    @number_of_mcn_off = number_of_mcn_off
+    @number_of_mailbox_with_basic_greeting = number_of_mailbox_with_basic_greeting
+    @number_of_mailbox_with_msisdn_greeting = number_of_mailbox_with_msisdn_greeting
+    @number_of_mailbox_with_nametag_greeting = number_of_mailbox_with_nametag_greeting
+    @number_of_mailbox_with_personal_greeting = number_of_mailbox_with_personal_greeting
+    @number_of_password_or_language_changed = number_of_password_or_language_changed
+    @total_number_of_mailboxes_with_1_to_5_messages = total_number_of_mailboxes_with_1_to_5_messages
+    @total_number_of_mailboxes_with_6_to_10_messages = total_number_of_mailboxes_with_6_to_10_messages
+    @total_number_of_mailboxes_with_11_to_15_messages = total_number_of_mailboxes_with_11_to_15_messages
+    @total_number_of_mailboxes_with_16_or_more_messages = total_number_of_mailboxes_with_16_or_more_messages
+    @total_number_of_messages_in_msg_store = total_number_of_messages_in_msg_store
+    @total_number_of_messages_in_msg_store_with_status_save = total_number_of_messages_in_msg_store_with_status_save
+    @total_number_of_messages_in_msg_store_with_status_new = total_number_of_messages_in_msg_store_with_status_new
+    @total_number_of_messages_in_msg_store_with_status_deleted = total_number_of_messages_in_msg_store_with_status_deleted
+    @license_dynamic_used = license_dynamic_used
+    @license_static_used = license_static_used
+    @license_fixline_used = license_fixline_used
+    @license_vvm_used = license_vvm_used
+    @number_of_call_with_redirection_reason_minus_1 = number_of_call_with_redirection_reason_minus_1
+    @number_of_call_with_redirection_reason_0 = number_of_call_with_redirection_reason_0
+    @number_of_call_with_redirection_reason_1 = number_of_call_with_redirection_reason_1
+    @number_of_call_with_redirection_reason_2 = number_of_call_with_redirection_reason_2
+    @number_of_call_with_redirection_reason_3 = number_of_call_with_redirection_reason_3
+    @number_of_call_with_redirection_reason_4 = number_of_call_with_redirection_reason_4
+    @number_of_call_with_redirection_reason_5 = number_of_call_with_redirection_reason_5
+    @number_of_call_with_redirection_reason_6 = number_of_call_with_redirection_reason_6
+    
+  end
+  
+  def to_s
+    "Date: #{@date}, Number of events: #{@number_of_events}"
+  end
+  
+end
