@@ -1,5 +1,20 @@
 import Foundation
 
+/*
+    A linked list is a basic data structure that provides a way to associate
+    related content.
+ 
+    In its basic form, a linked list is comprised of a key and an indicator. The
+    key represents the data you would like to store. Typically represented by a
+    pointer, the indicator stores the location (also called the address) of where
+    the next item can be found. Using this technique, you can chain seemingly
+    independent objects together.
+ 
+    Linked lists typically provide O(n) for storage and lookup. Algorithms with
+    an efficiency of O(n) are said to run in linear time.
+ 
+ */
+
 class LLNode<T> {
     var key: T!
     var next: LLNode?
