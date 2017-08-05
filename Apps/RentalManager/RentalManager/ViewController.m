@@ -23,7 +23,7 @@
  the TableViewController scene, and then embedded it in the NavigationViewController.
  
  Remember, to change the superclass of this view controller to TableViewController and
- update the 'Class' field in Identify Inspector respectively. 
+ update the 'Class' field in Identify Inspector respectively.
  
  */
 
@@ -42,6 +42,8 @@
     }
     
     cell.textLabel.text = [NSString stringWithFormat:@"Rental Property %d", indexPath.row];
+    
+    NSLog(@"Rental Property %d", indexPath.row);
     
     return cell;
 }
