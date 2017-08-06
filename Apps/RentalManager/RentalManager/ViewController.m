@@ -1,4 +1,5 @@
 #import "ViewController.h"
+#import "RentalManager-Swift.h"
 
 @interface ViewController ()
 
