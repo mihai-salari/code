@@ -13,7 +13,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    // We are using a model from a Swift class here
     RentalProperty *p1 = [[RentalProperty alloc] initWithAddress:@"13 Waverly Crescent, Sumner" type:PropertyTypeTownHouse weeklyRentalPrice:420.0f];
     RentalProperty *p2 = [[RentalProperty alloc] initWithAddress:@"74 Roberson Lane, Christchurch" type:PropertyTypeApartment weeklyRentalPrice:365.0f];
     RentalProperty *p3 = [[RentalProperty alloc] initWithAddress:@"17 Kipling Street, Riccarton" type:PropertyTypeApartment weeklyRentalPrice:275.9f];
@@ -42,7 +43,7 @@
 // MARK: - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 25;
+    return self.properties.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -50,12 +51,15 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Rental Property %d", indexPath.row];
+    //cell.textLabel.text = [NSString stringWithFormat:@"Rental Property %d", indexPath.row];
+    RentalProperty *property = self.properties[indexPath.row];
+    cell.textLabel.text = property.address;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Rents for $%0.2f per week", property.weeklyRentalPrice];
     
-    NSLog(@"Rental Property %d", indexPath.row);
+    //NSLog(@"Rental Property %d", indexPath.row);
     
     return cell;
 }
