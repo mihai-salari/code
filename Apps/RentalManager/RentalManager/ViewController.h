@@ -2,5 +2,6 @@
 
 @interface ViewController : UITableViewController
 
+@property (nonatomic, readonly, strong) NSMutableArray *properties;
 
 @end

@@ -5,8 +5,6 @@
 
 @interface ViewController ()
 
-@property (nonatomic, readonly, strong) NSMutableArray *properties;
-
 @end
 
 @implementation ViewController
