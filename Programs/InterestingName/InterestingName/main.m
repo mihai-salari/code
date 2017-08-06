@@ -34,11 +34,7 @@ int main(int argc, const char * argv[]) {
         NSArray *words = [wordString componentsSeparatedByString:@"\n"];
         
         for (NSString *w in words) {
-            //NSLog(@"word = %@", w);
-            
             for (NSString *n in names) {
-                //NSLog(@"name = %@", n);
-                
                 if ([[n lowercaseString] isEqualToString:w]) {
                     NSLog(@"word: %@, name: %@", w, n);
                 }
