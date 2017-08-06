@@ -23,7 +23,9 @@ int main(int argc, const char * argv[]) {
             NSLog(@"Here is a date: %@", d);
         }
         
-        // Fast enumeration
+        // When using fast enumeration with an NSMutableArray, you are not allowed
+        // to add or remove items while iterating over the array. If you need
+        // to add or remove items while iterating, you must use a standard for-loop.
         for (NSDate *d in dateList) {
             NSLog(@"Here is a date: %@", d);
         }
