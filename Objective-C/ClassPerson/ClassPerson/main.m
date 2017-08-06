@@ -12,7 +12,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Foo is %.2f meters tall and weighs %d kilograms", height, weight);
         
         float bmi = [foo bodyMassIndex];
-        NSLog(@"Foo has a BMI of %.1f", bmi);
+        NSLog(@"Foo has a BMI of %.1f", bmi);        
     }
     
     return 0;
