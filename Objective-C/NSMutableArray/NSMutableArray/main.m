@@ -8,7 +8,12 @@ int main(int argc, const char * argv[]) {
         NSDate *tomorrow = [now dateByAddingTimeInterval:ONE_DAY];
         NSDate *yesterday = [now dateByAddingTimeInterval:-ONE_DAY];
         
-        NSArray *dateList = @[now, tomorrow, yesterday];
+        NSMutableArray *dateList = [NSMutableArray array];
+        
+        [dateList addObject:now];
+        [dateList insertObject:yesterday atIndex:0];
+        [dateList addObject:tomorrow];
+        [dateList removeObjectAtIndex:1];
         
         NSLog(@"The first date is %@", dateList[0]);
         NSLog(@"There are %lu dates in the array", [dateList count]);
