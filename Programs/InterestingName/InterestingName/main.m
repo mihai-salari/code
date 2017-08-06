@@ -35,7 +35,7 @@ int main(int argc, const char * argv[]) {
         
         for (NSString *w in words) {
             for (NSString *n in names) {
-                if ([[n lowercaseString] isEqualToString:w]) {
+                if ([[n lowercaseString] isEqualToString:w] && ![w isEqualToString:@""]) {
                     NSLog(@"word: %@, name: %@", w, n);
                 }
             }
