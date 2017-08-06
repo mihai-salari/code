@@ -18,6 +18,7 @@
     return [super bodyMassIndex] * 0.9;
 }
 
+// Override description from NSObject
 - (NSString *)description {
     return [NSString stringWithFormat:@"<Employee %d>", self.employeeID];
 }
