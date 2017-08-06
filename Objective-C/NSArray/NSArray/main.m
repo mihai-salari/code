@@ -22,6 +22,11 @@ int main(int argc, const char * argv[]) {
         for (NSDate *d in dateList) {
             NSLog(@"Here is a date: %@", d);
         }
+        
+        // Old style
+        NSArray *nameList = [NSArray arrayWithObjects:@"Foo", @"Ben", @"Ken", nil];
+        NSLog(@"The first name is %@", [nameList objectAtIndex:0]);
+        NSLog(@"The second name is %@", [nameList objectAtIndex:1]);
     }
     
     return 0;
