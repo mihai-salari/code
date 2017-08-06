@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
             NSLog(@"Here is a date: %@", d);
         }
         
-        // Old style
+        // Old-style methods working with array
         NSArray *nameList = [NSArray arrayWithObjects:@"Foo", @"Ben", @"Ken", nil];
         NSLog(@"The first name is %@", [nameList objectAtIndex:0]);
         NSLog(@"The second name is %@", [nameList objectAtIndex:1]);
