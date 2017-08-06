@@ -5,4 +5,6 @@ current tenants.
 Some aspects of the application:
 
 - Developed with both Objective-C and Swift language, to show the interoperability
-between them 
+between them
+- Replaced the default ViewController with custom TableViewController and the use of
+NavigationViewController
