@@ -11,8 +11,6 @@ int main(int argc, const char * argv[]) {
                                                          encoding:NSUTF8StringEncoding
                                                             error:NULL];
         
-        //NSLog(@"nameString = %@", nameString);
-        
         // Break it into an array of strings
         NSArray *names = [nameString componentsSeparatedByString:@"\n"];
         
