@@ -34,6 +34,15 @@ int main(int argc, const char * argv[]) {
         
         [employees removeObjectAtIndex:5];
         
+        for (Employee *e in employees) {
+            if ([e valueOfAssets] > 0) {
+                for (Asset *a in [e assets]) {
+                    NSLog(@"%@ has %@", e, a);
+                    [e removeAsset:a];
+                }
+            }
+        }
+        
         NSLog(@"Giving up ownership of arrays!!!");
         
         employees = nil;

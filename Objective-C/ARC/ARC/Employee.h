@@ -13,6 +13,7 @@
 
 - (double)yearsOfEmployment;
 - (void)addAsset:(Asset *)a;
+- (void)removeAsset:(Asset *)a;
 - (unsigned int)valueOfAssets;
 
 @end

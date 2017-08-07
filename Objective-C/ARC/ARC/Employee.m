@@ -22,6 +22,15 @@
     [_assets addObject:a];
 }
 
+- (void)removeAsset:(Asset *)a {
+    // make sure we have asset before we remove anything
+    if (_assets) {
+        [_assets removeObject:a];
+    } else {
+        NSLog(@"Error: failed to remove asset %@", self);
+    }
+}
+
 - (unsigned int)valueOfAssets {
     unsigned int sum = 0;
     
