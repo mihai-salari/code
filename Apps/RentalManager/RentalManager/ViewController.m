@@ -55,7 +55,7 @@
     //cell.textLabel.text = [NSString stringWithFormat:@"Rental Property %d", indexPath.row];
     RentalProperty *property = self.properties[indexPath.row];
     
-    // To separate the city
+    // To separate the city from the address, for cell image use
     int indexOfComma = [property.address rangeOfString:@","].location;
     NSString *address = [property.address substringToIndex:indexOfComma];
     NSString *city = [property.address substringFromIndex:indexOfComma + 2];
