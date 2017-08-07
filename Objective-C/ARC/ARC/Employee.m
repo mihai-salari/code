@@ -50,7 +50,11 @@
 
 // Override description from NSObject
 - (NSString *)description {
-    return [NSString stringWithFormat:@"<Employee %d>", self.employeeID];
+    return [NSString stringWithFormat:@"<Employee %u: $%u in assets>", self.employeeID, self.valueOfAssets];
+}
+
+- (void)dealloc {
+    NSLog(@"deallocating %@", self);
 }
 
 @end
