@@ -54,7 +54,22 @@
     
     //cell.textLabel.text = [NSString stringWithFormat:@"Rental Property %d", indexPath.row];
     RentalProperty *property = self.properties[indexPath.row];
+    
+    // To separate the city
+    int indexOfComma = [property.address rangeOfString:@","].location;
+    NSString *address = [property.address substringToIndex:indexOfComma];
+    NSString *city = [property.address substringFromIndex:indexOfComma + 2];
+    
     cell.textLabel.text = property.address;
+    
+    if ([city isEqual:@"Clifton"]) {
+        cell.imageView.image = [UIImage imageNamed:@"mountain.jpg"];
+    } else if ([city isEqual:@"Sumner"]) {
+        cell.imageView.image = [UIImage imageNamed:@"sea.png"];
+    } else {
+        cell.imageView.image = [UIImage imageNamed:@"city.png"];
+    }
+    
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Rents for $%0.2f per week", property.weeklyRentalPrice];
     
     //NSLog(@"Rental Property %d", indexPath.row);
