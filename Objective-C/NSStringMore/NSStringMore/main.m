@@ -27,6 +27,12 @@ int main(int argc, const char * argv[]) {
         NSLog(@"hello1 in lowercase: %@", [hello1 lowercaseString]);
         
         NSLog(@"hello1 is now: %@", [hello1 stringByReplacingOccurrencesOfString:@"World" withString:@"Objective-C"]);
+        
+        NSLog(@"hello1 is now: %@", [hello1 stringByAppendingString:@" Wow Wow!"]);
+        
+        if ([hello2 isEqual:hello3]) {
+            NSLog(@"The two strings are identical");
+        }
     }
     
     return 0;
