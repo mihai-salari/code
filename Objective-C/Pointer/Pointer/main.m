@@ -7,6 +7,17 @@ int main(int argc, const char * argv[]) {
         
         currentTime = [NSDate date];
         NSLog(@"currentTime's value is %p", currentTime);
+        
+        int x = 8;
+        int *y = &x;
+        
+        NSLog(@"x = %d", x);
+        NSLog(@"y = %p", y);
+        
+        *y = 88;
+        
+        NSLog(@"x = %d", x);
+        NSLog(@"dereferencing the pointer y and access the value it currently points to: %d", *y);
     }
     
     return 0;
