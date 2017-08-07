@@ -8,3 +8,7 @@ Some aspects of the application:
 between them
 - Replaced the default ViewController with custom TableViewController and the use of
 NavigationViewController
+
+__Screenshot__
+
+![picture](http://choonsiong.com/public/pic/rental_manager1.png)
