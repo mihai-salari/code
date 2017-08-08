@@ -18,7 +18,24 @@ int main(int argc, const char * argv[]) {
         moo.lastName = @"Boo";
         moo.basicSalary = 2000.0;
         
+        Person *john = [[Person alloc] init];
+        john.firstName = @"John";
+        john.lastName = @"Appleseed";
+        john.basicSalary = 950.0;
+        
         NSMutableArray *person = [NSMutableArray arrayWithObjects:foo, nick, moo, nil];
+        [person addObject:john];
+        
+        NSSortDescriptor *sortFirstNameAsc = [NSSortDescriptor sortDescriptorWithKey:@"firstName" ascending:YES];
+        NSSortDescriptor *sortSalaryDesc = [NSSortDescriptor sortDescriptorWithKey:@"basicSalary" ascending:NO];
+        NSSortDescriptor *sortLastNameDesc = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:NO];
+        
+        NSLog(@"person is %@", person);
+        
+        //[person sortUsingDescriptors:@[sortFirstNameAsc]];
+        [person sortUsingDescriptors:@[sortSalaryDesc, sortLastNameDesc]];
+        
+        NSLog(@"sorted person is %@", person);
     }
     
     return 0;
