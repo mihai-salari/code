@@ -1,6 +1,12 @@
 #import "Employee.h"
 #import "Asset.h"
 
+@interface Employee() {
+    NSMutableArray *_assets;
+}
+
+@end
+
 @implementation Employee
 
 // Accessors for assets properties

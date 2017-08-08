@@ -3,7 +3,8 @@
 @class Asset; // Using @class instead of #import gives the compiler less information, but makes the processing of this particular file faster
 
 @interface Employee : Person {
-    NSMutableArray *_assets; // We want to use different type for property and instance variable
+    // Move to Employee class extension
+    // NSMutableArray *_assets; // We want to use different type for property and instance variable
 }
 
 @property (nonatomic) unsigned int employeeID;
