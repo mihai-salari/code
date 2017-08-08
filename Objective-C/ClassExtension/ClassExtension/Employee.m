@@ -1,5 +1,12 @@
 #import "Employee.h"
 
+// Class extension
+@interface Employee()
+
+@property (nonatomic) unsigned int officeAlarmCode;
+
+@end
+
 @implementation Employee
 
 - (double)yearsOfEmployment {
