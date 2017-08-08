@@ -21,6 +21,12 @@ int main(int argc, const char * argv[]) {
                                             @"Earth": @[@"Luna"],
                                             @"Mars": @[@"Deimos", @"Phobos"],
                                             };
+        
+        NSMutableDictionary *names = [[NSMutableDictionary alloc] init];
+        [names setObject:@"Foo Bar" forKey:@"foo"];
+        [names setObject:@"Bar Foo" forKey:@"bar"];
+        
+        NSLog(@"Names: %@", names);
     }
     
     return 0;
