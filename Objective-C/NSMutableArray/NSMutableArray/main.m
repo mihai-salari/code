@@ -29,6 +29,19 @@ int main(int argc, const char * argv[]) {
         for (NSDate *d in dateList) {
             NSLog(@"Here is a date: %@", d);
         }
+        
+        // Working with C-style array
+        int numbers[] = {1, 2, 3, 4, 5};
+        
+        NSMutableArray *numberArray = [[NSMutableArray alloc] init];
+        
+        for (int i = 0; i < 5; i++) {
+            NSNumber *n = [NSNumber numberWithInteger:numbers[i]];
+            [numberArray addObject:n];
+        }
+        
+        NSLog(@"numberArray: %@", numberArray);
+
     }
     
     return 0;

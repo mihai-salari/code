@@ -7,9 +7,9 @@ int main(int argc, const char * argv[]) {
         
         int numbers[] = {1, 2, 3, 4, 5}; // C style array
         
-        NSMutableArray *numberArray;
+        NSMutableArray *numberArray = [[NSMutableArray alloc] init];
         
-        for (int i = 1; i < 5; i++) {
+        for (int i = 0; i < 5; i++) {
             NSNumber *n = [NSNumber numberWithInteger:numbers[i]];
             [numberArray addObject:n];
         }
