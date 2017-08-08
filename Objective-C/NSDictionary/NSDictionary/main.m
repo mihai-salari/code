@@ -27,6 +27,8 @@ int main(int argc, const char * argv[]) {
         [names setObject:@"Bar Foo" forKey:@"bar"];
         
         NSLog(@"Names: %@", names);
+        
+        NSLog(@"Key 'foo' has value '%@'", [names objectForKey:@"foo"]);
     }
     
     return 0;
