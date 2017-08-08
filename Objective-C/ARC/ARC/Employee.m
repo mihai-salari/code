@@ -26,6 +26,8 @@
     }
     
     [_assets addObject:a];
+    
+    a.holder = self;
 }
 
 - (void)removeAsset:(Asset *)a {
