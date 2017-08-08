@@ -26,16 +26,25 @@ int main(int argc, const char * argv[]) {
         NSMutableArray *person = [NSMutableArray arrayWithObjects:foo, nick, moo, nil];
         [person addObject:john];
         
-        NSSortDescriptor *sortFirstNameAsc = [NSSortDescriptor sortDescriptorWithKey:@"firstName" ascending:YES];
-        NSSortDescriptor *sortSalaryDesc = [NSSortDescriptor sortDescriptorWithKey:@"basicSalary" ascending:NO];
-        NSSortDescriptor *sortLastNameDesc = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:NO];
+        NSArray *personArray = [NSArray arrayWithArray:person];
         
-        NSLog(@"person is %@", person);
+        NSPredicate *salaryPredicate = [NSPredicate predicateWithFormat:@"self.basicSalary >= 1500"];
+        NSArray *richPersonArray = [personArray filteredArrayUsingPredicate:salaryPredicate];
         
-        //[person sortUsingDescriptors:@[sortFirstNameAsc]];
-        [person sortUsingDescriptors:@[sortSalaryDesc, sortLastNameDesc]];
+        NSLog(@"Person who salary >= 2000: %@", richPersonArray);
         
-        NSLog(@"sorted person is %@", person);
+        nick.basicSalary = 10000.0;
+        
+        // Note that all below arrays are pointing to the same Person reference above,
+        // that's why when we set 'person' to nil, the other two are not call because
+        // all person are deallocated already.
+        NSLog(@"person: %@", person);
+        NSLog(@"personArray: %@", personArray);
+        NSLog(@"richPersonArray: %@", richPersonArray);
+        
+        person = nil;
+        personArray = nil;
+        richPersonArray = nil;        
     }
     
     return 0;
