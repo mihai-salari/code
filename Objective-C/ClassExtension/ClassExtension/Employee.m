@@ -20,6 +20,14 @@
     }
 }
 
+- (void)alarmCode {
+    if (self.officeAlarmCode){
+        NSLog(@"Alarm Code is: %u", self.officeAlarmCode);
+    } else {
+        NSLog(@"Alarm Code is not set");
+    }    
+}
+
 // Override inherited method
 - (float)bodyMassIndex {
     return [super bodyMassIndex] * 0.9;

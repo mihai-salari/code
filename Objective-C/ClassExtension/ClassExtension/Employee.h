@@ -6,5 +6,6 @@
 @property (nonatomic) NSDate *hireDate;
 
 - (double)yearsOfEmployment;
+- (void)alarmCode;
 
 @end

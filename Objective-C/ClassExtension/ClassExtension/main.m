@@ -14,6 +14,8 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Foo's bmi is %.2f", [foo bodyMassIndex]);
         
         NSLog(@"%@ hired on %@", foo, foo.hireDate);
+        
+        [foo alarmCode];
     }
     
     return 0;
