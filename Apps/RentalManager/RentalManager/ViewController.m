@@ -3,7 +3,9 @@
 
 //#define ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))
 
-@interface ViewController ()
+@interface ViewController () // Class extension
+
+@property (nonatomic, readonly, strong) NSMutableArray *properties;
 
 @end
 
