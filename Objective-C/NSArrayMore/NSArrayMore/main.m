@@ -11,6 +11,13 @@ int main(int argc, const char * argv[]) {
         NSArray *xmlFile = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:@"http://choonsiong.com/public/tmp/plist.txt"]];
         
         NSLog(@"xmlFile is: %@", xmlFile);
+        
+        NSLog(@"Last object in xmlFile is '%@'.", [xmlFile lastObject]);
+        
+        if ([xmlFile containsObject:@"Cat"]) {
+            unsigned long index = [xmlFile indexOfObject:@"Cat"];
+            NSLog(@"'cat' is inside xmlFile at index %lu", index);
+        }
     }
     
     return 0;
