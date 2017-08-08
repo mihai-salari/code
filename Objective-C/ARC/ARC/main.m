@@ -15,6 +15,8 @@ int main(int argc, const char * argv[]) {
             [employees addObject:foo];
         }
         
+        NSMutableArray *allAssets = [[NSMutableArray alloc] init];
+        
         for (int i = 0; i < 10; i++) {
             Asset *asset = [[Asset alloc] init];
             
@@ -27,6 +29,8 @@ int main(int argc, const char * argv[]) {
             Employee *randomEmployee = [employees objectAtIndex:randomIndex];
             
             [randomEmployee addAsset:asset];
+            
+            [allAssets addObject:asset];
         }
         
         NSLog(@"Employees: %@", employees);
@@ -43,8 +47,10 @@ int main(int argc, const char * argv[]) {
             }
         }
         
+        NSLog(@"All assets: %@", allAssets);
         NSLog(@"Giving up ownership of arrays!!!");
         
+        allAssets = nil;
         employees = nil;
     }
     
@@ -53,7 +59,7 @@ int main(int argc, const char * argv[]) {
 
 /*
 
- 2017-08-07 17:43:17.379797+0800 ARC[19428:7771560] Employees: (
+ 2017-08-08 19:28:56.559238+0800 ARC[31587:8844829] Employees: (
  "<Employee 0: $0 in assets>",
  "<Employee 1: $503 in assets>",
  "<Employee 2: $469 in assets>",
@@ -65,36 +71,48 @@ int main(int argc, const char * argv[]) {
  "<Employee 8: $0 in assets>",
  "<Employee 9: $486 in assets>"
  )
- 2017-08-07 17:43:17.379944+0800 ARC[19428:7771560] Giving up ownership of one employee!
- 2017-08-07 17:43:17.380026+0800 ARC[19428:7771560] deallocating <Employee 5: $836 in assets>
- 2017-08-07 17:43:17.380109+0800 ARC[19428:7771560] deallocating <Laptop 3: 401>
- 2017-08-07 17:43:17.380144+0800 ARC[19428:7771560] deallocating <Laptop 5: 435>
- 2017-08-07 17:43:17.380175+0800 ARC[19428:7771560] <Employee 1: $503 in assets> has <Laptop 9: 503>
- 2017-08-07 17:43:17.380192+0800 ARC[19428:7771560] deallocating <Laptop 9: 503>
- 2017-08-07 17:43:17.380215+0800 ARC[19428:7771560] <Employee 2: $469 in assets> has <Laptop 7: 469>
- 2017-08-07 17:43:17.380227+0800 ARC[19428:7771560] deallocating <Laptop 7: 469>
- 2017-08-07 17:43:17.380252+0800 ARC[19428:7771560] <Employee 3: $768 in assets> has <Laptop 0: 350>
- 2017-08-07 17:43:17.380273+0800 ARC[19428:7771560] <Employee 3: $418 in assets> has <Laptop 4: 418>
- 2017-08-07 17:43:17.380286+0800 ARC[19428:7771560] deallocating <Laptop 0: 350>
- 2017-08-07 17:43:17.380296+0800 ARC[19428:7771560] deallocating <Laptop 4: 418>
- 2017-08-07 17:43:17.391827+0800 ARC[19428:7771560] <Employee 6: $819 in assets> has <Laptop 1: 367>
- 2017-08-07 17:43:17.391855+0800 ARC[19428:7771560] <Employee 6: $452 in assets> has <Laptop 6: 452>
- 2017-08-07 17:43:17.391868+0800 ARC[19428:7771560] deallocating <Laptop 1: 367>
- 2017-08-07 17:43:17.391879+0800 ARC[19428:7771560] deallocating <Laptop 6: 452>
- 2017-08-07 17:43:17.391895+0800 ARC[19428:7771560] <Employee 7: $384 in assets> has <Laptop 2: 384>
- 2017-08-07 17:43:17.391905+0800 ARC[19428:7771560] deallocating <Laptop 2: 384>
- 2017-08-07 17:43:17.391928+0800 ARC[19428:7771560] <Employee 9: $486 in assets> has <Laptop 8: 486>
- 2017-08-07 17:43:17.391940+0800 ARC[19428:7771560] deallocating <Laptop 8: 486>
- 2017-08-07 17:43:17.391948+0800 ARC[19428:7771560] Giving up ownership of arrays!!!
- 2017-08-07 17:43:17.391959+0800 ARC[19428:7771560] deallocating <Employee 0: $0 in assets>
- 2017-08-07 17:43:17.391969+0800 ARC[19428:7771560] deallocating <Employee 1: $0 in assets>
- 2017-08-07 17:43:17.392014+0800 ARC[19428:7771560] deallocating <Employee 2: $0 in assets>
- 2017-08-07 17:43:17.392058+0800 ARC[19428:7771560] deallocating <Employee 3: $0 in assets>
- 2017-08-07 17:43:17.392087+0800 ARC[19428:7771560] deallocating <Employee 4: $0 in assets>
- 2017-08-07 17:43:17.392119+0800 ARC[19428:7771560] deallocating <Employee 6: $0 in assets>
- 2017-08-07 17:43:17.392137+0800 ARC[19428:7771560] deallocating <Employee 7: $0 in assets>
- 2017-08-07 17:43:17.392148+0800 ARC[19428:7771560] deallocating <Employee 8: $0 in assets>
- 2017-08-07 17:43:17.392158+0800 ARC[19428:7771560] deallocating <Employee 9: $0 in assets>
+ 2017-08-08 19:28:56.559407+0800 ARC[31587:8844829] Giving up ownership of one employee!
+ 2017-08-08 19:28:56.559464+0800 ARC[31587:8844829] deallocating <Employee 5: $836 in assets>
+ 2017-08-08 19:28:56.559614+0800 ARC[31587:8844829] <Employee 1: $503 in assets> has <Laptop 9: $503, assigned to <Employee 1: $503 in assets>>
+ 2017-08-08 19:28:56.559720+0800 ARC[31587:8844829] <Employee 2: $469 in assets> has <Laptop 7: $469, assigned to <Employee 2: $469 in assets>>
+ 2017-08-08 19:28:56.559788+0800 ARC[31587:8844829] <Employee 3: $768 in assets> has <Laptop 0: $350, assigned to <Employee 3: $768 in assets>>
+ 2017-08-08 19:28:56.559817+0800 ARC[31587:8844829] <Employee 3: $418 in assets> has <Laptop 4: $418, assigned to <Employee 3: $418 in assets>>
+ 2017-08-08 19:28:56.559842+0800 ARC[31587:8844829] <Employee 6: $819 in assets> has <Laptop 1: $367, assigned to <Employee 6: $819 in assets>>
+ 2017-08-08 19:28:56.559859+0800 ARC[31587:8844829] <Employee 6: $452 in assets> has <Laptop 6: $452, assigned to <Employee 6: $452 in assets>>
+ 2017-08-08 19:28:56.559881+0800 ARC[31587:8844829] <Employee 7: $384 in assets> has <Laptop 2: $384, assigned to <Employee 7: $384 in assets>>
+ 2017-08-08 19:28:56.559898+0800 ARC[31587:8844829] <Employee 9: $486 in assets> has <Laptop 8: $486, assigned to <Employee 9: $486 in assets>>
+ 2017-08-08 19:28:56.560005+0800 ARC[31587:8844829] All assets: (
+ "<Laptop 0: $350, assigned to <Employee 3: $0 in assets>>",
+ "<Laptop 1: $367, assigned to <Employee 6: $0 in assets>>",
+ "<Laptop 2: $384, assigned to <Employee 7: $0 in assets>>",
+ "<Laptop 3: 401 unassigned>",
+ "<Laptop 4: $418, assigned to <Employee 3: $0 in assets>>",
+ "<Laptop 5: 435 unassigned>",
+ "<Laptop 6: $452, assigned to <Employee 6: $0 in assets>>",
+ "<Laptop 7: $469, assigned to <Employee 2: $0 in assets>>",
+ "<Laptop 8: $486, assigned to <Employee 9: $0 in assets>>",
+ "<Laptop 9: $503, assigned to <Employee 1: $0 in assets>>"
+ )
+ 2017-08-08 19:28:56.560124+0800 ARC[31587:8844829] Giving up ownership of arrays!!!
+ 2017-08-08 19:28:56.560208+0800 ARC[31587:8844829] deallocating <Laptop 0: $350, assigned to <Employee 3: $0 in assets>>
+ 2017-08-08 19:28:56.560261+0800 ARC[31587:8844829] deallocating <Laptop 1: $367, assigned to <Employee 6: $0 in assets>>
+ 2017-08-08 19:28:56.560283+0800 ARC[31587:8844829] deallocating <Laptop 2: $384, assigned to <Employee 7: $0 in assets>>
+ 2017-08-08 19:28:56.560366+0800 ARC[31587:8844829] deallocating <Laptop 3: 401 unassigned>
+ 2017-08-08 19:28:56.560410+0800 ARC[31587:8844829] deallocating <Laptop 4: $418, assigned to <Employee 3: $0 in assets>>
+ 2017-08-08 19:28:56.560426+0800 ARC[31587:8844829] deallocating <Laptop 5: 435 unassigned>
+ 2017-08-08 19:28:56.560472+0800 ARC[31587:8844829] deallocating <Laptop 6: $452, assigned to <Employee 6: $0 in assets>>
+ 2017-08-08 19:28:56.560544+0800 ARC[31587:8844829] deallocating <Laptop 7: $469, assigned to <Employee 2: $0 in assets>>
+ 2017-08-08 19:28:56.560583+0800 ARC[31587:8844829] deallocating <Laptop 8: $486, assigned to <Employee 9: $0 in assets>>
+ 2017-08-08 19:28:56.560613+0800 ARC[31587:8844829] deallocating <Laptop 9: $503, assigned to <Employee 1: $0 in assets>>
+ 2017-08-08 19:28:56.560636+0800 ARC[31587:8844829] deallocating <Employee 0: $0 in assets>
+ 2017-08-08 19:28:56.560656+0800 ARC[31587:8844829] deallocating <Employee 1: $0 in assets>
+ 2017-08-08 19:28:56.560687+0800 ARC[31587:8844829] deallocating <Employee 2: $0 in assets>
+ 2017-08-08 19:28:56.560707+0800 ARC[31587:8844829] deallocating <Employee 3: $0 in assets>
+ 2017-08-08 19:28:56.560727+0800 ARC[31587:8844829] deallocating <Employee 4: $0 in assets>
+ 2017-08-08 19:28:56.560746+0800 ARC[31587:8844829] deallocating <Employee 6: $0 in assets>
+ 2017-08-08 19:28:56.560765+0800 ARC[31587:8844829] deallocating <Employee 7: $0 in assets>
+ 2017-08-08 19:28:56.560784+0800 ARC[31587:8844829] deallocating <Employee 8: $0 in assets>
+ 2017-08-08 19:28:56.560802+0800 ARC[31587:8844829] deallocating <Employee 9: $0 in assets>
  Program ended with exit code: 0
-
+ 
 */

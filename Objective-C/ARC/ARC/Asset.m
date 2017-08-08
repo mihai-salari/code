@@ -8,7 +8,7 @@
         return [NSString stringWithFormat:@"<%@: $%u, assigned to %@>", self.label, self.resaleValue, self.holder];
     }
     
-    return [NSString stringWithFormat:@"<%@: %u>", self.label, self.resaleValue];
+    return [NSString stringWithFormat:@"<%@: %u unassigned>", self.label, self.resaleValue];
 }
 
 - (void)dealloc {
