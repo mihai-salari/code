@@ -8,7 +8,7 @@ int main(int argc, const char * argv[]) {
         NSString *cArray[] = {@"Cat", @"Dog", @"Mouse"};
         NSArray *animal = [NSArray arrayWithObjects:cArray count:3];
         
-        NSArray *xmlFile = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:@"http://choonsiong.com/public/tmp/foo.xml"]];
+        NSArray *xmlFile = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:@"http://choonsiong.com/public/tmp/plist.txt"]];
         
         NSLog(@"xmlFile is: %@", xmlFile);
     }
