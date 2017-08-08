@@ -14,6 +14,13 @@ int main(int argc, const char * argv[]) {
                                         };
         
         NSLog(@"Jupiter has %@ moons.", numberOfMoons[@"Jupiter"]);
+        
+        NSDictionary *innerPlanetsMoons = @{
+                                            @"Mercury": @[], // empty array
+                                            @"Venus": @[],
+                                            @"Earth": @[@"Luna"],
+                                            @"Mars": @[@"Deimos", @"Phobos"],
+                                            };
     }
     
     return 0;
