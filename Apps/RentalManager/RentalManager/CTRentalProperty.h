@@ -11,7 +11,7 @@ typedef enum CTPropertyType {
 }
 
 @property (nonatomic) float rentalPrice;
-@property (nonatomic) NSString *address;
+@property (nonatomic, copy) NSString *address;
 @property (nonatomic) CTPropertyType propertyType;
 
 - (void)increaseRentalByPercent:(float)percent withMaximum:(float)max;
