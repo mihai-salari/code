@@ -2,6 +2,7 @@
 
 @interface ViewController : UITableViewController {
     NSDictionary *cityMappings;
+    NSArray *ctProperties;
 }
 
 @end

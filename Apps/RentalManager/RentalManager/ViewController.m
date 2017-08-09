@@ -1,11 +1,12 @@
 #import "ViewController.h"
+#import "CTRentalProperty.h"
 #import "RentalManager-Swift.h"
 
 //#define ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))
 
 @interface ViewController () // Class extension
 
-@property (nonatomic, readonly, strong) NSMutableArray *properties;
+@property (nonatomic, strong) NSMutableArray *properties;
 
 @end
 
@@ -21,7 +22,11 @@
     RentalProperty *p4 = [[RentalProperty alloc] initWithAddress:@"4 Everglade Ridge, Sumner" type:PropertyTypeVilla weeklyRentalPrice:1500.0f];
     RentalProperty *p5 = [[RentalProperty alloc] initWithAddress:@"19 Islington Road, Clifton" type:PropertyTypeBungalow weeklyRentalPrice:2000.0f];
     
-    _properties = [NSMutableArray arrayWithArray:@[p1, p2, p3, p4, p5]];
+    // This is directly access the instance variable
+    //_properties = [NSMutableArray arrayWithArray:@[p1, p2, p3, p4, p5]];
+    
+    // This is through the setter
+    self.properties = [NSMutableArray arrayWithArray:@[p1, p2, p3, p4, p5]];
     
     // Use plist file to load images
     NSString *path = [[NSBundle mainBundle] pathForResource:@"CityMappings" ofType:@"plist"];
