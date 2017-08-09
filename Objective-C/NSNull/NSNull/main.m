@@ -11,6 +11,10 @@ int main(int argc, const char * argv[]) {
         [array addObject:@"five"];
         
         NSLog(@"%@", array);
+        
+        if ([array objectAtIndex:3] == [NSNull null]) {
+            NSLog(@"It is empty");
+        }
     }
     
     return 0;
