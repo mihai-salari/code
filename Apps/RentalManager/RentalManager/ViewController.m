@@ -22,6 +22,10 @@
     RentalProperty *p5 = [[RentalProperty alloc] initWithAddress:@"19 Islington Road, Clifton" type:PropertyTypeBungalow weeklyRentalPrice:2000.0f];
     
     _properties = [NSMutableArray arrayWithArray:@[p1, p2, p3, p4, p5]];
+    
+    // Use plist file to load images
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"CityMappings" ofType:@"plist"];
+    cityMappings = [[NSDictionary alloc] initWithContentsOfFile:path];
 }
 
 
@@ -64,13 +68,17 @@
     
     cell.textLabel.text = property.address;
     
-    if ([city isEqual:@"Clifton"]) {
+    NSString *imageName = [cityMappings objectForKey:city];
+    
+    /*if ([city isEqual:@"Clifton"]) {
         cell.imageView.image = [UIImage imageNamed:@"mountain.jpg"];
     } else if ([city isEqual:@"Sumner"]) {
         cell.imageView.image = [UIImage imageNamed:@"sea.png"];
     } else {
         cell.imageView.image = [UIImage imageNamed:@"city.png"];
-    }
+    }*/
+    
+    cell.imageView.image = [UIImage imageNamed:imageName];
     
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Rents for $%0.2f per week", property.weeklyRentalPrice];
     

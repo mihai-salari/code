@@ -1,5 +1,7 @@
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
+@interface ViewController : UITableViewController {
+    NSDictionary *cityMappings;
+}
 
 @end
