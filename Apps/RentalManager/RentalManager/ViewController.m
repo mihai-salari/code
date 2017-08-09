@@ -31,6 +31,9 @@
     // Use plist file to load images
     NSString *path = [[NSBundle mainBundle] pathForResource:@"CityMappings" ofType:@"plist"];
     cityMappings = [[NSDictionary alloc] initWithContentsOfFile:path];
+    
+    // This is for illustration purposes only, we still use the Swift model above!
+    ctProperties = [[NSArray alloc] initWithObjects:[CTRentalProperty ctRentalPropertyOfType:TownHouse rentingFor:420.0f atAddress:@"13 Waverly Crescent, Sumner"], [CTRentalProperty ctRentalPropertyOfType:Unit rentingFor:365.0f atAddress:@"74 Roberson Lane, Christchurch"], [CTRentalProperty ctRentalPropertyOfType:Unit rentingFor:275.9f atAddress:@"17 Kipling Street, Riccarton"], [CTRentalProperty ctRentalPropertyOfType:Mansion rentingFor:1500.0f atAddress:@"4 Everglade Ridge, Sumner"], [CTRentalProperty ctRentalPropertyOfType:Mansion rentingFor:2000.0f atAddress:@"19 Islington Road, Clifton"], nil];
 }
 
 
@@ -64,14 +67,16 @@
     }
     
     //cell.textLabel.text = [NSString stringWithFormat:@"Rental Property %d", indexPath.row];
-    RentalProperty *property = self.properties[indexPath.row];
+    
+    //RentalProperty *property = self.properties[indexPath.row];
+    RentalProperty *property = [self.properties objectAtIndex:indexPath.row];
     
     // To separate the city from the address, for cell image use
     int indexOfComma = [property.address rangeOfString:@","].location;
     NSString *address = [property.address substringToIndex:indexOfComma];
     NSString *city = [property.address substringFromIndex:indexOfComma + 2];
     
-    cell.textLabel.text = property.address;
+    cell.textLabel.text = address;
     
     NSString *imageName = [cityMappings objectForKey:city];
     
