@@ -24,6 +24,22 @@ int main(int argc, const char * argv[]) {
         NSArray *lookupValues = [fooBar objectsForKeys:lookupKeys notFoundMarker:@"???"];
         
         NSLog(@"%@", lookupValues);
+        
+        NSDictionary *fooBar3 = [NSDictionary dictionaryWithObjectsAndKeys:@"Male", @"Gender", @"Japan", @"Country", nil];
+        
+        NSMutableDictionary *fooBar4 = [NSMutableDictionary dictionary];
+        [fooBar4 addEntriesFromDictionary:fooBar];
+        [fooBar4 addEntriesFromDictionary:fooBar3];
+        
+        NSLog(@"%@", fooBar4);
+        
+        [fooBar4 removeObjectForKey:@"Country"];
+        
+        NSLog(@"%@", fooBar4);
+        
+        [fooBar4 removeAllObjects];
+        
+        NSLog(@"%@", fooBar4);
     }
     
     return 0;
