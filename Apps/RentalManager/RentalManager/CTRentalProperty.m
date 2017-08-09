@@ -2,6 +2,12 @@
 
 @implementation CTRentalProperty
 
++ (id)ctRentalPropertyOfType:(CTPropertyType)newCTPropertyType rentingFor:(float)newRentalPrice atAddress:(NSString *)newAddress {
+    id newObject = [[CTRentalProperty alloc] initWithAddress:newAddress rentalPrice:newRentalPrice andType:newCTPropertyType];
+    
+    return newObject;
+}
+
 - (id)initWithAddress:(NSString *)address rentalPrice:(float)price andType:(CTPropertyType)type {
     if ((self = [super init])) {
         self.address = address;

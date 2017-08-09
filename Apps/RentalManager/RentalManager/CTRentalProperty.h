@@ -14,6 +14,9 @@ typedef enum CTPropertyType {
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic) CTPropertyType propertyType;
 
+// Class method
++ (id)ctRentalPropertyOfType:(CTPropertyType)newCTPropertyType rentingFor:(float)newRentalPrice atAddress:(NSString *)newAddress;
+
 // Custom initialization
 - (id)initWithAddress:(NSString *)address rentalPrice:(float)price andType:(CTPropertyType)type;
 
