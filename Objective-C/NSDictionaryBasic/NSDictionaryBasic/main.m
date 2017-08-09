@@ -40,6 +40,27 @@ int main(int argc, const char * argv[]) {
         [fooBar4 removeAllObjects];
         
         NSLog(@"%@", fooBar4);
+        
+        // Enumerating a dict
+        
+        NSEnumerator *kEnum = [fooBar keyEnumerator];
+        id key;
+        
+        while (key = [kEnum nextObject]) {
+            NSLog(@"Entry has key: %@", key);
+        }
+        
+        NSEnumerator *vEnum = [fooBar objectEnumerator];
+        id value;
+        
+        while (value = [vEnum nextObject]) {
+            NSLog(@"Entry has value: %@", value);
+        }
+        
+        // Fast enumeration, default iterates over keys
+        for (id key in fooBar) {
+            NSLog(@"key: %@ -> value: %@", key, [fooBar objectForKey:key]);
+        }
     }
     
     return 0;
