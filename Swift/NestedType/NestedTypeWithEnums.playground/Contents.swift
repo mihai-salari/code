@@ -9,8 +9,7 @@ struct BlackjackCard {
     }
     
     enum Rank: Int {
-        case two = 2
-        case three, four, five, six, seven, eight, nine, ten
+        case two = 2, three, four, five, six, seven, eight, nine, ten
         case jack, queen, king, ace
         
         struct Values {
@@ -43,3 +42,8 @@ struct BlackjackCard {
         return output
     }
 }
+
+let theAceOfSpades = BlackjackCard(rank: .ace, suit: .spades)
+print("theAceOfSpades: \(theAceOfSpades.desciption)")
+
+print("Heart symbol is: \(BlackjackCard.Suit.hearts.rawValue)")
