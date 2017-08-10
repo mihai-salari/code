@@ -36,6 +36,7 @@ let library = [
     Song(name: "Never Gonna Give You Up", artist: "Rick Astley")
 ]
 
+// Downcasting with as? (or as!)
 for item in library {
     if let movie = item as? Movie {
         print("Movie: \(movie.name), dir. \(movie.director)")
