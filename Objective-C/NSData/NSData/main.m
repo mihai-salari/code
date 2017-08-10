@@ -27,6 +27,12 @@ int main(int argc, const char * argv[]) {
         }
         
         NSLog(@"Success!");
+        
+        NSData *readData = [NSData dataWithContentsOfFile:@"/tmp/image.jpg"
+                                                  options:0
+                                                    error:&error];
+        
+        NSLog(@"The read file is %lu bytes", [readData length]);
     }
     
     return 0;
