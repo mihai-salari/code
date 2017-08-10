@@ -16,6 +16,17 @@ int main(int argc, const char * argv[]) {
         }
         
         NSLog(@"The image file is %lu bytes", [imgData length]);
+        
+        BOOL written = [imgData writeToFile:@"/tmp/image.jpg"
+                                    options:0
+                                      error:&error];
+        
+        if (!written) {
+            NSLog(@"write failed: %@", [error localizedDescription]);
+            return 1;
+        }
+        
+        NSLog(@"Success!");
     }
     
     return 0;
