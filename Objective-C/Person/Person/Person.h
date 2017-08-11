@@ -7,6 +7,9 @@
 @property (nonatomic, readonly) NSDate *dateOfBirth;
 
 + (id)person;
+
+- (void)saySomething:(NSString *)message;
 - (void)sayHello;
+- (void)sayGoodbye;
 
 @end

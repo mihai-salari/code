@@ -2,8 +2,17 @@
 
 @implementation Person
 
+- (void)saySomething:(NSString *)message {
+    NSLog(@"%@", message);
+    
+}
+
 - (void)sayHello {
-    NSLog(@"Hello");
+    [self saySomething:@"Hello!"];
+}
+
+- (void)sayGoodbye {
+    [self saySomething:@"Goodbye!"];
 }
 
 @end
