@@ -5,7 +5,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Logger *logger = [[Logger alloc] init];
         
-        NSURL *url = [NSURL URLWithString:@"http://"];
+        NSURL *url = [NSURL URLWithString:@"http://www.choonsiong.com/index.php"];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         
         __unused NSURLConnection *fetchConn = [[NSURLConnection alloc] initWithRequest:request
