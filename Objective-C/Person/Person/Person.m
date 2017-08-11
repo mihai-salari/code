@@ -1,46 +1,59 @@
 #import "Person.h"
 
-@interface Person()
-
-{
-    NSString *_fullName;
-    NSNumber *_age;
-    Gender gender;
-}
-
-
-@end
-
 @implementation Person
 
 + (id)person {
     return [[self alloc] init];
 }
 
-- (id)initWithName:(NSString *)name {
-    _fullName = name;
-    _age = 0;
-    gender = Male;
+- (id)init {
+    if ((self = [super init])) {
+        _fullName = @"Person";
+        _age = [NSNumber numberWithInt:-1];
+        _gender = Male;
+    }
     
-    return [self initWithName:_fullName age:_age gender:gender];
+    return self;
+}
+
+- (id)initWithName:(NSString *)name {
+    if ((self = [super init])) {
+        _fullName = name;
+        _age = [NSNumber numberWithInt:-1];
+        _gender = Male;
+    }
+    
+    return self;
 }
 
 - (id)initWithAge:(NSNumber *)age {
-    _age = age;
-    _fullName = @"unknown";
-    gender = Male;
+    if ((self = [super init])) {
+        _fullName = @"Person";
+        _age = age;
+        _gender = Male;
+    }
     
-    return [self initWithName:_fullName age:_age gender:gender];
+    return self;
+}
+
+- (id)initWithGender:(Gender)gender {
+    if ((self = [super init])) {
+        _fullName = @"Person";
+        _age = [NSNumber numberWithInt:-1];
+        _gender = gender;
+    }
+    
+    return self;
 }
 
 - (id)initWithName:(NSString *)name age:(NSNumber *)age gender:(Gender)gender {
-    Person *p = nil;
-    
-    if (nil == self) {
-        p = [[Person alloc] init];
+    if ((self = [super init])) {
+        _fullName = name;
+        _age = age;
+        _gender = gender;
     }
     
-    return p;
+    return self;
 }
 
 - (void)saySomething:(NSString *)message {

@@ -7,6 +7,12 @@ typedef enum {
 
 @interface Person : NSObject
 
+{
+    NSString *_fullName;
+    NSNumber *_age;
+    Gender _gender;
+}
+
 @property (nonatomic, readonly) NSString *firstName;
 @property (nonatomic, readonly) NSString *lastName;
 @property (nonatomic, readonly) NSDate *dateOfBirth;
