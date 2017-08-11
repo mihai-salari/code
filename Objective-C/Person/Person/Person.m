@@ -2,6 +2,10 @@
 
 @implementation Person
 
++ (id)person {
+    return [[self alloc] init];
+}
+
 - (void)saySomething:(NSString *)message {
     NSLog(@"%@", message);
     
