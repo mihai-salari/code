@@ -1,13 +1,18 @@
-//
-//  Student.m
-//  Person
-//
-//  Created by Lee Choon Siong on 2017/08/12.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 #import "Student.h"
 
 @implementation Student
+
+- (id)initWithName:(NSString *)name age:(NSNumber *)age gender:(Gender)gender classes:(NSArray *)classes numberOfCredits:(NSNumber *)numberOfCredits major:(NSString *)major {
+    if ((self = [super init])) {
+        _fullName = name;
+        _age = age;
+        _gender = gender;
+        _classes = classes;
+        _numberOfCredits = numberOfCredits;
+        _major = major;
+    }
+    
+    return self;
+}
 
 @end
