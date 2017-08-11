@@ -15,4 +15,11 @@
     return [dateFormatter stringFromDate:self.lastTime];
 }
 
+- (void)updateLastTime:(NSTimer *)t {
+    NSDate *now = [NSDate date];
+    [self setLastTime:now];
+    
+    NSLog(@"just set time to %@", self.lastTimeString);
+}
+
 @end
