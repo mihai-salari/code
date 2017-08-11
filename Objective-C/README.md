@@ -11,4 +11,5 @@
 
 ##### Classes #####
 
+- [Predicate Programming Guide](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Predicates/)
 - [String Programming Guide](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/)
