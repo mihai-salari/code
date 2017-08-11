@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface Logger : NSObject <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
+@interface Logger : NSObject
 
 {
     NSMutableData *_incomingData;
@@ -10,14 +10,6 @@
 
 - (NSString *)lastTimeString;
 - (void)updateLastTime:(NSTimer *)t;
-
-// MARK: - NSURLConnectionDataDelegate
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
-
-// MARK: - NSURLConnectionDelegate
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
+- (void)zoneChange:(NSNotification *)nf;
 
 @end

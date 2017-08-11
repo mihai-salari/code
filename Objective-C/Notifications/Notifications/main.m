@@ -5,12 +5,10 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Logger *logger = [[Logger alloc] init];
         
-        NSURL *url = [NSURL URLWithString:@"http://www.choonsiong.com/index.php"];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        
-        __unused NSURLConnection *fetchConn = [[NSURLConnection alloc] initWithRequest:request
-                                                                              delegate:logger
-                                                                      startImmediately:YES];
+        [[NSNotificationCenter defaultCenter] addObserver:logger
+                                                 selector:@selector(zoneChange:)
+                                                     name:NSSystemTimeZoneDidChangeNotification
+                                                   object:nil];                
         
         [[NSRunLoop currentRunLoop] run];
     }
