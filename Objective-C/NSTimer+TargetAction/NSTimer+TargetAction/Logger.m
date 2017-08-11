@@ -3,7 +3,7 @@
 @implementation Logger
 
 - (NSString *)lastTimeString {
-    static NSDateFormatter *dateFormatter = nil;
+    static NSDateFormatter *dateFormatter = nil; // so that all instances of Logger will share a single instance of NSDateFormatter
     
     if (!dateFormatter) {
         dateFormatter = [[NSDateFormatter alloc] init];
