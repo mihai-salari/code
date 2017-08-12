@@ -17,7 +17,7 @@
 
 - (NSString *)description {
     if (self.gender == Male) {
-        return [NSString stringWithFormat:@"%@. I am teaching %@, and my salary is $%@ with expertise in %@", [super description], _classes, _salary, _areaOfExpertise];
+        return [NSString stringWithFormat:@"%@. I am teaching %@, and my salary is $%@ with expertise in %@", [super description], _classes, _salary, _areaOfExpertise]; // should implement setter and getter, not using instance variable directly
     } else {
         return @"Don't bother about me!";
     }
