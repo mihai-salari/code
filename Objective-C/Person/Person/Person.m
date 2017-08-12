@@ -6,7 +6,7 @@
     return [[self alloc] init];
 }
 
-// MARK: - Initializers
+// MARK: - initializers
 
 // Override init to call Person's designated initializer
 - (id)init {
@@ -36,6 +36,8 @@
     return self;
 }
 
+// MARK: - methods
+
 - (void)saySomething:(NSString *)message {
     NSLog(@"%@", message);
     
@@ -48,6 +50,8 @@
 - (void)sayGoodbye {
     [self saySomething:@"Goodbye!"];
 }
+
+// MARK: - setter and getter
 
 - (NSString *)name {
     if (_fullName) {
