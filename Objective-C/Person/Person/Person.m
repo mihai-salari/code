@@ -1,5 +1,13 @@
 #import "Person.h"
 
+/*
+ NOTE:
+ 
+ The implementation of initializers here is a mess, purely for testing
+ purposes, in practice we should have the designated initializer initialize
+ all our instance variables, which is not the case here.
+ */
+
 @implementation Person
 
 + (id)person {
