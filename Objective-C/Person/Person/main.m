@@ -12,6 +12,12 @@ int main(int argc, const char * argv[]) {
         [p setLastName:@"Bar"];
         [p sayHello];
         
+        Person *pp = [Person personWithFirstName:@"John" andLastName:@"Appleseed"];
+        [pp sayHello];
+        
+        NSLog(@"pp's age is %@", [p age]);
+        NSLog(@"pp's gender is %u", [p gender]);
+        
         SmallPerson *sp = [[SmallPerson alloc] init];
         [sp sayHello];
         
