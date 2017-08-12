@@ -6,46 +6,26 @@
     return [[self alloc] init];
 }
 
+// MARK: - Initializers
+
+// Override init to call Person's designated initializer
 - (id)init {
-    if ((self = [super init])) {
-        _fullName = @"Person";
-        _age = [NSNumber numberWithInt:-1];
-        _gender = Male;
-    }
-    
-    return self;
+    return [self initWithName:@"" age:[NSNumber numberWithInt:-1] gender:Male];
 }
 
 - (id)initWithName:(NSString *)name {
-    if ((self = [super init])) {
-        _fullName = name;
-        _age = [NSNumber numberWithInt:-1];
-        _gender = Male;
-    }
-    
-    return self;
+    return [self initWithName:name age:[NSNumber numberWithInt:-1] gender:Male];
 }
 
 - (id)initWithAge:(NSNumber *)age {
-    if ((self = [super init])) {
-        _fullName = @"Person";
-        _age = age;
-        _gender = Male;
-    }
-    
-    return self;
+    return [self initWithName:@"" age:age gender:Male];
 }
 
 - (id)initWithGender:(Gender)gender {
-    if ((self = [super init])) {
-        _fullName = @"Person";
-        _age = [NSNumber numberWithInt:-1];
-        _gender = gender;
-    }
-    
-    return self;
+    return [self initWithName:@"" age:[NSNumber numberWithInt:-1] gender:gender];
 }
 
+// Designated initializer
 - (id)initWithName:(NSString *)name age:(NSNumber *)age gender:(Gender)gender {
     if ((self = [super init])) {
         _fullName = name;
