@@ -1,7 +1,8 @@
 #### Note ####
 
 Class extension strategies:
-- If you want to add new instance variables to a class or override a method of a class, use __subclassing__
+- If you want to add new instance variables to a class or override a method of a class, use __subclassing__.
+- If you want to hide the implementation of a class, simplify a class's interface, or incorporate more code reuse, create a __class cluster__.
 
 #### Apple References ####
 
