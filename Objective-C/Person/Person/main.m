@@ -24,6 +24,9 @@ int main(int argc, const char * argv[]) {
         } else {
             NSLog(@"Oh fuck, sp3 is something");
         }
+        
+        NSLog(@"p's name is %@", p.name);
+        NSLog(@"p's age is %@", p.age);
     }
     
     return 0;

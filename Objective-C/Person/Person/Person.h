@@ -28,4 +28,15 @@ typedef enum {
 - (void)sayHello;
 - (void)sayGoodbye;
 
+// Setter and getter
+
+- (NSString *)name;
+- (NSNumber *)age;
+- (Gender)gender;
+
+- (void)setName:(NSString *)name;
+- (void)setAge:(NSNumber *)age;
+- (void)setGender:(Gender)gender;
+
+
 @end

@@ -69,4 +69,40 @@
     [self saySomething:@"Goodbye!"];
 }
 
+- (NSString *)name {
+    if (_fullName) {
+        return _fullName;
+    }
+    
+    return @"unknown";
+}
+
+- (NSNumber *)age {
+    if (_age) {
+        return _age;
+    }
+    
+    return [NSNumber numberWithInt:-1];
+}
+
+- (Gender)gender {
+    if (_gender) {
+        return _gender;
+    }
+    
+    return -1;
+}
+
+- (void)setName:(NSString *)name {
+    _fullName = name;
+}
+
+- (void)setAge:(NSNumber *)age {
+    _age = age;
+}
+
+- (void)setGender:(Gender)gender {
+    _gender = gender;
+}
+
 @end
