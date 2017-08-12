@@ -16,18 +16,23 @@ int main(int argc, const char * argv[]) {
         
         Person *pp = [Person personWithFirstName:@"John" andLastName:@"Appleseed"];
         [pp sayHello];
+        [pp setName:@"John Appleseed"];
+        
         
         NSLog(@"pp's age is %@", [p age]);
         NSLog(@"pp's gender is %u", [p gender]);
         
         SmallPerson *sp = [[SmallPerson alloc] init];
         [sp sayHello];
+        [sp setName:@"Small Person"];
         
         Person *p2 = [Person person];
         [p2 sayHello];
+        [p2 setName:@"Person Two"];
         
         SmallPerson *sp2 = [SmallPerson person];
         [sp2 sayGoodbye];
+        [sp2 setName:@"Small Person Two"];
         
         SmallPerson *sp3;
         
