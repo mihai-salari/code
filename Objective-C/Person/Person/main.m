@@ -4,6 +4,8 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        Person __weak *weakP = [[Person alloc] init]; // due to weak reference, deallocated immediately
+        
         Person *p = [[Person alloc] init];
         [p sayHello];
         [p sayGoodbye];

@@ -119,4 +119,8 @@
     }
 }
 
+- (void)dealloc {
+    NSLog(@"%@ is deallocated", self);
+}
+
 @end
