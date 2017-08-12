@@ -15,4 +15,8 @@
     return self;
 }
 
+- (NSString *)description {
+    return @"I am a student only!";
+}
+
 @end

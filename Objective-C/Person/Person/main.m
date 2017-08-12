@@ -27,6 +27,12 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"p's name is %@", p.name);
         NSLog(@"p's age is %@", p.age);
+        
+        p.name = @"Foo Bar";
+        p.gender = Female;
+        p.age = @22;
+        
+        NSLog(@"%@", p);
     }
     
     return 0;
