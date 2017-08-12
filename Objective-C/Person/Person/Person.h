@@ -14,6 +14,7 @@ typedef enum {
 }
 
 @property (nonatomic, copy) NSString *firstName;
+@property (nonatomic) NSMutableString *middleName;
 @property (nonatomic, copy) NSString *lastName;
 @property (nonatomic) NSDate *dateOfBirth;
 
