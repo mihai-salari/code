@@ -13,9 +13,9 @@ typedef enum {
     Gender _gender;
 }
 
-@property (nonatomic, readonly) NSString *firstName;
-@property (nonatomic, readonly) NSString *lastName;
-@property (nonatomic, readonly) NSDate *dateOfBirth;
+@property (nonatomic, copy) NSString *firstName;
+@property (nonatomic, copy) NSString *lastName;
+@property (nonatomic) NSDate *dateOfBirth;
 
 + (id)person;
 

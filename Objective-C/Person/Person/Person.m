@@ -44,7 +44,11 @@
 }
 
 - (void)sayHello {
-    [self saySomething:@"Hello!"];
+    if (self.firstName && self.lastName) {
+        [self saySomething:[NSString stringWithFormat:@"Hello, %@ %@", self.firstName, self.lastName]];
+    } else {
+        [self saySomething:@"Hello!"];
+    }    
 }
 
 - (void)sayGoodbye {

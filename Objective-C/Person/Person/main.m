@@ -8,6 +8,10 @@ int main(int argc, const char * argv[]) {
         [p sayHello];
         [p sayGoodbye];
         
+        [p setFirstName:@"Foo"];
+        [p setLastName:@"Bar"];
+        [p sayHello];
+        
         SmallPerson *sp = [[SmallPerson alloc] init];
         [sp sayHello];
         
@@ -28,7 +32,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"p's name is '%@'.", p.name);
         NSLog(@"p's age is %@.", p.age);
         
-        p.name = @"Foo Bar";
+        p.name = @"Foo Bar Foo";
         p.gender = Female;
         p.age = @22;
         
