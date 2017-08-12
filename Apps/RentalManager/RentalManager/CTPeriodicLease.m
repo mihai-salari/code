@@ -1,13 +1,16 @@
-//
-//  CTPeriodicLease.m
-//  RentalManager
-//
-//  Created by Lee Choon Siong on 2017/08/12.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 #import "CTPeriodicLease.h"
 
 @implementation CTPeriodicLease
+
++ (CTLease *)periodicLeaseWithWeeklyPrice:(float)weeklyPrice {
+    CTPeriodicLease *lease = [CTPeriodicLease alloc];
+    lease.weeklyRental = weeklyPrice;
+    
+    return lease;
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"$%0.2f per week", self.weeklyRental];
+}
 
 @end

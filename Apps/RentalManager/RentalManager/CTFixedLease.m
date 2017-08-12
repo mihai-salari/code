@@ -1,13 +1,17 @@
-//
-//  CTFixedLease.m
-//  RentalManager
-//
-//  Created by Lee Choon Siong on 2017/08/12.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 #import "CTFixedLease.h"
 
 @implementation CTFixedLease
+
++ (CTLease *)fixedTermLeaseWithPrice:(float)totalRental forWeeks:(int)numberOfWeeks {
+    CTFixedLease *lease = [CTFixedLease alloc];
+    lease.totalRental = totalRental;
+    lease.numberOfWeeks = numberOfWeeks;
+    
+    return lease;
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"$%0.2f for %d weeks", self.totalRental, self.numberOfWeeks];
+}
 
 @end
