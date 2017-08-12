@@ -90,7 +90,7 @@
     
     cell.imageView.image = [UIImage imageNamed:imageName];
     
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Rents for $%0.2f per week", property.weeklyRentalPrice];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Rents for RM%0.2f per week", property.weeklyRentalPrice];
     
     //NSLog(@"Rental Property %d", indexPath.row);
     
