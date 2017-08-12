@@ -8,7 +8,7 @@ Some aspects of the application:
 between them
 - Replaced the default ViewController with custom TableViewController and the use of
 NavigationViewController
-- Use of class cluster to hide the implementation details of a lease class
+- Use of class cluster to hide the implementation details of a subclasses
 
 - - -
 
