@@ -105,4 +105,14 @@
     _gender = gender;
 }
 
+// MARK: - overrides
+
+- (NSString *)description {
+    if (self.gender == Male) {
+        return [NSString stringWithFormat:@"Hi! I am a man, named %@, %@ years old", self.name, self.age];
+    } else {
+        return [NSString stringWithFormat:@"Hi! I am a woman, named %@, and %@ years old", self.name, self.age];
+    }
+}
+
 @end
