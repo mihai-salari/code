@@ -18,6 +18,7 @@ typedef enum {
 @property (nonatomic) NSDate *dateOfBirth;
 
 + (id)person;
++ (id)personWithFirstName:(NSString *)firstName andLastName:(NSString *)lastName;
 
 - (id)initWithName:(NSString *)name;
 - (id)initWithAge:(NSNumber *)age;

@@ -6,6 +6,14 @@
     return [[self alloc] init];
 }
 
++ (id)personWithFirstName:(NSString *)firstName andLastName:(NSString *)lastName {
+    Person *p = [[self alloc] init];
+    [p setFirstName:firstName];
+    [p setLastName:lastName];
+    
+    return p;
+}
+
 // MARK: - initializers
 
 // Override init to call Person's designated initializer
