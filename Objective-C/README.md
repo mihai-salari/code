@@ -1,3 +1,8 @@
+#### Note ####
+
+Class extension strategies:
+- If you want to add new instance variables to a class or override a method of a class, use __subclassing__
+
 #### Apple References ####
 
 - [Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/)
