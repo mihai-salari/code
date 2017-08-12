@@ -3,7 +3,7 @@ Class extension strategies:
 - If you want to hide the implementation of a class, simplify a class's interface, or incorporate more code reuse, create a __class cluster__.
 - If you want to add a method to a class, create a __class category__.
 
-#### Apple References ####
+##### Apple References #####
 
 - [Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/)
 - [Concepts in Objective-C Programming](https://developer.apple.com/library/content/documentation/General/Conceptual/CocoaEncyclopedia/)
