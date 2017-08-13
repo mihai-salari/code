@@ -19,7 +19,7 @@
 @end
 
 @interface MyView : UIView {
-    id <animationNotification> delegate;
+    id <animationNotification, NSObject> __unsafe_unretained delegate;
     UIView *boxView;
 }
 

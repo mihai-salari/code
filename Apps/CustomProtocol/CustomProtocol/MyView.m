@@ -10,6 +10,8 @@
 
 @implementation MyView
 
+@synthesize delegate;
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -34,11 +36,17 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:2];
     [UIView setAnimationDelegate:self];
-    [UIView setAnimationWillStartSelector:@selector(<#selector#>)];
-    [UIView setAnimationDidStopSelector:@selector(<#selector#>)];
-    CGRect newFrame = CGRectMake(boxView.frame.x, boxView.frame.y + 100, boxView.frame.size.height, boxView.frame.size.width);
+    [UIView setAnimationWillStartSelector:@selector(animationStarted)];
+    [UIView setAnimationDidStopSelector:@selector(animationStopped)];
+    CGRect newFrame = CGRectMake(boxView.frame.origin.x, boxView.frame.origin.y + 100, boxView.frame.size.height, boxView.frame.size.width);
     [boxView setFrame:newFrame];
     [UIView commitAnimations];
+}
+
+- (void)animationStarted {
+    if ([delegate respondsToSelector:@selector(animationStartedWithView:)]) {
+        [delegate animationStartedWithView:self];
+    }
 }
 
 @end
