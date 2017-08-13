@@ -49,4 +49,10 @@
     }
 }
 
+- (void)animationStopped {
+    if ([delegate respondsToSelector:@selector(animationHasFinishedWithView:)]) {
+        [delegate animationHasFinishedWithView:self];
+    }
+}
+
 @end
