@@ -1,9 +1,13 @@
 #import <Foundation/Foundation.h>
+#import "Parser.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        Parser *p = [[Parser alloc] init];
+        
+        [p testReadonlyElement];
+        NSLog(@"%@", p.element);
     }
+    
     return 0;
 }

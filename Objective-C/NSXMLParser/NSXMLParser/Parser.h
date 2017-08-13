@@ -2,4 +2,10 @@
 
 @interface Parser : NSObject
 
+@property (nonatomic) NSXMLParser *parser;
+@property (nonatomic, readonly, copy) NSString *element;
+
+- (void)testReadonlyElement;
+- (void)setElement:(NSString *)text;
+
 @end
