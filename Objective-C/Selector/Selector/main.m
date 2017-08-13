@@ -6,7 +6,12 @@ int main(int argc, const char * argv[]) {
         SEL selPrintName = @selector(printName);
                 
         Person *p = [Person new];
-        [p printName];
+        
+        if ([p respondsToSelector:selPrintName]) {
+            [p printName];
+        } else {
+            NSLog(@"unknown selector");
+        }
     }
     
     return 0;
