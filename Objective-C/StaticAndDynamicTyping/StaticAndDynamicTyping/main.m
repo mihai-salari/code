@@ -5,8 +5,8 @@ int main(int argc, const char * argv[]) {
         NSString *name = @"Foo Bar"; // static type
         id fullName = @"Foo Bar"; // dynamic type with 'id'
         
-        NSLog(@"name = %@", name);
-        NSLog(@"fullName = %@", fullName);
+        NSLog(@"name = %@", [name uppercaseString]);
+        NSLog(@"fullName = %@", [fullName uppercaseString]);
     }
     
     return 0;
