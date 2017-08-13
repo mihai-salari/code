@@ -1,6 +1,6 @@
 #import <Cocoa/Cocoa.h>
 
-@protocol SomeViewProtocol
+@protocol SomeViewProtocol <NSObject>
 
 - (NSUInteger)numberOfSegments;
 - (CGFloat)sizeOfSegmentAtIndex:(NSUInteger)segmentIndex;
