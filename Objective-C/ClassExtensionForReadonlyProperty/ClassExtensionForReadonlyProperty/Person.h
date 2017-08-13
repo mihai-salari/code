@@ -2,7 +2,7 @@
 
 @interface Person : NSObject
 
-@property (nonatomic, readonly) NSString *nationalID;
+@property (nonatomic, readonly) NSString *nationalID; // readonly for public
 
 - (void)assignNationalID:(NSString *)id;
 

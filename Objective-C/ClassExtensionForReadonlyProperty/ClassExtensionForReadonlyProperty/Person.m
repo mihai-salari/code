@@ -2,7 +2,7 @@
 
 @interface Person ()
 
-@property (nonatomic, readwrite) NSString *nationalID;
+@property (nonatomic, readwrite) NSString *nationalID; // but internally we can readwrite
 
 @end
 
