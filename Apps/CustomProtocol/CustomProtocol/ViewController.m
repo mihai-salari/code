@@ -1,11 +1,3 @@
-//
-//  ViewController.m
-//  CustomProtocol
-//
-//  Created by Lee Choon Siong on 2017/08/13.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 #import "ViewController.h"
 
 @interface ViewController ()
@@ -16,7 +8,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
     myView = [[MyView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [myView setDelegate:self];
@@ -29,15 +20,11 @@
     [self.view addSubview:animateButton];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)animate {
     [myView animate];
 }
+
+// MARK: - animationNotification protoocl
 
 - (void)animationStartedWithView:(UIView *)animatedView {
     NSLog(@"The animation has started");
