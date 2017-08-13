@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Parser : NSObject
+@interface Parser : NSObject <NSXMLParserDelegate>
+
+@property (nonatomic) NSXMLParser *parser;
+@property (nonatomic) NSMutableString *element;
 
 @end

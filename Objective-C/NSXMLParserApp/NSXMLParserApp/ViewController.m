@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Parser.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    __unused Parser *parser = [[Parser alloc] init];
 }
 
 
