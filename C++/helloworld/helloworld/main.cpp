@@ -6,6 +6,8 @@
  * Purpose: Demonstration of a simple program
  *
  * Usage: Run the program and the message appears
+ *
+ * Notes: -
  */
 
 #include <iostream>
