@@ -12,6 +12,8 @@
     if (self = [super init]) {
         self.parser = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSString alloc] initWithContentsOfFile:@"/tmp/text.xml" encoding:NSUTF8StringEncoding error:nil]]];
         
+        NSLog(@"parser is %@", self.parser);
+        
         [self.parser setDelegate:self];
         [self.parser parse];
     }
