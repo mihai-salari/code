@@ -30,4 +30,15 @@
     return self;
 }
 
+- (void)animate {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:2];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationWillStartSelector:@selector(<#selector#>)];
+    [UIView setAnimationDidStopSelector:@selector(<#selector#>)];
+    CGRect newFrame = CGRectMake(boxView.frame.x, boxView.frame.y + 100, boxView.frame.size.height, boxView.frame.size.width);
+    [boxView setFrame:newFrame];
+    [UIView commitAnimations];
+}
+
 @end
