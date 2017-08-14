@@ -10,10 +10,15 @@ void testBlockInFunction() {
         NSLog(@"number is %d", number);
         NSLog(@"anotherNumber is %d", anotherNumber);
         NSLog(@"magicNumber is %d", magicNumber);
+        NSLog(@"block is changing the magicNumber...");
+        
+        magicNumber = 9;
+        
+        NSLog(@"magicNumber is %d", magicNumber);        
     };
     
     anotherNumber = 8; // not affected
-    magicNumber = 42;
+    magicNumber = 42; // affected due to shared storage
     
     testBlock();
 }
