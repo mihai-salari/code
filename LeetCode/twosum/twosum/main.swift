@@ -21,8 +21,23 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
     var nums = nums
     nums = nums.sorted()
     
-    var middle = nums.count / 2
-    return nums
+    var tmpNums = nums
+    let first = tmpNums[0]
+    var result = [Int]()
+    
+    for n in 1...tmpNums.count-1 {
+        if (first + tmpNums[n]) == target {
+            print("found!")
+            result.append(first)
+            result.append(tmpNums[n])
+            
+            break
+        }
+    }
+    
+    // no match found, call the function with reduced numbers    
+    return twoSum(Array(nums.dropFirst(1)), target)
+
 }
 
 print(twoSum([9, 3, 1, -10, -2], 1))
