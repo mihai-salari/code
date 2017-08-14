@@ -20,7 +20,7 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
     var result = [Int]() // initialize empty array to store the result
     var count = 0 // to keep track of current first index
     
-    func r(_ nums: [Int], _ target: Int, _ result: inout [Int], _ count: inout Int) -> [Int] {
+    func r(_ nums: [Int], _ target: Int, _ result: inout    [Int], _ count: inout Int) -> [Int] {
         let tmpNums = nums
         let first = tmpNums[0]
         
