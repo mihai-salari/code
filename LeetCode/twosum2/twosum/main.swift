@@ -22,32 +22,30 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
     var result = [Int]()
     var count = 0
     
-    func r(_ nums: [Int], _ target: Int, _ result: inout [Int], _ count: inout Int) {
+    func r(_ nums: [Int], _ target: Int, _ result: inout [Int], _ count: inout Int) -> [Int] {
         let tmpNums = nums
         let first = tmpNums[0]
         
-        if (tmpNums.count - 1 == 0) { // only one element left, no need to go further
-            return
-        } else {
-            for n in 1...tmpNums.count-1 {
-                if (first + tmpNums[n]) == target {
-                    print("found!")
-                    result.append(count)
-                    result.append(count + n)
-                    
-                    break
-                }
+        guard tmpNums.count - 1 != 0 else {
+            return result
+        }
+        
+        for n in 1...tmpNums.count-1 {
+            if (first + tmpNums[n]) == target {
+                print("found!")
+                result.append(count)
+                result.append(count + n)
+                
+                return result
             }
         }
         
         count += 1
         
-        r(Array(nums.dropFirst(1)), target, &result, &count)
+        return r(Array(nums.dropFirst(1)), target, &result, &count)
     }
     
-    r(nums, target, &result, &count)
-    
-    return result
+    return r(nums, target, &result, &count)
 }
 
 print(twoSum([9, 3, 1, -10, -2], 4))
