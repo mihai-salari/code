@@ -1,5 +1,14 @@
 #!/bin/bash -
 
+##################################################################################################################
+# Note:
+#
+# This script is only use to check whether there's any new 'failed to fetch greeting' error in server.log. 
+# Everytime the script runs, it will compare the latest grep result to a previous result file. If there's a difference,
+# then new 'failed to fetch greeting' error is found and SMS will be send to notify the user.
+# The script will run every hour, and should have enough time before the server.log files get rotated.
+##################################################################################################################
+
 CONF_FILE='/home/tecnotree/bin/fetch_greeting_failed_config.txt'
 
 DATE=`date +%m/%d/%Y`
