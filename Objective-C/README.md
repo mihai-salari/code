@@ -23,3 +23,9 @@ Class extension strategies:
 
 - [Predicate Programming Guide](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Predicates/)
 - [String Programming Guide](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/)
+
+##### Apps #####
+
+- [App Programming Guide for iOS](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/)
+- [Mac App Programming Guide](https://developer.apple.com/library/content/documentation/General/Conceptual/MOSXAppProgrammingGuide/)
+- [Document-Based App Programming Guide for Mac](https://developer.apple.com/library/content/documentation/DataManagement/Conceptual/DocBasedAppProgrammingGuideForOSX/)
