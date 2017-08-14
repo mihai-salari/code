@@ -20,18 +20,11 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
     let tmpNums = nums
     let first = tmpNums[0]
     var result = [Int]()
+    var count = 0
     
-    print("tmpNums = \(tmpNums)")
-    print("first = \(tmpNums[0])")
-    print("result = \(result)")
-    
-    func r(_ nums: [Int], _ target: Int, _ result: inout [Int]) {
+    func r(_ nums: [Int], _ target: Int, _ result: inout [Int], _ count: inout Int) {
         let tmpNums = nums
         let first = tmpNums[0]
-        
-        print("tmpNums = \(tmpNums)")
-        print("first = \(first)")
-        print("tmpNums.count - 1 = \(tmpNums.count - 1)")
         
         if (tmpNums.count - 1 == 0) { // only one element left, no need to go further
             return
@@ -39,28 +32,26 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
             for n in 1...tmpNums.count-1 {
                 if (first + tmpNums[n]) == target {
                     print("found!")
-                    result.append(first)
-                    result.append(tmpNums[n])
+                    result.append(count)
+                    result.append(count + n)
                     
                     break
                 }
             }
         }
         
-        r(Array(nums.dropFirst(1)), target, &result)
+        count += 1
+        
+        r(Array(nums.dropFirst(1)), target, &result, &count)
     }
     
-    r(nums, target, &result)
+    r(nums, target, &result, &count)
     
-    let x = nums.index(of: result[0])
-    let y = nums.index(of: result[1])
-    
-    let answer = [x!, y!]
-    
-    return answer
+    return result
 }
 
 print(twoSum([9, 3, 1, -10, -2], 4))
+print(twoSum([3, 3], 6))
 
 /*
  
