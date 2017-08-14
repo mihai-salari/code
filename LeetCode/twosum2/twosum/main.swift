@@ -17,8 +17,6 @@
 import Foundation
 
 func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-    let tmpNums = nums
-    let first = tmpNums[0]
     var result = [Int]()
     var count = 0
     
