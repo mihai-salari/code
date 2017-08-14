@@ -3,14 +3,17 @@
 void testBlockInFunction() {
     int number = 42;
     int anotherNumber = 88;
+    __block int magicNumber = 1;
     
     void (^testBlock)(void) = ^{
         //printf("number is %d\n", number);
         NSLog(@"number is %d", number);
-        NSLog(@"number is %d", anotherNumber);
+        NSLog(@"anotherNumber is %d", anotherNumber);
+        NSLog(@"magicNumber is %d", magicNumber);
     };
     
     anotherNumber = 8; // not affected
+    magicNumber = 42;
     
     testBlock();
 }
