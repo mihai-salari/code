@@ -14,7 +14,7 @@ void testBlockInFunction() {
         
         magicNumber = 9;
         
-        NSLog(@"magicNumber is %d", magicNumber);        
+        NSLog(@"magicNumber is %d", magicNumber);
     };
     
     anotherNumber = 8; // not affected
