@@ -30,7 +30,6 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         
         for n in 1...tmpNums.count-1 {
             if (first + tmpNums[n]) == target {
-                print("found!")
                 result.append(count)
                 result.append(count + n)
                 
@@ -38,6 +37,7 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
             }
         }
         
+        // no match found, increase index
         count += 1
         
         return r(Array(nums.dropFirst(1)), target, &result, &count)
