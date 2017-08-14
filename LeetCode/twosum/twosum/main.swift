@@ -12,9 +12,17 @@
 // Because nums[0] + nums[1] = 2 + 7 = 9,
 //
 // return [0, 1].
+//
 
 import Foundation
 
 func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+    // sort the array
+    var nums = nums
+    nums = nums.sorted()
     
+    var middle = nums.count / 2
+    return nums
 }
+
+print(twoSum([9, 3, 1, -10, -2], 1))
