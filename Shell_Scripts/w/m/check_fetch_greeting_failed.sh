@@ -25,13 +25,16 @@ fi
 grep -i 'failed to fetch greeting' $JBOSS_SERVER_LOG* > $TMP_GREP_FILE
 
 # cut the needed fields
-cat $TMP_GREP_FILE | cut -d ' ' -f 1,2,9 > $TMP_RESULT_FILE
+cat $TMP_GREP_FILE | cut -d ' ' -f 1,2,9 > $TMP_CUT_RESULT_FILE
+
+# remove the server.log file in front, keep only date, time, and greeting wav path
+cat $TMP_CUT_RESULT_FILE | cut -d : -f 2- > $TMP_RESULT_FILE
 
 # compare the latest grep result to previous one
 diff $RESULT_FILE $TMP_RESULT_FILE > $TMP_DIFF_RESULT
 
 # to remove the diff info message at the top of the file
-grep -i 'server.log' $TMP_DIFF_RESULT > $DIFF_RESULT
+grep -i 'messages' $TMP_DIFF_RESULT > $DIFF_RESULT
 
 # get number of lines in the diff result file, if 0 line means no new error found
 diff_line=$(wc -l "$DIFF_RESULT" | awk '{print $1}')
