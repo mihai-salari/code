@@ -34,5 +34,6 @@ if [ $diff_line != "0" ]; then
 	        curl "http://$SMS_SERVER/send?sms_dest=$recipient&sms_source=$SMS_SENDER&sms_valid_rel=500&sms_text=$SMS_TEXT HTTP/1.0"
 	done
 	
+	# update to use the new found fetch error result file
 	mv $TMP_RESULT_FILE $RESULT_FILE
 fi
