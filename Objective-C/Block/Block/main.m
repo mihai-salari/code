@@ -8,7 +8,7 @@ int main(int argc, const char * argv[]) {
         
         simpleBlock();
         
-        NSArray *blocks = @[simpleBlock];
+        NSArray *blocks = @[simpleBlock]; // block is object, so we can store in array
         NSLog(@"block is %@", blocks[0]);
     }
     
