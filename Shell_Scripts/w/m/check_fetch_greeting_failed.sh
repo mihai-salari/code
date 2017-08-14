@@ -7,9 +7,6 @@
 #
 # Everytime the script runs, it will compare the latest grep result to a previous result file. If there's a difference,
 # then SMS will be send to notify the user.
-#
-# Kindly note that due to log rotation, the same error message will rotate to a different log file after certain
-# period, therefore, the recipient of the SMS has to manually verify whethere it is a new issue or not.
 ##################################################################################################################
 
 CONF_FILE='/home/tecnotree/bin/fetch_greeting_failed_config.txt'
