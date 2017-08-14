@@ -7,6 +7,9 @@ int main(int argc, const char * argv[]) {
         };
         
         simpleBlock();
+        
+        NSArray *blocks = @[simpleBlock];
+        NSLog(@"block is %@", blocks[0]);
     }
     
     return 0;
