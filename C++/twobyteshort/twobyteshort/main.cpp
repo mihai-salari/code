@@ -13,6 +13,7 @@ int main(int argc, const char * argv[]) {
     std::cout << zip << "\n";
     
     zip = 92126;
+    std::cout << zip << "\n";
     /*
      92126 - 32767 = 59359
      59359 - 32768 = 26591
