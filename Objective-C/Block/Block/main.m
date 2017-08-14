@@ -2,11 +2,15 @@
 
 void testBlockInFunction() {
     int number = 42;
+    int anotherNumber = 88;
     
     void (^testBlock)(void) = ^{
         //printf("number is %d\n", number);
         NSLog(@"number is %d", number);
+        NSLog(@"number is %d", anotherNumber);
     };
+    
+    anotherNumber = 8; // not affected
     
     testBlock();
 }
@@ -34,7 +38,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"9 x 9 = %g", multiplyTwoValues(9, 9));
         
         // Blocks can capture values from the enclosing scope
-        testBlockInFunction();        
+        testBlockInFunction();
     }
     
     return 0;
