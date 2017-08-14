@@ -3,8 +3,10 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         void (^simpleBlock)(void) = ^{
-            NSLog(@"This is a block");
+            NSLog(@"This is a simple block.");
         };
+        
+        simpleBlock();
     }
     
     return 0;
