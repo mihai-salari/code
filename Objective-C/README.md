@@ -15,6 +15,7 @@ Class extension strategies:
 - [Objective-C](https://developer.apple.com/documentation/objectivec)
 - [Objective-C Runtime](https://developer.apple.com/documentation/objectivec/objective_c_runtime)
 - [Objective-C Runtime Programming Guide](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/)
+- [Concurrency Programming Guide](https://developer.apple.com/library/content/documentation/General/Conceptual/ConcurrencyProgrammingGuide/)
 
 ##### Classes #####
 
