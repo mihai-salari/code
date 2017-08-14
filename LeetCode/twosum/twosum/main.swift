@@ -17,27 +17,42 @@
 import Foundation
 
 func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-    // sort the array
-    var nums = nums
-    nums = nums.sorted()
-    
-    var tmpNums = nums
+    let tmpNums = nums
     let first = tmpNums[0]
     var result = [Int]()
     
-    for n in 1...tmpNums.count-1 {
-        if (first + tmpNums[n]) == target {
-            print("found!")
-            result.append(first)
-            result.append(tmpNums[n])
-            
-            break
-        }
+    print("tmpNums = \(tmpNums)")
+    print("first = \(tmpNums[0])")
+    print("result = \(result)")
+    
+    func r(_ nums: [Int], _ target: Int, _ result: inout [Int]) {
+        let tmpNums = nums
+        let first = tmpNums[0]
+        
+        print("tmpNums = \(tmpNums)")
+        print("first = \(first)")
+        print("tmpNums.count - 1 = \(tmpNums.count - 1)")
+        
+        if (tmpNums.count - 1 == 0) { // only one element left, no need to go further
+            return
+        } else {
+            for n in 1...tmpNums.count-1 {
+                if (first + tmpNums[n]) == target {
+                    print("found!")
+                    result.append(first)
+                    result.append(tmpNums[n])
+                    
+                    break
+                }
+            }
+        }        
+        
+        r(Array(nums.dropFirst(1)), target, &result)
     }
     
-    // no match found, call the function with reduced numbers    
-    return twoSum(Array(nums.dropFirst(1)), target)
-
+    r(nums, target, &result)
+    
+    return result
 }
 
-print(twoSum([9, 3, 1, -10, -2], 1))
+print(twoSum([9, 3, 1, -10, -2], 4))
