@@ -6,5 +6,6 @@
 
 - (void)printNameWithBlock:(void (^)(id))aBlock;
 - (void)testSelfBlock;
+- (void)testSelfBlockWithoutStrong;
 
 @end
