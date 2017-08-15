@@ -3,6 +3,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSArray *originalStrings = @[@"Kuala Lumpur", @"Johor", @"Penang", @"Sabah", @"Sarawak", @"Selangor"];
+
         NSLog(@"original strings: %@", originalStrings);
         
         NSMutableArray *devowelizedStrings = [NSMutableArray array];
@@ -27,6 +28,11 @@ int main(int argc, const char * argv[]) {
             
             [devowelizedStrings addObject:newString];
         };
+        
+        // Iterate over the array with block
+        [originalStrings enumerateObjectsUsingBlock:devowelizer];
+        
+        NSLog(@"devowelized strings: %@", devowelizedStrings);
     }
     
     return 0;
