@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
 
 //
-// typedef belong at the top of the file or in a header,
-// outside of any method implementation.
+// typedefs belong at the top of the file or in a header,
+// outside of any method implementations.
 //
 
 typedef void (^StringDevowelizerBlock)(id, NSUInteger, BOOL *);
