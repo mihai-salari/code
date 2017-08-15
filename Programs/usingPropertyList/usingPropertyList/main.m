@@ -15,7 +15,7 @@ int main(int argc, const char * argv[]) {
         [person setObject:@28 forKey:@"age"];
         [persons addObject:person];
         
-        [persons writeToFile:@"person.plist" atomically:YES];
+        [persons writeToFile:@"/Users/choonsiong/Code/Programs/usingPropertyList/person.plist" atomically:YES];
     }
     
     return 0;
