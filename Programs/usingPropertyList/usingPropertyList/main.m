@@ -11,6 +11,7 @@ int main(int argc, const char * argv[]) {
         
         [persons addObject:person];
         
+        [persons writeToFile:@"person.plist" atomically:YES];
     }
     
     return 0;
