@@ -5,6 +5,9 @@
  Original intention is to demonstrate the problem of strong reference cycle
  while reference self inside a block, but seems in this example, the strong
  reference cycle is not created.
+ 
+ Nevertheless, I include the example to break the strong reference cycle in a
+ block for demonstration purpose.
  */
 
 int main(int argc, const char * argv[]) {
@@ -22,6 +25,7 @@ int main(int argc, const char * argv[]) {
         
         // Call another block
         [p testSelfBlock];
+        [p testSelfBlockWithoutStrong];
     }
     
     return 0;

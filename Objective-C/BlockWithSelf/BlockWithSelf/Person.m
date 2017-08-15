@@ -17,12 +17,12 @@
 - (void)testSelfBlockWithoutStrong {
     __weak Person *weakSelf = self; // weak reference
     
-    void (^myBlock2)(void) = ^{
+    void (^myBlock3)(void) = ^{
         Person *innerself = weakSelf; // block local strong reference, so that the object that 'weakSelf' points to will not deallocated while the block is executing
         NSLog(@"My name is %@", innerself.name);
     };
     
-    myBlock2();
+    myBlock3();
 }
 
 - (void)dealloc {
