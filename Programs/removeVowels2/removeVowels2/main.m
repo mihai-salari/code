@@ -1,5 +1,12 @@
 #import <Foundation/Foundation.h>
 
+//
+// typedef belong at the top of the file or in a header,
+// outside of any method implementation.
+//
+
+typedef void (^StringDevowelizerBlock)(id, NSUInteger, BOOL *);
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSArray *originalStrings = @[@"Kuala Lumpur", @"Johor", @"Penang", @"Sabah", @"Sarawak", @"Selangor"];
@@ -9,11 +16,8 @@ int main(int argc, const char * argv[]) {
         NSMutableArray *devowelizedStrings = [NSMutableArray array];
         NSArray *vowels = @[@"a", @"e", @"i", @"o", @"u"];
         
-        // Declare the block variable
-        void (^devowelizer)(id, NSUInteger, BOOL *);
-        
-        // Compose a block and assign it to the block variable
-        devowelizer = ^(id string, NSUInteger i, BOOL *stop) {
+        // Declare and compose a block and assign it to the block variable
+        StringDevowelizerBlock devowelizer = ^(id string, NSUInteger i, BOOL *stop) {
             NSLog(@"string is %@, index is %lu", string, i);
             
             NSRange sRange = [string rangeOfString:@"s" options:NSCaseInsensitiveSearch];
