@@ -3,7 +3,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSArray *originalStrings = @[@"Kuala Lumpur", @"Johor", @"Penang", @"Sabah", @"Sarawak", @"Selangor"];
-
+        
         NSLog(@"original strings: %@", originalStrings);
         
         NSMutableArray *devowelizedStrings = [NSMutableArray array];
@@ -49,27 +49,3 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
-
-/*
-
- 2017-08-15 13:13:20.793040+0800 removeVowels[2517:107218] original strings: (
- "Kuala Lumpur",
- Johor,
- Penang,
- Sabah,
- Sarawak,
- Selangor
- )
- 2017-08-15 13:13:20.793200+0800 removeVowels[2517:107218] string is Kuala Lumpur, index is 0
- 2017-08-15 13:13:20.793271+0800 removeVowels[2517:107218] string is Johor, index is 1
- 2017-08-15 13:13:20.793294+0800 removeVowels[2517:107218] string is Penang, index is 2
- 2017-08-15 13:13:20.793306+0800 removeVowels[2517:107218] string is Sabah, index is 3
- 2017-08-15 13:13:20.793313+0800 removeVowels[2517:107218] Oops, found a s, I am out!
- 2017-08-15 13:13:20.793361+0800 removeVowels[2517:107218] devowelized strings: (
- "Kl Lmpr",
- Jhr,
- Pnng
- )
- Program ended with exit code: 0
-
-*/
