@@ -5,5 +5,6 @@
 @property (nonatomic) NSString *name;
 
 - (void)printNameWithBlock:(void (^)(id))aBlock;
+- (void)testSelfBlock;
 
 @end

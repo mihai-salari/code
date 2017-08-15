@@ -1,6 +1,12 @@
 #import <Foundation/Foundation.h>
 #import "Person.h"
 
+/*
+ Original intention is to demonstrate the problem of strong reference cycle
+ while reference self inside a block, but seems in this example, the strong
+ reference cycle is not created.
+ */
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Person *p = [Person new];
@@ -13,6 +19,9 @@ int main(int argc, const char * argv[]) {
         
         // Call the block
         [p printNameWithBlock:myBlock];
+        
+        // Call another block
+        [p testSelfBlock];
     }
     
     return 0;
