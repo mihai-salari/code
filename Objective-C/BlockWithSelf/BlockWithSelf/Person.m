@@ -8,6 +8,7 @@
 
 - (void)testSelfBlock {
     void (^myBlock2)(void) = ^{
+        NSLog(@"I am %@", self);
         NSLog(@"My name is %@", self.name);
     };
     
