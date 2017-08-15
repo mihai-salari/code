@@ -1,17 +1,19 @@
-//
-//  main.m
-//  BlockWithSelf
-//
-//  Created by Lee Choon Siong on 2017/08/15.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
+#import "Person.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        Person *p = [Person new];
+        p.name = @"Foo Bar";
+        
+        // Declare a block
+        void (^myBlock)(id) = ^ (id person) {
+            NSLog(@"My name is %@", [person name]);
+        };
+        
+        // Call the block
+        [p printNameWithBlock:myBlock];
     }
+    
     return 0;
 }
