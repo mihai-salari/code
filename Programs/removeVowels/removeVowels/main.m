@@ -37,3 +37,25 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
+
+/*
+
+ 2017-08-15 13:01:24.251048+0800 removeVowels[2253:99535] original strings: (
+ "Kuala Lumpur",
+ Johor,
+ Penang,
+ Sabah,
+ Sarawak,
+ Selangor
+ )
+ 2017-08-15 13:01:24.251432+0800 removeVowels[2253:99535] devowelized strings: (
+ "Kl Lmpr",
+ Jhr,
+ Pnng,
+ Sbh,
+ Srwk,
+ Slngr
+ )
+ Program ended with exit code: 0
+
+*/
