@@ -5,7 +5,12 @@ int main(int argc, const char * argv[]) {
         NSMutableString *msg = [NSMutableString stringWithFormat:@"hello world"];
         NSLog(@"%@", msg);
         
-        [msg release];
+        // No longer needed in ARC
+        //[msg release];
+        
+        msg = nil;
+        
+        NSLog(@"%@ is %lu long", msg, [msg length]);
     }
     
     return 0;
