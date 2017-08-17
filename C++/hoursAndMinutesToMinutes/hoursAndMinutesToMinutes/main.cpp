@@ -1,9 +1,9 @@
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-    double hour;
-    double minute;
-    double totalMinutes;
+    int hour;
+    int minute;
+    int totalMinutes;
     
     std::cout << "Enter hours and minutes (separate by space): ";
     std::cin >> hour >> minute;
