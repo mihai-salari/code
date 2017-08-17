@@ -1,5 +1,13 @@
 #import "AppDelegate.h"
 
+// Helper functions
+
+NSString *documentPath() {
+    NSArray *pathList = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    return [pathList [0] stringByAppendingPathComponent:@"taskData.xml"];
+}
+
 @interface AppDelegate ()
 
 @end
