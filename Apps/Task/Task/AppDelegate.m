@@ -7,6 +7,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Create empty tasks array
+    self.tasks = [NSMutableArray array];
+    
     // Create and configure the UIWindow instance
     CGRect windowFrame = [[UIScreen mainScreen] bounds]; // get screen size
     UIWindow *mainWindow = [[UIWindow alloc] initWithFrame:windowFrame];
@@ -32,6 +35,7 @@
     // Create and configure the UITableView instance
     self.taskTable = [[UITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
     [self.taskTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"]; // tell the table view which class to instantiate whenever it needs to create a new cell
+    self.taskTable.dataSource = self;
     [self.mainView addSubview:self.taskTable];
     
     // Create and configure the UITextField instance, where new tasks will be entered
@@ -53,6 +57,22 @@
     return YES;
 }
 
+// MARK: - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.tasks count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *c = [self.taskTable dequeueReusableCellWithIdentifier:@"Cell"]; // check for reusable cell, before creating new cell
+    NSString *item = [self.tasks objectAtIndex:indexPath.row];
+    c.textLabel.text = item;
+    
+    return c;
+}
+
+// MARK: - Actions
+
 - (void)addTask:(id)sender {
     NSString *text = [self.taskField text];
     
@@ -61,6 +81,9 @@
     }
     
     NSLog(@"Task entered: %@", text);
+    
+    [self.tasks addObject:text];
+    [self.taskTable reloadData]; // refresh the table so that new item shows up
     
     [self.taskField setText:@""];
     [self.taskField resignFirstResponder];
