@@ -11,6 +11,10 @@ int main(int argc, const char * argv[]) {
         
         // or use default zone
         NSZone *defaultZone = NSDefaultMallocZone();
+        
+        NSString *defaultText = [[NSString allocWithZone:defaultZone] init];
+        
+        defaultText = @"hello";
     }
     
     return 0;
