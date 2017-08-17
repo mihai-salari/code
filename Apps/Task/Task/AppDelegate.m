@@ -15,7 +15,7 @@
     
     self.window = mainWindow;
     self.window.rootViewController = mainVC;
-    [self.window setBackgroundColor:[UIColor redColor]];
+    [self.window setBackgroundColor:[UIColor lightGrayColor]];
     
     CGRect tableFrame = CGRectMake(0, 80, windowFrame.size.width, windowFrame.size.height - 100);
     CGRect fieldFrame = CGRectMake(20, 40, 200, 31);
@@ -23,8 +23,12 @@
     
     self.taskTable = [[UITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
     [self.taskTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-    
     [self.window addSubview:self.taskTable];
+    
+    self.taskField = [[UITextField alloc] initWithFrame:fieldFrame];
+    self.taskField.borderStyle = UITextBorderStyleRoundedRect;
+    self.taskField.placeholder = @"Type a task, tap Insert";
+    [self.window addSubview:self.taskField];
     
     [self.window makeKeyAndVisible];
     
