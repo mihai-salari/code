@@ -30,7 +30,12 @@ int main(int argc, const char * argv[]) {
     
     std::cout << fullName << "\n";
     
+    char age[5];
     
+    std::cout << "Enter your age: ";
+    std::getline(std::cin, test);
+    
+    std::cout << "You are " << age << "years old\n";
     
     return 0;
 }
