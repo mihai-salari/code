@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-    double minutes;
+    int minutes;
     int hour;
     int minute;
     
