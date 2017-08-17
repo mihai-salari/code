@@ -15,8 +15,14 @@ NSString *documentPath() {
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Create empty tasks array
-    self.tasks = [NSMutableArray array];
+    // Load an existing dataset or create a new one
+    NSArray *pList = [NSArray arrayWithContentsOfFile:documentPath()];
+    
+    if (pList) {
+        self.tasks = [pList mutableCopy]; // load the data
+    } else {
+        self.tasks = [NSMutableArray array]; // create new empty tasks array
+    }
     
     // Create and configure the UIWindow instance
     CGRect windowFrame = [[UIScreen mainScreen] bounds]; // get screen size
@@ -63,6 +69,11 @@ NSString *documentPath() {
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    // Save our tasks
+    [self.tasks writeToFile:documentPath() atomically:YES];
 }
 
 // MARK: - UITableViewDataSource
