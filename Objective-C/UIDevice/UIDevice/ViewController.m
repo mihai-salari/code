@@ -8,9 +8,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
+
     UIDevice *device = [UIDevice currentDevice];
+    
+    BOOL backgroundSupported = NO;
+    
+    if ([device respondsToSelector:@selector(isMultitaskingSupported)]) {
+        backgroundSupported = device.multitaskingSupported;
+        NSLog(@"Cool, we have multitasking supported!");
+    } else {
+        NSLog(@"Cool, we are in the 40s!");
+    }
     
 }
 
