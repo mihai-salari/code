@@ -1,7 +1,9 @@
 #include <iostream>
+#include <cstring>
 
 int main(int argc, const char * argv[]) {
     char name[4];
+    char anotherName[4];
     
     name[0] = 'F';
     name[1] = 'o';
@@ -9,6 +11,14 @@ int main(int argc, const char * argv[]) {
     name[3] = '\0';
     
     std::cout << name << "\n";
+    
+    // Illegal assignment
+    // anotherName = name;
+    
+    // Use strcpy
+    std::strcpy(anotherName, name);
+    
+    std::cout << anotherName << "\n";
     
     return 0;
 }
