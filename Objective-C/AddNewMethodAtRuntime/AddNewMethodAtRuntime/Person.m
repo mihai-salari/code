@@ -1,4 +1,5 @@
 #import "Person.h"
+#import <objc/runtime.h>
 
 @implementation Person
 
@@ -8,8 +9,8 @@ void aSimpleDynamicMethodIMP(id self, SEL _cmd) {
 
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     if (sel == @selector(aSimpleDynamicMethod)) {
-//        NSLog(@"Adding a method named %@ to class %@", NSStringFromSelector(sel), NSStringFromClass([self class]));
-        class_addMethod([self class], sel, (IMP)aSimpleDynamicMethodIMP, "v@:");
+        NSLog(@"Adding a method named %@ to class %@", NSStringFromSelector(sel), NSStringFromClass([self class]));
+        class_addMethod([self class], sel, (IMP) aSimpleDynamicMethodIMP, "v@:");
         
         return YES;
     }
