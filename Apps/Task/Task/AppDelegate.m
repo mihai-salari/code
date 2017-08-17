@@ -30,6 +30,11 @@
     self.taskField.placeholder = @"Type a task, tap Insert";
     [self.window addSubview:self.taskField];
     
+    self.insertButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.insertButton.frame = buttonFrame;
+    [self.insertButton setTitle:@"Insert" forState:UIControlStateNormal];
+    [self.window addSubview:self.insertButton];
+    
     [self.window makeKeyAndVisible];
     
     return YES;
