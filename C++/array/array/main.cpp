@@ -1,6 +1,7 @@
 #include <iostream>
 
 float data[5];
+float anotherData[10];
 float total;
 float average;
 
@@ -16,6 +17,9 @@ int main(int argc, const char * argv[]) {
     
     std::cout << "Total: " << total << "\n";
     std::cout << "Average: " << average << "\n";
+    
+    // C++ does not allow one array to be assigned to another
+    //anotherData = data;
     
     return 0;
 }
