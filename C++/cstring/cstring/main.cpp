@@ -20,5 +20,15 @@ int main(int argc, const char * argv[]) {
     
     std::cout << anotherName << "\n";
     
+    char firstName[] = "Foo";
+    char lastName[] = "Bar";
+    char fullName[100];
+    
+    strcpy(fullName, firstName);
+    strcat(fullName, " ");
+    strcat(fullName, lastName);
+    
+    std::cout << fullName << "\n";
+    
     return 0;
 }
