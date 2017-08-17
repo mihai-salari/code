@@ -3,6 +3,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic) UIView *mainView;
 @property (nonatomic) UITableView *taskTable;
 @property (nonatomic) UITextField *taskField;
 @property (nonatomic) UIButton *insertButton;
