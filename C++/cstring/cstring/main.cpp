@@ -33,9 +33,9 @@ int main(int argc, const char * argv[]) {
     char age[5];
     
     std::cout << "Enter your age: ";
-    std::getline(std::cin, test);
+    gets(age); // std::getline is not working for c string...
     
-    std::cout << "You are " << age << "years old\n";
+    std::cout << "You are " << age << " years old.\n";
     
     return 0;
 }
