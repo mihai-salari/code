@@ -15,9 +15,6 @@ int main(int argc, const char * argv[]) {
         NSString *defaultText = [[NSString allocWithZone:defaultZone] init];
         
         defaultText = @"hello";
-        
-        // which memory zone, zone is not available in ARC
-        // NSZone *zoneOfText = [text zone];
     }
     
     return 0;
