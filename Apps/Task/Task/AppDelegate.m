@@ -10,8 +10,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     CGRect windowFrame = [[UIScreen mainScreen] bounds];
     UIWindow *mainWindow = [[UIWindow alloc] initWithFrame:windowFrame];
+    
+    UIViewController *mainVC = [[UIViewController alloc] init];
+    
     self.window = mainWindow;
+    self.window.rootViewController = mainVC;
     [self.window setBackgroundColor:[UIColor redColor]];
+    
+    CGRect tableFrame = CGRectMake(0, 80, windowFrame.size.width, windowFrame.size.height - 100);
+    CGRect fieldFrame = CGRectMake(20, 40, 200, 31);
+    CGRect buttonFrame = CGRectMake(228, 40, 72, 31);
+    
+    self.taskTable = [[UITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
+    [self.taskTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    
+    [self.window addSubview:self.taskTable];
+    
     [self.window makeKeyAndVisible];
     
     return YES;
