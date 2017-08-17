@@ -3,6 +3,7 @@
 
 @implementation Person
 
+// C function for runtime method implementation
 void aSimpleDynamicMethodIMP(id self, SEL _cmd) {
     NSLog(@"You called a method named %@", NSStringFromSelector(_cmd));
 }

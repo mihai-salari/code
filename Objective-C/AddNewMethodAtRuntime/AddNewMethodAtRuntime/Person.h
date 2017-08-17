@@ -2,6 +2,4 @@
 
 @interface Person : NSObject
 
-+ (BOOL)resolveInstanceMethod:(SEL)sel;
-
 @end
