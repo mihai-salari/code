@@ -6,6 +6,13 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
+    int i = 100;
+    
+    while (i >= 0) {
+        NSBeep();
+        sleep(2);
+        i--;
+    }
 }
 
 
