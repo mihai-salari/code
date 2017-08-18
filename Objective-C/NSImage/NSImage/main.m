@@ -1,6 +1,5 @@
 #import <Cocoa/Cocoa.h>
 
-
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         id url = [NSURL URLWithString:@"https://pbs.twimg.com/media/DHccSZNUIAApnlS.jpg"];
