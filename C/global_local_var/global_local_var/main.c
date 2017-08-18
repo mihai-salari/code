@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int gNumber;
+int gNumber; // global variable - out of any functions
 
 void printNumber();
 
@@ -11,7 +11,7 @@ int main(int argc, const char * argv[]) {
 }
 
 void printNumber() {
-    int lNumber = 2;
+    int lNumber = 2; // local variable - inside a function
     gNumber = 3;
     
     int number = lNumber + gNumber;
