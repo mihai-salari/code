@@ -57,3 +57,24 @@ float cost_with_sales_tax(float price) {
     
     return subTotal;
 }
+
+/*
+
+ 
+ Adding 5 items of cost $1599.00
+ Subtotal for 5 items: $8474.70
+ Adding 1 items of cost $1299.95
+ Subtotal for 6 items: $9852.65
+ Adding 4 items of cost $399.00
+ Subtotal for 10 items: $11544.41
+ -------------------------------------------------------------
+ TOTAL for 10 items: $11544.41
+ 
+ ==================
+ APPROVAL STATUS
+ ==================
+ Damn, you're over budget.
+ 
+ Program ended with exit code: 0
+
+*/
