@@ -5,6 +5,12 @@ int main(int argc, const char * argv[]) {
     int *numbers;
     numbers = malloc(sizeof(int) * 10); // to hold 10 int
     
+    int *startOfNumbers;
+    startOfNumbers = numbers;
+    
+    printf("Start memory address of numbers: %p\n", numbers);
+    printf("Start memory address of startOfNumbers: %p\n", startOfNumbers);
+    
     for (int i = 0; i < 10; i++) {
         *numbers = i;
         numbers++;
@@ -19,6 +25,8 @@ int main(int argc, const char * argv[]) {
     }
     
     printf("memory address is %p, number is %i\n", numbers, *numbers);
+    
+    free(startOfNumbers);
     
     return 0;
 }
