@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+// If use the 'static' with a global variable, it will only be visible
+// within the same file. Therefore in a larger program, multiple global vars
+// with same name won't collide.
+static int count;
+
 void static_function() {
     // If you want a local variable to keep its value even after
     // the function ends, use the 'static' keyword
