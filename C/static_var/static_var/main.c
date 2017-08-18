@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 void static_function() {
-    static int number = 1; // the value will remains after function returned
+    // If you want a local variable to keep its value even after
+    // the function ends, use the 'static' keyword
+    static int number = 1;
     
     printf("This number has been called %i times\n", number);
     
