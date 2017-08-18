@@ -28,5 +28,9 @@ int main(int argc, const char * argv[]) {
     
     free(startOfNumbers);
     
+    // Be careful when using free, make sure we are pointing to the beginning
+    // of the memory address, below numbers is pointing to one slice before
+    //free(numbers);
+    
     return 0;
 }
