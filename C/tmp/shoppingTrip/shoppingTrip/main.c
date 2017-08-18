@@ -8,12 +8,39 @@ void add_to_total(float cost, int quantity);
 float cost_with_sales_tax(float price);
 
 int main(int argc, const char * argv[]) {
+    float budget = 10000.00;
+    
+    printf("\n");
+    
+    float laptopPrice = 1599.00; // 12' MacBook with 1.3GHz processor, 512GB storage
+    float monitorPrice = 1299.95; // LG UltraFine 5K display
+    float phonePrice = 399.00; // iPhone SE
+
+    add_to_total(laptopPrice, 5);
+    add_to_total(monitorPrice, 1);
+    add_to_total(phonePrice, 4);
+    
+    printf("-------------------------------------------------------------\n");
+    
+    printf("TOTAL for %i items: $%5.2f\n\n", totalItems, totalCost);
+    
+    printf("==================\n");
+    printf(" APPROVAL STATUS\n");
+    printf("==================\n");
+    
+    if (totalCost < budget) {
+        printf("Approved, please go ahead to Apple Store online now!\n");
+    } else {
+        printf("Damn, you're over budget.\n");
+    }
+    
+    printf("\n");
     
     return 0;
 }
 
 void add_to_total(float cost, int quantity) {
-    printf("Adding %i items of cost RM%5.2f\n", quantity, cost);
+    printf("Adding %i items of cost $%5.2f\n", quantity, cost);
     
     float calculatedCost = cost * quantity;
     float realCost = cost_with_sales_tax(calculatedCost);
@@ -21,7 +48,7 @@ void add_to_total(float cost, int quantity) {
     totalCost += realCost;
     totalItems += quantity;
     
-    printf("Subtotal for %i items: RM%5.2f\n", totalItems, totalCost);
+    printf("Subtotal for %i items: $%5.2f\n", totalItems, totalCost);
 }
 
 float cost_with_sales_tax(float price) {
