@@ -10,7 +10,6 @@ int main(int argc, const char * argv[]) {
     
     number2[0] = number1[0];
     number2[1] = number1[1];
-    number2[2] = number1[2];
     
     for (int i = 0; i < 3; i++) {
         printf("%i ", number1[i]);
