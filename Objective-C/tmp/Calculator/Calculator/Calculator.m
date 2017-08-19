@@ -74,13 +74,13 @@
 - (double)memAdd:(double)value {
     memory += value;
     
-    return accumulator;
+    return [self memRecall];
 }
 
 - (double)memSubtract:(double)value {
     memory -= value;
     
-    return accumulator;
+    return [self memRecall];
 }
 
 @end

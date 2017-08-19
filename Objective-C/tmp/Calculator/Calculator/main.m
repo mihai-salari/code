@@ -20,6 +20,15 @@ int main(int argc, const char * argv[]) {
         [cal clear];
         
         NSLog(@"The final result is %g", [cal accumulator]);
+        
+        // test memory operations
+        [cal setAccumulator:100];
+        [cal memStore];
+        [cal memAdd:50];
+        [cal memClear];
+        [cal memStore];
+        
+        NSLog(@"%g", [cal accumulator]);
     }
     
     return 0;
