@@ -2,10 +2,11 @@
 
 @interface ComplexNumber : NSObject
 
-- (void)setReal:(double)r;
-- (void)setImaginary:(double)i;
-- (void)print; // display as a + bi
 - (double)real;
+- (void)setReal:(double)r;
 - (double)imaginary;
+- (void)setImaginary:(double)i;
+
+- (void)print; // display as a + bi
 
 @end
