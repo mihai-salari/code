@@ -6,10 +6,10 @@
 - (void)setAccumulator:(double)value;
 - (void)clear;
 
-- (void)add:(double)value;
-- (void)subtract:(double)value;
-- (void)multiply:(double)value;
-- (void)divide:(double)value;
+- (double)add:(double)value;
+- (double)subtract:(double)value;
+- (double)multiply:(double)value;
+- (double)divide:(double)value;
 
 - (double)changeSign;
 - (double)reciprocal; // 1/accumulator
@@ -33,20 +33,28 @@
     accumulator = 0;
 }
 
-- (void)add:(double)value {
+- (double)add:(double)value {
     accumulator += value;
+    
+    return accumulator;
 }
 
-- (void)subtract:(double)value {
+- (double)subtract:(double)value {
     accumulator -= value;
+    
+    return accumulator;
 }
 
-- (void)multiply:(double)value {
+- (double)multiply:(double)value {
     accumulator *= value;
+    
+    return accumulator;
 }
 
-- (void)divide:(double)value {
+- (double)divide:(double)value {
     accumulator /= value;
+    
+    return accumulator;
 }
 
 - (double)changeSign {
