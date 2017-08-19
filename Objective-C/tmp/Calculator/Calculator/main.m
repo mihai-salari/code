@@ -11,6 +11,10 @@
 - (void)multiply:(double)value;
 - (void)divide:(double)value;
 
+- (double)changeSign;
+- (double)reciprocal; // 1/accumulator
+- (double)xSquared;
+
 @end
 
 @implementation Calculator {
@@ -43,6 +47,18 @@
 
 - (void)divide:(double)value {
     accumulator /= value;
+}
+
+- (double)changeSign {
+    return -accumulator;
+}
+
+- (double)reciprocal {
+    return 1/accumulator;
+}
+
+- (double)xSquared {
+    return accumulator * accumulator;
 }
 
 @end
