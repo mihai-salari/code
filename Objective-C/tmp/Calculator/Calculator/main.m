@@ -58,6 +58,10 @@ int main(int argc, const char * argv[]) {
         [cal multiply:5];
         
         NSLog(@"The final result is %g", [cal accumulator]);
+        
+        [cal clear];
+        
+        NSLog(@"The final result is %g", [cal accumulator]);
     }
     
     return 0;
