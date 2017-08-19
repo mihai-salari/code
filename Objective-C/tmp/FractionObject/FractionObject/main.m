@@ -11,6 +11,7 @@
 @end
 
 @implementation Fraction {
+    // Instance variables
     int numerator;
     int denominator;
 }
