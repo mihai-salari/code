@@ -2,6 +2,7 @@
 
 @implementation Calculator {
     double accumulator;
+    double memory;
 }
 
 - (double)accumulator {
@@ -50,6 +51,36 @@
 
 - (double)xSquared {
     return accumulator * accumulator;
+}
+
+- (double)memClear {
+    memory = 0;
+    
+    return accumulator;
+}
+
+- (double)memStore {
+    memory = accumulator;
+    
+    return accumulator;
+}
+
+- (double)memRecall {
+    accumulator = memory;
+    
+    return accumulator;
+}
+
+- (double)memAdd:(double)value {
+    memory += value;
+    
+    return accumulator;
+}
+
+- (double)memSubtract:(double)value {
+    memory -= value;
+    
+    return accumulator;
 }
 
 @end
