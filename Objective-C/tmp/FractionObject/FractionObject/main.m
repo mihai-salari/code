@@ -5,7 +5,9 @@
 @interface Fraction: NSObject
 
 - (void)print;
+- (int)numerator;
 - (void)setNumerator:(int)n;
+- (int)denominator;
 - (void)setDenominator:(int)d;
 
 @end
@@ -20,8 +22,16 @@
     printf("%i/%i\n", numerator, denominator);
 }
 
+- (int)numerator {
+    return numerator;
+}
+
 - (void)setNumerator:(int)n {
     numerator = n;
+}
+
+- (int)denominator {
+    return denominator;
 }
 
 - (void)setDenominator:(int)d {
