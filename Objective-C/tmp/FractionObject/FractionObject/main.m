@@ -20,18 +20,24 @@
 }
 
 - (void)setNumerator:(int)n {
-    
+    numerator = n;
 }
 
 - (void)setDenominator:(int)d {
-    
+    denominator = d;
 }
 
 @end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        Fraction *fraction = [Fraction new];
         
+        [fraction setNumerator:1];
+        [fraction setDenominator:3];
+        
+        NSLog(@"The value of fraction is:");
+        [fraction print];
     }
     
     return 0;
