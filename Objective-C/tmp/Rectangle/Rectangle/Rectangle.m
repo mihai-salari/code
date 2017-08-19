@@ -10,7 +10,7 @@
 }
 
 - (void)setWidth:(int)w {
-    width = w
+    width = w;
 }
 
 - (int)height {
@@ -19,6 +19,14 @@
 
 - (void)setHeight:(int)h {
     height = h;
+}
+
+- (int)area {
+    return width * height;
+}
+
+- (int)perimeter {
+    return (width * 2) + (height * 2);
 }
 
 @end
