@@ -58,7 +58,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"The value of anotherFraction is:");
         [anotherFraction print];
         
-        NSLog(@"The fraction is %i/%i", [fraction numerator], [fraction denominator]);
+        NSLog(@"The value of fraction is %i/%i", [fraction numerator], [fraction denominator]);
     }
     
     return 0;
