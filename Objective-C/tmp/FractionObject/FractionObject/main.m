@@ -22,10 +22,14 @@
     printf("%i/%i\n", numerator, denominator);
 }
 
+// accessor methods = setter & getter
+
+// getter
 - (int)numerator {
     return numerator;
 }
 
+// setter
 - (void)setNumerator:(int)n {
     numerator = n;
 }
