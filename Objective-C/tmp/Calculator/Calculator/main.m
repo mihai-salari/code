@@ -75,6 +75,10 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"The final result is %g", [cal accumulator]);
         
+        NSLog(@"The reciprocal is %g", [cal reciprocal]);
+        
+        NSLog(@"The squared is %g", [cal xSquared]);
+        
         [cal clear];
         
         NSLog(@"The final result is %g", [cal accumulator]);
