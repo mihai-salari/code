@@ -39,6 +39,14 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"The value of fraction is:");
         [fraction print];
+        
+        Fraction *anotherFraction = [Fraction new];
+        
+        [anotherFraction setNumerator:9];
+        [anotherFraction setDenominator:99];
+        
+        NSLog(@"The value of anotherFraction is:");
+        [anotherFraction print];
     }
     
     return 0;
