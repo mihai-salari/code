@@ -9,6 +9,13 @@ int main(int argc, const char * argv[]) {
         printf("Enter a number: ");
         scanf("%i", &number);
         
+        // use a do while loop to get rid of this if statement
+        if (number == 0) {
+            printf("%i\n", number);
+            
+            return 0;
+        }
+        
         while (number != 0) {
             right_digit = number % 10;
             printf("%i", right_digit);
