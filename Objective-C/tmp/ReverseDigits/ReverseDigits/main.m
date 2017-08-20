@@ -14,6 +14,8 @@ int main(int argc, const char * argv[]) {
             printf("%i", right_digit);
             number = number / 10;
         }
+        
+        printf("\n");
     }
     
     return 0;
