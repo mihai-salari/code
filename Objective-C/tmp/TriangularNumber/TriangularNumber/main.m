@@ -11,7 +11,7 @@ int main(int argc, const char * argv[]) {
         
         for (n = 1; n <= 10; ++n) {
             triangularNumber += n;
-            NSLog(@"%i\t%i", n, triangularNumber);
+            NSLog(@"%2i\t%5i", n, triangularNumber);
         }
     }
     
@@ -20,20 +20,20 @@ int main(int argc, const char * argv[]) {
 
 /*
 
- 2017-08-20 15:45:41.449795+0800 TriangularNumber[16476:823304] Table of Triangular Numbers
- 2017-08-20 15:45:41.451662+0800 TriangularNumber[16476:823304] ============================
- 2017-08-20 15:45:41.451678+0800 TriangularNumber[16476:823304] n	Sum from 1 to n
- 2017-08-20 15:45:41.451688+0800 TriangularNumber[16476:823304] ----------------------------
- 2017-08-20 15:45:41.451699+0800 TriangularNumber[16476:823304] 1	1
- 2017-08-20 15:45:41.451716+0800 TriangularNumber[16476:823304] 2	3
- 2017-08-20 15:45:41.451726+0800 TriangularNumber[16476:823304] 3	6
- 2017-08-20 15:45:41.451737+0800 TriangularNumber[16476:823304] 4	10
- 2017-08-20 15:45:41.451749+0800 TriangularNumber[16476:823304] 5	15
- 2017-08-20 15:45:41.451761+0800 TriangularNumber[16476:823304] 6	21
- 2017-08-20 15:45:41.451772+0800 TriangularNumber[16476:823304] 7	28
- 2017-08-20 15:45:41.451783+0800 TriangularNumber[16476:823304] 8	36
- 2017-08-20 15:45:41.451795+0800 TriangularNumber[16476:823304] 9	45
- 2017-08-20 15:45:41.451806+0800 TriangularNumber[16476:823304] 10	55
+ 2017-08-20 15:49:27.276020+0800 TriangularNumber[16546:827714] Table of Triangular Numbers
+ 2017-08-20 15:49:27.276215+0800 TriangularNumber[16546:827714] ============================
+ 2017-08-20 15:49:27.276223+0800 TriangularNumber[16546:827714] n	Sum from 1 to n
+ 2017-08-20 15:49:27.276232+0800 TriangularNumber[16546:827714] ----------------------------
+ 2017-08-20 15:49:27.276240+0800 TriangularNumber[16546:827714]  1	    1
+ 2017-08-20 15:49:27.276250+0800 TriangularNumber[16546:827714]  2	    3
+ 2017-08-20 15:49:27.276258+0800 TriangularNumber[16546:827714]  3	    6
+ 2017-08-20 15:49:27.276269+0800 TriangularNumber[16546:827714]  4	   10
+ 2017-08-20 15:49:27.276279+0800 TriangularNumber[16546:827714]  5	   15
+ 2017-08-20 15:49:27.276288+0800 TriangularNumber[16546:827714]  6	   21
+ 2017-08-20 15:49:27.276305+0800 TriangularNumber[16546:827714]  7	   28
+ 2017-08-20 15:49:27.276328+0800 TriangularNumber[16546:827714]  8	   36
+ 2017-08-20 15:49:27.276336+0800 TriangularNumber[16546:827714]  9	   45
+ 2017-08-20 15:49:27.276341+0800 TriangularNumber[16546:827714] 10	   55
  Program ended with exit code: 0
 
 */
