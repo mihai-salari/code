@@ -6,7 +6,10 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        unsigned int u, v, temp;
         
+        NSLog(@"Please type in two nonnegative integers.");
+        scanf("%u%u", &u, &v);
     }
     
     return 0;
