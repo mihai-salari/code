@@ -5,3 +5,8 @@
 
 import Foundation
 
+var u: Int
+var v: Int
+var temp: Int
+
+print("Please type in two nonnegative integers.")
