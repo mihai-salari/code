@@ -3,7 +3,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         int a, b;
-        char c = 'n';
+        char c = 'y';
         
         while (c == 'y' || c == 'Y') {
             printf("Enter two numbers, separate by space: ");
