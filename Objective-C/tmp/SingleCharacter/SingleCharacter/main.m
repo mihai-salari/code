@@ -5,7 +5,9 @@ int main(int argc, const char * argv[]) {
         char c;
         
         printf("Enter a single character: ");
-        scanf("%c", &c);
+        scanf(" %c", &c);
+        printf("Enter a single character: ");
+        scanf(" %c", &c);
         
         if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
             printf("An alphabetic character\n");
