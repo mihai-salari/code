@@ -9,9 +9,9 @@ int main(int argc, const char * argv[]) {
         
         Calculator *cal = [Calculator new];
         
-        printf("Begin Calculations");
+        printf("Begin Calculations\n");
         
-        while (operator != 'E') {
+        do {
             scanf("%lf %c", &number, &operator);
             
             // Make sure user set accumulator before perform
@@ -37,9 +37,9 @@ int main(int argc, const char * argv[]) {
             }
             
             printf("= %lf\n", [cal accumulator]);
-        }
+        } while (operator != 'E');
         
-        printf("End of Calculations");
+        printf("End of Calculations\n");
     }
     
     return 0;
