@@ -1,4 +1,3 @@
-// Program to generate a table of prime numbers
 
 #import <Foundation/Foundation.h>
 
