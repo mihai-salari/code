@@ -29,6 +29,28 @@ int main(int argc, const char * argv[]) {
         [cal memStore];
         
         NSLog(@"%g", [cal accumulator]);
+        
+        // test expression
+        double value1, value2;
+        char operator;
+        
+        printf("Enter your expression: ");
+        scanf("%lf %c %lf", &value1, &operator, &value2);
+        
+        Calculator *newCal = [Calculator new];
+        [newCal setAccumulator:value1];
+        
+        if (operator == '+') {
+            [newCal add:value2];
+        } else if (operator == '-') {
+            [newCal subtract:value2];
+        } else if (operator == '*') {
+            [newCal multiply:value2];
+        } else if (operator == '/') {
+            [newCal divide:value2];
+        }
+        
+        printf("%.2f", [newCal accumulator]);
     }
     
     return 0;
