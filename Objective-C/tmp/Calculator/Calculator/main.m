@@ -59,6 +59,24 @@ int main(int argc, const char * argv[]) {
             return 1;
         }
         
+        switch (operator) {
+            case '+':
+                [newCal add:value2];
+                break;
+            case '-':
+                [newCal subtract:value2];
+                break;
+            case '*':
+                [newCal multiply:value2];
+                break;
+            case '/':
+                [newCal divide:value2];
+                break;
+            default:
+                printf("Error: unknown operator.\n");
+                break;                
+        }
+        
         printf("%.2f\n", [newCal accumulator]);
     }
     
