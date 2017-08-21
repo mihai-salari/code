@@ -40,6 +40,8 @@ int main(int argc, const char * argv[]) {
         Calculator *newCal = [Calculator new];
         [newCal setAccumulator:value1];
         
+        printf("%.2f\n", [newCal accumulator]);
+        
         if (operator == '+') {
             [newCal add:value2];
         } else if (operator == '-') {
@@ -50,7 +52,7 @@ int main(int argc, const char * argv[]) {
             [newCal divide:value2];
         }
         
-        printf("%.2f", [newCal accumulator]);
+        printf("%.2f\n", [newCal accumulator]);
     }
     
     return 0;
