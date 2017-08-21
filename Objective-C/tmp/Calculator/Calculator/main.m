@@ -43,7 +43,7 @@ int main(int argc, const char * argv[]) {
         Calculator *newCal = [Calculator new];
         [newCal setAccumulator:value1];
         
-        //printf("%.2f\n", [newCal accumulator]);
+        // using if-else
         
         if (operator == '+') {
             [newCal add:value2];
@@ -58,6 +58,8 @@ int main(int argc, const char * argv[]) {
             
             return 1;
         }
+        
+        // using switch
         
         switch (operator) {
             case '+':
@@ -74,7 +76,7 @@ int main(int argc, const char * argv[]) {
                 break;
             default:
                 printf("Error: unknown operator.\n");
-                break;                
+                break;
         }
         
         printf("%.2f\n", [newCal accumulator]);
