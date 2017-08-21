@@ -7,11 +7,11 @@ int main(int argc, const char * argv[]) {
         int p, d, isPrime;
         
         for (p = 2; p <= 100; p++) {
-            isPrime = 1;
+            isPrime = 1; // true
             
             for (d = 2; d < p; d++) {
                 if (p % d == 0) {
-                    isPrime = 0;
+                    isPrime = 0; // false
                 }
             }
             
