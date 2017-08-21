@@ -69,6 +69,8 @@ int main(int argc, const char * argv[]) {
                 [newCal subtract:value2];
                 break;
             case '*':
+            case 'x':
+            case 'X':
                 [newCal multiply:value2];
                 break;
             case '/':
