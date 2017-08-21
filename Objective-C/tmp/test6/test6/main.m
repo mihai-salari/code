@@ -18,6 +18,8 @@ int main(int argc, const char * argv[]) {
             printf("Continue (y/n)? ");
             scanf(" %c", &c);
         }
+        
+        printf("Bye!\n");
     }
     
     return 0;
