@@ -18,8 +18,9 @@ int main(int argc, const char * argv[]) {
             // additional calculations
             if (firstTime) {
                 if (operator != 'S') {
-                    printf("Set accumulator with command 'S'\n");
-                    printf("e.g. 10 S");
+                    printf("Set accumulator with command 'S', e.g 10 S\n");
+                    
+                    continue;
                 } else {
                     firstTime = NO;
                 }
