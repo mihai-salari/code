@@ -36,7 +36,12 @@
 }
 
 - (double)divide:(double)value {
-    accumulator /= value;
+    if (value != 0.0) {
+        accumulator /= value;
+    } else {
+        printf("Error: division by zero\n");
+        accumulator = NAN;
+    }    
     
     return accumulator;
 }
