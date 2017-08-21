@@ -52,7 +52,15 @@ int main(int argc, const char * argv[]) {
         } else if (operator == '*') {
             [newCal multiply:value2];
         } else if (operator == '/') {
+            if (value2 == 0) {
+                printf("Error - division by zero.");
+                
+                return 1;
+            }
+            
             [newCal divide:value2];
+        } else {
+            printf("Error - unknown operator.");
         }
         
         printf("%.2f\n", [newCal accumulator]);
