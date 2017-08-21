@@ -15,6 +15,20 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        int year, rem4, rem100, rem400;
+        
+        NSLog(@"Enter the year to be tested: ");
+        scanf("%i", &year);
+        
+        rem4 = year % 4;
+        rem100 = year % 100;
+        rem400 = year % 400;
+        
+        if ((rem4 == 0 && rem100 != 0) || rem400 == 0) {
+            NSLog(@"Year %i is a leap year!", year);
+        } else {
+            NSLog(@"Year %i is not a leap year!", year);
+        }
     }
     
     return 0;
