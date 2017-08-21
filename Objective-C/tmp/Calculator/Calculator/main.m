@@ -1,3 +1,6 @@
+// Program to evaluate simple expressions of the form
+// value operator value
+
 #import <Foundation/Foundation.h>
 #import "Calculator.h"
 
