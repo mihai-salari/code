@@ -43,7 +43,7 @@ int main(int argc, const char * argv[]) {
         Calculator *newCal = [Calculator new];
         [newCal setAccumulator:value1];
         
-        printf("%.2f\n", [newCal accumulator]);
+        //printf("%.2f\n", [newCal accumulator]);
         
         if (operator == '+') {
             [newCal add:value2];
@@ -53,14 +53,16 @@ int main(int argc, const char * argv[]) {
             [newCal multiply:value2];
         } else if (operator == '/') {
             if (value2 == 0) {
-                printf("Error - division by zero.");
+                printf("Error - division by zero.\n");
                 
                 return 1;
             }
             
             [newCal divide:value2];
         } else {
-            printf("Error - unknown operator.");
+            printf("Error - unknown operator.\n");
+            
+            return 1;
         }
         
         printf("%.2f\n", [newCal accumulator]);
