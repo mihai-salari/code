@@ -16,7 +16,9 @@ int main(int argc, const char * argv[]) {
         [b print];
         printf("=\n");
         
-        result = [a add:b];
+        //result = [a add:b];
+        //result = [a subtract:b];
+        result = [a multiply:b];
         [result print];
     }
     

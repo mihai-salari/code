@@ -46,4 +46,24 @@
     return result;
 }
 
+- (Fraction *)subtract:(Fraction *)f {
+    Fraction *result = [Fraction new];
+    result.numerator = self.numerator * f.denominator - self.denominator * f.numerator;
+    result.denominator = self.denominator * f.denominator;
+    
+    [result reduce];
+    
+    return result;
+}
+
+- (Fraction *)multiply:(Fraction *)f {
+    Fraction *result = [Fraction new];
+    result.numerator = self.numerator * f.numerator;
+    result.denominator = self.denominator * f.denominator;
+    
+    [result reduce];
+    
+    return result;
+}
+
 @end
