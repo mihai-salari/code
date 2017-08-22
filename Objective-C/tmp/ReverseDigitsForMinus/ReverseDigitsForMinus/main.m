@@ -22,6 +22,7 @@ int main(int argc, const char * argv[]) {
             number = number / 10;
         }
         
+        // for negative number
         if (number < 0) {
             number = -number;
         }
