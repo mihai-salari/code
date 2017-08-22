@@ -18,7 +18,8 @@ int main(int argc, const char * argv[]) {
         
         //result = [a add:b];
         //result = [a subtract:b];
-        result = [a multiply:b];
+        //result = [a multiply:b];
+        //result = [a divide:b];
         [result print];
     }
     

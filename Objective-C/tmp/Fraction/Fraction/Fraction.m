@@ -66,4 +66,14 @@
     return result;
 }
 
+- (Fraction *)divide:(Fraction *)f {
+    Fraction *result = [Fraction new];
+    result.numerator = self.numerator * f.denominator;
+    result.denominator = self.denominator * f.numerator;
+    
+    [result reduce];
+    
+    return result;
+}
+
 @end
