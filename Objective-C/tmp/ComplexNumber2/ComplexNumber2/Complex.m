@@ -27,8 +27,8 @@
 
 - (Complex *)add:(Complex *)complexNumber {
     Complex *c = [Complex new];
-    [c setReal:([c real] + [complexNumber real])];
-    [c setImaginary:([c imaginary] + [complexNumber imaginary])];
+    [c setReal:([self real] + [complexNumber real])];
+    [c setImaginary:([self imaginary] + [complexNumber imaginary])];
     
     return c;
 }
