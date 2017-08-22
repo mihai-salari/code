@@ -2,10 +2,9 @@
 
 @interface Fraction : NSObject
 
+@property int numerator;
+@property int denominator;
+
 - (void)print;
-- (int)numerator;
-- (void)setNumerator:(int)n;
-- (int)denominator;
-- (void)setDenominator:(int)d;
 
 @end
