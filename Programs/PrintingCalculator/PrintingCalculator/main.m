@@ -30,6 +30,15 @@ int main(int argc, const char * argv[]) {
                 case '+':
                     [cal add:number];
                     break;
+                case '-':
+                    [cal subtract:number];
+                    break;
+                case '*':
+                    [cal multiply:number];
+                    break;
+                case '/':
+                    [cal divide:number];
+                    break;
                 case 'S':
                     [cal setAccumulator:number];
                     break;
