@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "A.h"
+#import "B.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -7,6 +8,9 @@ int main(int argc, const char * argv[]) {
         [a setAge];
         
         NSLog(@"%i", [a age]);
+        
+        B *b = [B new];
+        [b printAge];
     }
     
     return 0;
