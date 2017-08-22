@@ -5,6 +5,14 @@
     double imaginary;
 }
 
+- (double)real {
+    return real;
+}
+
+- (double)imaginary {
+    return imaginary;
+}
+
 - (void)setReal:(double)r {
     real = r;
 }
