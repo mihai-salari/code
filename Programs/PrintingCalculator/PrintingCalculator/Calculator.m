@@ -39,7 +39,7 @@
     if (value != 0.0) {
         accumulator /= value;
     } else {
-        printf("Error: division by zero\n");
+        printf("= Error: division by zero\n");
         accumulator = NAN;
     }
     
