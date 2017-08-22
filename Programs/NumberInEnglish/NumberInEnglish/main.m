@@ -66,3 +66,14 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
+
+/*
+
+ Enter a positive number: 1001
+ One
+ Zero
+ Zero
+ One
+ Program ended with exit code: 0
+
+*/
