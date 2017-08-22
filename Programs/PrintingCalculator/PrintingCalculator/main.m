@@ -42,7 +42,10 @@ int main(int argc, const char * argv[]) {
                 case 'S':
                     [cal setAccumulator:number];
                     break;
+                case 'E':
+                    break;
                 default:
+                    printf("= ERROR: invalid input\n");
                     break;
             }
             
