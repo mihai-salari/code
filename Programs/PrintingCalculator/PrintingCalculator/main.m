@@ -57,3 +57,23 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
+
+/*
+
+ Begin Calculations
+ 10 S
+ = 10.000000
+ 2 /
+ = 5.000000
+ 55 -
+ = -50.000000
+ 100.25 S
+ = 100.250000
+ 4 *
+ = 401.000000
+ 0 E
+ = 401.000000
+ End of Calculations
+ Program ended with exit code: 0
+
+*/
