@@ -3,6 +3,7 @@
 @implementation Rectangle {
     int width;
     int height;
+    XYPoint *origin;
 }
 
 - (int)width {
@@ -21,12 +22,25 @@
     height = h;
 }
 
+- (void)setWidth:(int)w andHeight:(int)h {
+    width = w;
+    height = h;
+}
+
 - (int)area {
     return width * height;
 }
 
 - (int)perimeter {
     return (width * 2) + (height * 2);
+}
+
+- (void)setOrigin:(XYPoint *)pt {
+    origin = pt;
+}
+
+- (XYPoint *)origin {
+    return origin;
 }
 
 @end
