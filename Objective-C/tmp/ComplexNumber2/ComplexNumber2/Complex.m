@@ -1,6 +1,6 @@
-#import "ComplexNumber.h"
+#import "Complex.h"
 
-@implementation ComplexNumber {
+@implementation Complex {
     double real;
     double imaginary;
 }

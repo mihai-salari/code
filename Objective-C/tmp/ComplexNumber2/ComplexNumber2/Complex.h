@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface ComplexNumber : NSObject
+@interface Complex : NSObject
 
 - (double)real;
 - (void)setReal:(double)r;
