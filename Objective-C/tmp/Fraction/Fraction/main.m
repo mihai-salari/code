@@ -3,23 +3,21 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Fraction *fraction = [Fraction new];
+        Fraction *a = [Fraction new];
+        Fraction *b = [Fraction new];
         
-        [fraction setNumerator:1];
-        [fraction setDenominator:3];
+        Fraction *result;
         
-        NSLog(@"The value of fraction is:");
-        [fraction print];
+        [a setTo:1 over:4];
+        [b setTo:1 over:2];
         
-        Fraction *anotherFraction = [Fraction new];
+        [a print];
+        printf("+\n");
+        [b print];
+        printf("=\n");
         
-        [anotherFraction setNumerator:9];
-        [anotherFraction setDenominator:99];
-        
-        NSLog(@"The value of anotherFraction is:");
-        [anotherFraction print];
-        
-        NSLog(@"The value of fraction is %i/%i", [fraction numerator], [fraction denominator]);
+        result = [a add:b];
+        [result print];
     }
     
     return 0;
