@@ -8,6 +8,19 @@
     printf("%i/%i\n", numerator, denominator);
 }
 
+- (void)printWithReduced:(BOOL)reduced {
+    if (reduced) {
+        Fraction *f = [Fraction new];
+        f.numerator = self.numerator;
+        f.denominator = self.denominator;
+        [f reduce];
+        
+        printf("%i/%i\n", f.numerator, f.denominator);
+    } else {
+        [self print];
+    }
+}
+
 - (void)setTo:(int)n over:(int)d {
     self.numerator = n;
     self.denominator = d;

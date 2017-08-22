@@ -6,6 +6,7 @@
 @property int denominator;
 
 - (void)print;
+- (void)printWithReduced:(BOOL)reduced;
 - (void)setTo:(int)n over:(int)d;
 - (double)convertToNumber;
 - (void)reduce;

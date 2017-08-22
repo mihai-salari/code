@@ -16,11 +16,18 @@ int main(int argc, const char * argv[]) {
         [b print];
         printf("=\n");
         
-        //result = [a add:b];
+        result = [a add:b];
         //result = [a subtract:b];
         //result = [a multiply:b];
         //result = [a divide:b];
+        
         [result print];
+        
+        Fraction *c = [Fraction new];
+        [c setTo:2 over:4];
+        [c print];
+        [c printWithReduced:YES];
+        [c print];
     }
     
     return 0;
