@@ -19,6 +19,8 @@ int main(int argc, const char * argv[]) {
         [rect setWidth:5 andHeight:8];
         
         [rect setOrigin:pt];
+        
+        NSLog(@"Origin at (%i, %i)", [[rect origin] x], [[rect origin] y]);
     }
     
     return 0;
