@@ -28,6 +28,11 @@ int main(int argc, const char * argv[]) {
         [c print];
         [c printWithReduced:YES];
         [c print];
+        
+        Fraction *d = [Fraction new];
+        [d setTo:5 over:3];
+        [d print];
+        [d printWithProper];
     }
     
     return 0;

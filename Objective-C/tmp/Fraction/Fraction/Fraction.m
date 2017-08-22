@@ -21,6 +21,21 @@
     }
 }
 
+- (void)printWithProper {
+    int proper = 0;
+    
+    Fraction *f = [Fraction new];
+    f.numerator = self.numerator;
+    f.denominator = self.denominator;
+    
+    if (f.numerator >= f.denominator) {
+        proper = f.numerator / f.denominator;
+        f.numerator = f.numerator % f.denominator;
+    }
+    
+    printf("%i %i/%i\n", proper, f.numerator, f.denominator);
+}
+
 - (void)setTo:(int)n over:(int)d {
     self.numerator = n;
     self.denominator = d;

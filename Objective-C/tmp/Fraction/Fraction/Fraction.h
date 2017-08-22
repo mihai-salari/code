@@ -7,6 +7,7 @@
 
 - (void)print;
 - (void)printWithReduced:(BOOL)reduced;
+- (void)printWithProper;
 - (void)setTo:(int)n over:(int)d;
 - (double)convertToNumber;
 - (void)reduce;
