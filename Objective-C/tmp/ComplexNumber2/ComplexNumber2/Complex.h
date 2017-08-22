@@ -9,4 +9,6 @@
 
 - (void)print; // display as a + bi
 
+- (Complex *)add:(Complex *)complexNumber;
+
 @end

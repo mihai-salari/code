@@ -25,4 +25,12 @@
     NSLog(@"%g + %gi", real, imaginary);
 }
 
+- (Complex *)add:(Complex *)complexNumber {
+    Complex *c = [Complex new];
+    [c setReal:([c real] + [complexNumber real])];
+    [c setImaginary:([c imaginary] + [complexNumber imaginary])];
+    
+    return c;
+}
+
 @end
