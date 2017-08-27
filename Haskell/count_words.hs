@@ -1,6 +1,6 @@
--- count_lines.hs
--- counts the number of lines in its inputs
--- $ runghc count_lines < foo.txt
+-- count_words.hs
+-- counts the number of words in its inputs
+-- $ runghc count_words < foo.txt
 
 main = interact wordCount
 	where wordCount input = show (length (words input)) ++ "\n"
