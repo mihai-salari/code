@@ -1,3 +1,12 @@
+#### Using ghci ####
+
+To change the ghci prompt:
+
+```
+Prelude> :set prompt "> "
+>
+```
+
 #### Links ####
 
 - [Haskell](https://www.haskell.org)
