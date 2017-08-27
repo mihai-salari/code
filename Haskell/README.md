@@ -1,6 +1,7 @@
 #### Links ####
 
 - [Haskell](https://www.haskell.org)
+- [Haskell Platform for Mac](https://www.haskell.org/platform/mac.html)
 - [Haskell Docs](https://www.haskell.org/documentation)
 - [Hackage](http://hackage.haskell.org)
 - [Haskellers](http://www.haskellers.com/)
