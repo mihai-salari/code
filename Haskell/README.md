@@ -1,5 +1,6 @@
 #### Links ####
 
+- [Haskell](https://www.haskell.org)
 - [Haskell Docs](https://www.haskell.org/documentation)
 - [Hackage](http://hackage.haskell.org)
 - [Haskellers](http://www.haskellers.com/)
