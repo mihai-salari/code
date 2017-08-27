@@ -7,6 +7,15 @@ Prelude> :set prompt "> "
 >
 ```
 
+To load a module:
+
+```
+> :module + Data.Ratio
+> 2 % 3 + 2 % 3
+4 % 3
+>
+```
+
 #### Links ####
 
 - [Haskell](https://www.haskell.org)
