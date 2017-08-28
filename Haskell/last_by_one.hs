@@ -3,7 +3,7 @@
 -- the following function cannot handle []
 
 myLast xs =
-	if length xs == 2 || length xs == 1 
+	if length xs <= 2
 		then head xs
 	else
 		myLast (tail xs)
