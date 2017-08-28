@@ -34,3 +34,4 @@ To load a module:
 #### Others ####
 
 - [Alan Turing](http://www.alanturing.net/index.htm)
+- [TextMate Haskell bundle](https://github.com/textmate/haskell.tmbundle)
