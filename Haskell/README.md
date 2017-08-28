@@ -21,6 +21,7 @@ To load a module:
 - [Haskell](https://www.haskell.org)
 - [Haskell Platform for Mac](https://www.haskell.org/platform/mac.html)
 - [Haskell Docs](https://www.haskell.org/documentation)
+- [GHCi Doc](https://wiki.haskell.org/GHC/GHCi)
 - [Hackage](http://hackage.haskell.org)
 - [Haskellers](http://www.haskellers.com/)
 - [Haskell Communities and Activities Report](https://wiki.haskell.org/Haskell_Communities_and_Activities_Report)
