@@ -2,7 +2,12 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        FILE *wordFile = fopen("/usr/share/dict/propernames", "r");
+        if (argc == 1) {
+            NSLog(@"You need to provide a file name.");
+            return 1;
+        }
+                
+        FILE *wordFile = fopen(argv[1], "r");
         char word[100];
         
         // fgets to get a line
