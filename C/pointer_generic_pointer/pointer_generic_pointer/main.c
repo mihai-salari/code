@@ -1,15 +1,21 @@
-//
-//  main.c
-//  pointer_generic_pointer
-//
-//  Created by Lee Choon Siong on 2017/08/29.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    void *genericPointer;
+    
+    int a = 9;
+    
+    genericPointer = &a;
+    
+    printf("genericPointer store memory address %p\n", genericPointer);
+    printf("dereferencing genericPointer gives us %d\n", *((int *) genericPointer));
+    
+    float b = 1.234567;
+    
+    genericPointer = &b;
+    
+    printf("genericPointer store memory address %p\n", genericPointer);
+    printf("dereferencing genericPointer gives us %g\n", *((float *) genericPointer));
+    
     return 0;
 }
