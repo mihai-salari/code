@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+// To add a new shape, e.g. kTriangle, we have to modify several places...
+
 typedef enum {
     kCircle,
     kRectangle,
