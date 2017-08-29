@@ -1,8 +1,8 @@
-Naming variables:
+Naming variables or functions:
 
-- ```first_name``` for plain C variable
-- ```fullName``` for Objective-C variable
-- ```_realName``` for private variable
+- ```first_name``` for plain C variable or function
+- ```fullName``` for Objective-C variable or function (and method)
+- ```_realName``` for private variable (e.g. instance variable)
 
 Class extension strategies:
 
