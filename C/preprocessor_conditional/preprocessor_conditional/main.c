@@ -1,6 +1,9 @@
 #include <stdio.h>
 
 // Using conditional to turn on and off debug message.
+// First with #define
+// Second with the use of different values for debugging level, and hence
+// display different level of debugging message
 
 //#define kDebug
 #define kDebugLevel 0
