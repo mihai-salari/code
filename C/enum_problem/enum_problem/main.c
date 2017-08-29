@@ -14,6 +14,8 @@ int main(int argc, const char * argv[]) {
     
     int some_numeric_code = 1024;
     
+    // The compiler doesn't restrict us from assigning some invalid int
+    // to this enum, becareful!
     status_code = some_numeric_code; // NOTE THIS ERROR!!! 1024 should not allow!!!
     
     switch (status_code) {
