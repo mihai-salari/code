@@ -23,6 +23,12 @@ int main(int argc, const char * argv[]) {
         [shapes[1] setFillColor:kRed];
         [shapes[1] setShapeType:kCircle];
         
+        ShapeRect rect2 = {30, 40, 50, 60};
+        shapes[2] = [Rectangle new];
+        shapes[2].bounds = rect2;
+        shapes[2].fillColor = kBlue;
+        shapes[2].shapeType = kRectangle;
+        
         for (int i = 0; i < 3; i++) {
             id shape = shapes[i];
             [shape draw];

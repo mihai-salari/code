@@ -2,6 +2,4 @@
 
 @interface Rectangle : Shape
 
-- (void)draw;
-
 @end
