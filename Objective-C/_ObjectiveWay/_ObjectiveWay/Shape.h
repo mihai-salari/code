@@ -23,7 +23,10 @@ typedef struct {
 
 @property ShapeColor fillColor;
 @property ShapeRect bounds;
+@property ShapeType shapeType;
 
 - (void)draw;
+- (NSString *)colorNameOf:(ShapeColor)color;
+- (NSString *)shapeTypeOf:(ShapeType)shape;
 
 @end
