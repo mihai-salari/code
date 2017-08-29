@@ -1,4 +1,11 @@
+Naming variables:
+
+- ```first_name``` for plain C variable
+- ```fullName``` for Objective-C variable
+- ```_realName``` for private variable
+
 Class extension strategies:
+
 - If you want to add new instance variables to a class or override a method of a class, use __subclassing__.
 - If you want to hide the implementation of a class, simplify a class's interface, or incorporate more code reuse, create a __class cluster__.
 - If you want to add a method to a class, create a __class category__.
