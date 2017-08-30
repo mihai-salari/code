@@ -16,6 +16,11 @@ int main(int argc, const char * argv[]) {
         woman.foot = foot;
         
         [woman print];
+        
+        hand = [SmallHand new];
+        woman.hand = hand;
+        
+        [woman print];
     }
     
     return 0;
