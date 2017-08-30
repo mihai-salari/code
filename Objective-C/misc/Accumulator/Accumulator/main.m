@@ -3,7 +3,8 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Accumulator *acm = [Accumulator new];
+        Accumulator *acm = [[Accumulator alloc] init];
+        
         [acm zeroTotal];
         [acm addToTotalWith:1];
         
