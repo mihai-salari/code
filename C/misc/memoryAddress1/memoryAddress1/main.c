@@ -8,7 +8,8 @@ int main(int argc, const char * argv[]) {
     
     printf("In main, count is %d\n", count);
     
-    printCountAndAge();
+    //printCountAndAge();
+    callPrintCountAndAge();
     
     return 0;
 }

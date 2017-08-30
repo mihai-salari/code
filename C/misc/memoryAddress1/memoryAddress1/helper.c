@@ -2,6 +2,12 @@
 
 int count;
 
+void callPrintCountAndAge() {
+    int number = 99;
+    
+    printCountAndAge();
+}
+
 void printCountAndAge() {
     count = 1;
     
