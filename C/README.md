@@ -26,6 +26,9 @@ __function static variable__
 - It is initialized to zero unless you provide an explicit initialization.
 - The value of a function static variable persists between calls to the function.
 - References to a function static variable in multiple calls to the function (even if the function recursively calls itself) refer to the same memory location.
+- Only visible within the scope of the function that declared it (compare to an external variable).
+
+When __static__ keyword is used with an external variable, it limits the visibility of the variable to the file in which it is declared and hides it from other source files.
 
 - - -
 
