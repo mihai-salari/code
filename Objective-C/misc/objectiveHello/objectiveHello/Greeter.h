@@ -4,4 +4,6 @@
 
 @property NSString *greetingText;
 
+- (void)issueGreeting;
+
 @end
