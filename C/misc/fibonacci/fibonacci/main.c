@@ -1,8 +1,9 @@
+// https://en.wikipedia.org/wiki/Fibonacci_number
+// F(n) = F(n - 1) + F(n - 2)
+
 #include <stdio.h>
 
 #define number 20
-
-// F(n) = F(n - 1) + F(n - 2)
 
 int fib(int n) {
     int sum = 0;
