@@ -1,3 +1,11 @@
+#### Memory Layout ####
+
+Virtual address space of a running Objective-C program:
+
+![picture](http://choonsiong.com/public/pic/virtual_address_space_objc_program.png)
+
+- - -
+
 Naming variables or functions:
 
 - ```first_name``` for plain C variable or function
