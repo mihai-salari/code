@@ -1,39 +1,32 @@
 #include <stdio.h>
 
-#define n 10
+#define kNumber 10
 
-int functionalSquareOf(int number);
+int functionalSquareOf(int number, int *list);
 
 int main(int argc, const char * argv[]) {
-    int answer = functionalSquareOf(n);
+    int list[kNumber]; // empty list with size kNumber
     
-    printf("square of %d = %d\n", n, answer);
+    int answer = functionalSquareOf(kNumber, list);
+    
+    printf("square of %d = %d\n", kNumber, answer);
     
     return 0;
 }
 
-int functionalSquareOf(int number) {
+int functionalSquareOf(int number, int *list) {
     static int count = 1;
-    static int answer;
-    
-    int list[number]; // create array with size number
-    
-    printf("count is %d\n", count);
     
     list[count] = count * count; // store the squared of count into array
     
-    printf("value in list[%d] = %d\n", count, list[count]);
-    
-    if (count <= n && number > 0) {
+    if (count <= kNumber && number > 0) {
         count += 1;
         
         if (number != 1) {
-            functionalSquareOf(number - 1);
-        } else {
-            answer = list[count - 1];
+            functionalSquareOf(number - 1, list);
         }
         
     }
     
-    return answer;
+    return list[count-1];
 }
