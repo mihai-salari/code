@@ -11,6 +11,14 @@ __Automatic variables or local variables__
 
 __External variables__
 
+- Variables that are declared in a source file outside the scope of ```main``` or any subroutine.
+- Although it is not always a good design choice, external variables are sometimes used as _global variables_ to share information between different functions and different source files.
+- The compiler assigns external variables memory locations in the data segment of the virtual address space.
+- External variables persist for the lifetime of the program - they never go out of scope or disappear, and their value changes only when you assign a new value to them.
+- The compiler initializes external variables to zero if you do not provide an explicit initialization.
+- Are visible beyond the scope of a single function. In fact, external variables are global symbols.
+
+
 - - -
 
 ### Articles ###
