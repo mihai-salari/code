@@ -8,9 +8,10 @@
 int fib(int n) {
     int sum = 0;
     
+    // First fib is 0, the value of n here is the number of fib!
     if (n == 1) {
         return 0;
-    } else if (n == 2) {
+    } else if (n == 2) { // Second fib is 1
         return 1;
     } else {
         sum = fib(n - 1) + fib(n - 2);
