@@ -6,6 +6,7 @@ Virtual address space of a running Objective-C program:
 
 - The __text segment__ contains the program's executable code and read-only data.
 - The __data segment__ contains read-write data including global variables.
+- The __heap__ contains blocks of memory that can be dispensed to the program on request. When more memory is required, the system may expand the heap upward.
 
 - - -
 
