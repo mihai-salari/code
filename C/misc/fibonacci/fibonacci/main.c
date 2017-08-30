@@ -8,12 +8,21 @@ int fib(int n) {
     int sum = f0 + f1;
     
     if (n == 0) {
+        printf("%d ", f0);
+        
         return f0;
     } else if (n == 1) {
+        printf("%d ", sum);
         return sum;
+    } else {
+        f0 = f1;
+        f1 = sum;
+        sum = f0 + f1;
     }
     
-    return sum + fib(n - 1);
+    printf("%d ", sum);
+    
+    return sum
 }
 
 int main(int argc, const char * argv[]) {
