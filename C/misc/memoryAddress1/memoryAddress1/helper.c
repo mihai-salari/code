@@ -5,6 +5,8 @@ int count;
 void callPrintCountAndAge() {
     int number = 99;
     
+    printf("number is %d\n", number);
+    
     printCountAndAge();
 }
 
