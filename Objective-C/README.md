@@ -4,6 +4,9 @@ Virtual address space of a running Objective-C program:
 
 ![picture](http://choonsiong.com/public/pic/virtual_address_space_objc_program.png)
 
+- The __text segment__ contains the program's executable code and read-only data.
+- The __data segment__ contains read-write data including global variables.
+
 - - -
 
 Naming variables or functions:
