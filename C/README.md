@@ -18,8 +18,14 @@ __External variables__
 - The compiler initializes external variables to zero if you do not provide an explicit initialization.
 - Are visible beyond the scope of a single function. In fact, external variables are global symbols.
 
-__extern__ keyword is used when you want to reference an external variable that is declared in a different file. A declaration beginning with ```extern``` makes the name and type of the variable known to the compiler, but does not cause the compiler to reserve any storage for that variable. 
+__extern__ keyword is used when you want to reference an external variable that is declared in a different file. A declaration beginning with ```extern``` makes the name and type of the variable known to the compiler, but does not cause the compiler to reserve any storage for that variable.
 
+__function static variable__
+
+- The compiler creates storage for a function static variable in the data segment.
+- It is initialized to zero unless you provide an explicit initialization.
+- The value of a function static variable persists between calls to the function.
+- References to a function static variable in multiple calls to the function (even if the function recursively calls itself) refer to the same memory location.
 
 - - -
 
