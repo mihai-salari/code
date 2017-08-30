@@ -12,7 +12,8 @@
 }
 
 - (void)print {
-    
+    NSLog(@"%@", self.hand);
+    NSLog(@"%@", self.foot);
 }
 
 @end
