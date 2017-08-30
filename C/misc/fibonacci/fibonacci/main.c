@@ -2,6 +2,8 @@
 
 #define number 20
 
+// F(n) = F(n - 1) + F(n - 2)
+
 int fib(int n) {
     int sum = 0;
     
@@ -17,7 +19,7 @@ int fib(int n) {
 
 int main(int argc, const char * argv[]) {
     
-    printf("%d\n", fib(number));
+    printf("Fibonacci for %d is: %d\n", number, fib(number));
     
     return 0;
 }
