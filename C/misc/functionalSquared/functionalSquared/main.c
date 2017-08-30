@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define kNumber 10
+#define kNumber 99
 
 int functionalSquareOf(int number, int *list);
 
@@ -17,7 +17,7 @@ int main(int argc, const char * argv[]) {
 int functionalSquareOf(int number, int *list) {
     static int count = 1;
     
-    list[count] = count * count; // store the squared of count into array
+    list[count-1] = count * count; // store the squared of count into array
     
     if (count <= kNumber && number > 0) {
         count += 1;
@@ -28,5 +28,6 @@ int functionalSquareOf(int number, int *list) {
         
     }
     
-    return list[count-1];
+    // to get the last element in the list
+    return list[count-2];
 }
