@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define number 20
+#define number 50
 
 int main(int argc, const char * argv[]) {
     int f0 = 0;
