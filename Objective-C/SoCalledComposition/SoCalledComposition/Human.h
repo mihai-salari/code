@@ -8,4 +8,6 @@
 @property Hand *hand;
 @property Foot *foot;
 
+- (void)print;
+
 @end

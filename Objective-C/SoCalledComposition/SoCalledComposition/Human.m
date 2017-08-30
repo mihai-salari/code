@@ -2,4 +2,8 @@
 
 @implementation Human
 
+- (void)print {
+    
+}
+
 @end
