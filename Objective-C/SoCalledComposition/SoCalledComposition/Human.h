@@ -1,5 +1,4 @@
 #import <Foundation/Foundation.h>
-#import "Hand.h"
 #import "Foot.h"
 #import "SmallHand.h"
 
