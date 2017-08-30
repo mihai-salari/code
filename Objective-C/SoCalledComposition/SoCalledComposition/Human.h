@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "Foot.h"
 #import "SmallHand.h"
+#import "Foot.h"
 
 @interface Human : NSObject
 
