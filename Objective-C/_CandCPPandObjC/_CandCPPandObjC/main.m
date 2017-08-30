@@ -7,13 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CPP.hpp"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         printf("Hello from World of C!");
         NSLog(@"Hello from World of Objective-C!");
-        printCPP();
     }
     
     return 0;
