@@ -30,6 +30,8 @@ __function static variable__
 
 When __static__ keyword is used with an external variable, it limits the visibility of the variable to the file in which it is declared and hides it from other source files.
 
+The __volatile__ keyword declares that a variable's contents may be changed by something other than the program's main thread. The compiler will then avoid optimizations that it would otherwise make.
+
 - - -
 
 ### Articles ###
