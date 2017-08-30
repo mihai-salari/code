@@ -1,3 +1,3 @@
 ### Articles ###
 
-[Go To statement considered harmful](http://david.tribble.com/text/goto.html): a retrospective - David R. Tribble
+[Go To statement considered harmful: a retrospective](http://david.tribble.com/text/goto.html) - _David R. Tribble_
