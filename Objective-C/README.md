@@ -17,6 +17,11 @@ Naming variables or functions:
 - ```fullName``` for Objective-C variable or function (and method)
 - ```_realName``` for private variable (e.g. instance variable)
 
+Separation of interface and implementation files:
+
+- __Interface__ file for public ```struct``` definitions, ```enum``` constants, ```#define```, ```extern``` global variables, and so on.
+- __Implementation__ file for definitions of global variables, private ```structs```, and so on.
+
 Class extension strategies:
 
 - If you want to add new instance variables to a class or override a method of a class, use __subclassing__.
