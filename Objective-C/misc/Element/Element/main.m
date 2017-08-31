@@ -2,6 +2,10 @@
 #import "Atom.h"
 #import "Nuclear.h"
 
+/*
+ Using properties, protocol, category...
+ */
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Atom *atom = [[Atom alloc] init];
