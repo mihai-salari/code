@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
             printf("\n");
         }
         
-        //*printMyNameIMP(p, @selector(printMyName));
+        //  *printMyNameIMP(p, @selector(printMyName));
     }
     
     return 0;
