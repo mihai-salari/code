@@ -30,6 +30,8 @@ Class extension strategies:
 
 Objective-C Runtime:
 
+The _runtime_ is just a shared library of plain C functions and data structures.
+
 - - -
 
 #### Apple Reference/Guide  ####
