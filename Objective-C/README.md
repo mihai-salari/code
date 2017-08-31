@@ -30,7 +30,7 @@ Class extension strategies:
 
 Objective-C Runtime:
 
-The _runtime_ is just a shared library of plain C functions and data structures.
+The _runtime_ is just a shared library of plain C functions and data structures. Some of these functions are called when your program starts. There functions build tables based on information placed in your executable by the compiler.
 
 - - -
 
