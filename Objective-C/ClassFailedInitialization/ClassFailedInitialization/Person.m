@@ -23,4 +23,8 @@
     return self;
 }
 
+- (void)dealloc {
+    NSLog(@"deallocating Person");
+}
+
 @end
