@@ -14,4 +14,13 @@
     return 0;
 }
 
+#pragma mark - Writer protocol
+
+- (void)writeToFile:(NSFileHandle *)file {
+    NSData *data = [self.chemicalElement dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [file writeData:data];
+    [file closeFile];
+}
+
 @end
