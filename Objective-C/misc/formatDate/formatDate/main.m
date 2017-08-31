@@ -7,6 +7,8 @@ int main(int argc, const char * argv[]) {
         NSDate *date = [NSDate date];
         NSDateFormatter *df = [NSDateFormatter new];
         
+        [df setDateFormat:@"EEE MMM d, yyyy"];
+        
         
     }
     
