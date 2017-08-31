@@ -9,7 +9,6 @@ int main(int argc, const char * argv[]) {
         NSNumber *someNumber = nil;
         
         NSLog(@"This is some number: %@", someNumber);
-                
     }
     
     return 0;
