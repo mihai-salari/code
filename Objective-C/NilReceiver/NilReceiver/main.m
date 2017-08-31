@@ -5,6 +5,10 @@ int main(int argc, const char * argv[]) {
         NSString *someText = nil;
         
         NSLog(@"This is some text: %@", someText);
+        
+        NSNumber *someNumber = nil;
+        
+        NSLog(@"This is some number: %@", someNumber);
     }
     
     return 0;
