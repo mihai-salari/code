@@ -2,4 +2,6 @@
 
 @interface MenuItem : NSObject
 
+- (NSString *)menuBlurb;
+
 @end
