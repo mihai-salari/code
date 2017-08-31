@@ -1,11 +1,11 @@
 #import <Foundation/Foundation.h>
-#import "Human.h"
+#import "Something.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Human *h = [Human new];
+        Something *s = [Something new];
         
-        NSLog(@"Human is %@", h);
+        NSLog(@"Something is %@", s);
     }
     
     return 0;
