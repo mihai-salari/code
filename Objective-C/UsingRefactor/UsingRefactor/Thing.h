@@ -1,5 +1,5 @@
 //
-//  Something.h
+//  Thing.h
 //  UsingRefactor
 //
 //  Created by Lee Choon Siong on 2017/08/31.

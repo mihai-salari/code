@@ -1,5 +1,5 @@
 //
-//  Something.m
+//  Thing.m
 //  UsingRefactor
 //
 //  Created by Lee Choon Siong on 2017/08/31.
