@@ -9,7 +9,9 @@ int main(int argc, const char * argv[]) {
         
         [df setDateFormat:@"EEE MMM d, yyyy"];
         
+        NSString *dateString = [df stringFromDate:date];
         
+        NSLog(@"Today is %@", dateString);
     }
     
     return 0;
