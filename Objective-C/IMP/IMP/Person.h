@@ -4,4 +4,6 @@
 
 @property NSString *name;
 
+- (void)printMyName;
+
 @end
