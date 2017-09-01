@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "Atom.h"
 #import "Nuclear.h"
+#import "Hydrogen.h"
 
 /*
  Using properties, protocol, category...
@@ -13,6 +14,10 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Atom chemical element name: %@", atom.chemicalElement);
         
         NSLog(@"Atomic number = %lu", [atom atomicNumber]);
+        
+        Hydrogen *h = [[Hydrogen alloc] init];
+        
+        NSLog(@"Hydrogen chemical element name: %@", h.chemicalElement);
     }
     
     return 0;

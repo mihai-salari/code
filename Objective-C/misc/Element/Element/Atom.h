@@ -7,6 +7,7 @@
 @property (readonly) NSUInteger neutrons;
 @property (readonly) NSUInteger electrons;
 @property (readonly) NSString *chemicalElement;
+@property (readonly) NSString *atomicSymbol;
 
 - (NSUInteger)massNumber;
 
