@@ -22,7 +22,7 @@ int main(int argc, const char * argv[]) {
         Atom *h1 = [Hydrogen hydrogenWithNeutrons:0];
         [h1 logInfo];
         
-        Atom *h2 = [[Hydrogen alloc] initWithNeutrons:1];
+        id h2 = [[Hydrogen alloc] initWithNeutrons:1];
         [h2 logInfo];
         
         Hydrogen *h3 = [Hydrogen hydrogenWithNeutrons:2];
