@@ -15,7 +15,7 @@
 }
 
 - (void)logInfo {
-    NSLog(@"\n%@:", self.chemicalElement);
+    NSLog(@"\n%@:\n\tatomic symbol = %@\n\tatomic number = %lu\n\tmass number = %lu", self.chemicalElement, self.atomicSymbol, self.protons, [self massNumber]);
 }
 
 #pragma mark - Writer protocol
