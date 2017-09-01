@@ -12,4 +12,12 @@
     return nil;
 }
 
+- (instancetype)init {
+    return [self initWithName:@"The God"];
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"I am %@", self.name];
+}
+
 @end
