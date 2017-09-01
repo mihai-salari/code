@@ -4,6 +4,13 @@
 
 static int availableCoupons = INITIAL_COUPON_ALLOCATION; // visible to this file only
 
+@interface Coupon() // declare private accessors in an extension
+
++ (int)availableCoupons;
++ (void)setAvailableCoupons:(int)inAvailableCoupons;
+
+@end
+
 @implementation Coupon
 
 - (id)init {
