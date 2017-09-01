@@ -1,5 +1,9 @@
 #import <Foundation/Foundation.h>
 
-@interface Car : NSObject
+@class Person;
+
+@interface Car : NSObject {
+    Person *owner;
+}
 
 @end
