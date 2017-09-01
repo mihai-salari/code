@@ -1,4 +1,4 @@
-// Fast forwarding
+// Fast forwarding target for Hydrogen class
 
 #import <Foundation/Foundation.h>
 

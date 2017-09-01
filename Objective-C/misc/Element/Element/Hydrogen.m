@@ -1,6 +1,10 @@
 #import "Hydrogen.h"
+#import "Hydrogen+Helper.h"
 
-@implementation Hydrogen
+@implementation Hydrogen {
+    // Instance variable
+    @private Hydrogen_Helper *helper;
+}
 
 + (id)hydrogenWithNeutrons:(NSUInteger)neutrons {
     return [[[self class] alloc] initWithNeutrons:neutrons];
@@ -14,6 +18,9 @@
         _atomicSymbol = @"H";
         _protons = 1;
         _neutrons = neutrons;
+        
+        // Create helper for message forwarding
+        helper = [[Hydrogen_Helper alloc] init];
     }
     
     return self;
@@ -21,6 +28,15 @@
 
 - (instancetype)init {
     return [self initWithNeutrons:0];
+}
+
+// Fast forwarding in use here
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    if ([helper respondsToSelector:aSelector]) {
+        return helper;
+    }
+    
+    return nil;
 }
 
 @end
