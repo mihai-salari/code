@@ -1,7 +1,7 @@
 // Fast forwarding
 
-#import "Atom.h"
+#import <Foundation/Foundation.h>
 
-@interface Hydrogen_Helper : Atom
+@interface Hydrogen_Helper : NSObject
 
 @end
