@@ -4,7 +4,8 @@
 #import "Hydrogen.h"
 
 /*
- Using properties, protocol, category...
+    Using properties, protocol, category...
+    Added initialization method, class initialization method...
  */
 
 int main(int argc, const char * argv[]) {
