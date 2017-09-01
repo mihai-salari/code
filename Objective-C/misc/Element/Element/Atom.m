@@ -11,7 +11,7 @@
 }
 
 - (NSUInteger)massNumber {
-    return 0;
+    return self.protons + self.neutrons;
 }
 
 #pragma mark - Writer protocol
