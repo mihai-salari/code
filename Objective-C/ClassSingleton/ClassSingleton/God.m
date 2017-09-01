@@ -26,8 +26,8 @@
     return [self initWithName:@"The God"];
 }
 
-//- (NSString *)description {
-//    return [NSString stringWithFormat:@"I am %@", self.name];
-//}
+- (NSString *)description {
+    return [NSString stringWithFormat:@"I am %@ from planet %p.", self.name, self];
+}
 
 @end
