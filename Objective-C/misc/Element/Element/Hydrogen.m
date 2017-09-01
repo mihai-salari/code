@@ -3,7 +3,7 @@
 @implementation Hydrogen
 
 + (id)hydrogenWithNeutrons:(NSUInteger)neutrons {
-    
+    return [[[self class] alloc] initWithNeutrons:neutrons];
 }
 
 - (id)initWithNeutrons:(NSUInteger)neutrons {
