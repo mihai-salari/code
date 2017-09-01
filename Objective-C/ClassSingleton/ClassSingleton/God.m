@@ -5,7 +5,7 @@
 + (id)sharedGod {
     static God *sharedGod = nil;
     
-    if (!sharedGod) {
+    if (!sharedGod) { // lazy initialization
         sharedGod = [[God alloc] init];
     }
     
