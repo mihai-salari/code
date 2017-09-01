@@ -2,4 +2,7 @@
 
 @interface Coupon : NSObject
 
++ (int)numberCouponsLeft;
++ (void)resetCoupon;
+
 @end
