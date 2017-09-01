@@ -4,4 +4,6 @@
 
 @interface Hydrogen_Helper : NSObject
 
+- (NSString *)factoid;
+
 @end
