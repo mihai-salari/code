@@ -26,4 +26,8 @@ static int availableCoupons = INITIAL_COUPON_ALLOCATION; // visible to this file
     availableCoupons = INITIAL_COUPON_ALLOCATION;
 }
 
+- (void)dealloc {
+    NSLog(@"deallocating %p", self);
+}
+
 @end
