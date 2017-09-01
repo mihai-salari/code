@@ -10,7 +10,7 @@
     // Note the use of `self class`, so that it will works with subclass
     id obj = [[[self class] allocWithZone:zone] init];
     
-    [obj setName:self.name]; // This will crash, if name is nil
+    [obj setName:self.name];
     
     return obj;
 }
