@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "Person.h"
 
-// To check that all instance variables are initialized to 0 or null
+// To check that all instance variables are initialized to 0 or nil
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
