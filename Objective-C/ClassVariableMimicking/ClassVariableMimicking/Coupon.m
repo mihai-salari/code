@@ -2,4 +2,7 @@
 
 @implementation Coupon
 
++ (int)numberCouponsLeft;
++ (void)resetCoupon;
+
 @end
