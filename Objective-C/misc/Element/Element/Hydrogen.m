@@ -3,7 +3,7 @@
 
 @implementation Hydrogen {
     // Instance variable
-    @private Hydrogen_Helper *helper;
+@private Hydrogen_Helper *helper;
 }
 
 + (id)hydrogenWithNeutrons:(NSUInteger)neutrons {
@@ -20,7 +20,7 @@
         _neutrons = neutrons;
         
         // Create helper for message forwarding
-        helper = [[Hydrogen_Helper alloc] init];
+        helper = [[Hydrogen_Helper alloc] init]; // target object used for message forwarding
     }
     
     return self;

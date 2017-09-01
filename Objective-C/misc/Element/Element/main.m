@@ -2,6 +2,7 @@
 #import "Atom.h"
 #import "Nuclear.h"
 #import "Hydrogen.h"
+#import "Atom+Helper.h"
 
 /*
     Using properties, protocol, category...
@@ -32,6 +33,11 @@ int main(int argc, const char * argv[]) {
         NSLog(@"h1's class is %@", [h1 class]);
         NSLog(@"h2's class is %@", [h2 class]);
         NSLog(@"h3's superclass is %@", [h3 superclass]);
+        
+        // Use message forwarding to get a fact about Hydrogen
+        [h3 logInfoWith:@""];
+        [h3 logInfoWith:@"test"];
+        [h3 logInfoWith:[h3 factoid]];
     }
     
     return 0;

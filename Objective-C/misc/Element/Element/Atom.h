@@ -21,5 +21,6 @@
 - (NSUInteger)massNumber;
 
 - (void)logInfo;
+- (void)logInfoWith:(NSString *)info;
 
 @end

@@ -18,6 +18,14 @@
     NSLog(@"\n%@:\n\tatomic symbol = %@\n\tatomic number = %lu\n\tmass number = %lu", self.chemicalElement, self.atomicSymbol, self.protons, [self massNumber]);
 }
 
+- (void)logInfoWith:(NSString *)info {
+    if ([info length] == 0) {
+        [self logInfo];
+    } else {
+        NSLog(@"%@", info);
+    }
+}
+
 #pragma mark - Writer protocol
 
 - (void)writeToFile:(NSFileHandle *)file {
