@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "Person.h"
 
-// To demonstrate the possible of failed initialization
+// To demonstrate the use of failed initialization.
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
