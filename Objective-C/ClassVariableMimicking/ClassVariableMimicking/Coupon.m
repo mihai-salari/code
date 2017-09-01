@@ -14,11 +14,19 @@ static int availableCoupons = INITIAL_COUPON_ALLOCATION; // visible to this file
 @implementation Coupon
 
 + (int)numberCouponsLeft {
-    return availableCoupons;
+    // return class var directly
+    //return availableCoupons;
+    
+    // return via accessor
+    return [self availableCoupons];
 }
 
 + (void)resetCoupon {
-    availableCoupons = INITIAL_COUPON_ALLOCATION;
+    // set class var directly
+    //availableCoupons = INITIAL_COUPON_ALLOCATION;
+    
+    // set via accessor
+    [self setAvailableCoupons:INITIAL_COUPON_ALLOCATION];
 }
 
 + (int)availableCoupons {
