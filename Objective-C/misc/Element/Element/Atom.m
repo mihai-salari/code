@@ -22,7 +22,7 @@
     if ([info length] == 0) {
         [self logInfo];
     } else {
-        NSLog(@"%@", info);
+        NSLog(@"\n%@:\n\tfact = %@\n\tatomic symbol = %@\n\tatomic number = %lu\n\tmass number = %lu", self.chemicalElement, info, self.atomicSymbol, self.protons, [self massNumber]);
     }
 }
 
