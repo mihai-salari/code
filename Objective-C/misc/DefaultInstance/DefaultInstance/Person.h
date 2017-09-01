@@ -5,4 +5,7 @@
 @property NSString *name;
 @property int age;
 
+- (float)weight;
+- (float)height;
+
 @end
