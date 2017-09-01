@@ -4,6 +4,7 @@
 
 @property (readonly) NSString *name;
 
++ (id)sharedGod;
 - (id)initWithName:(NSString *)name;
 
 @end

@@ -8,6 +8,13 @@ int main(int argc, const char * argv[]) {
         God *god = [God new];
         
         NSLog(@"%@", god);
+        
+        God *sg1 = [God sharedGod];
+        God *sg2 = [God sharedGod];
+        
+        // Note both refer to same memory address
+        NSLog(@"%@", sg1);
+        NSLog(@"%@", sg2);
     }
     
     return 0;

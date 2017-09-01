@@ -2,6 +2,16 @@
 
 @implementation God
 
++ (id)sharedGod {
+    static God *sharedGod = nil;
+    
+    if (!sharedGod) {
+        sharedGod = [[God alloc] init];
+    }
+    
+    return sharedGod;
+}
+
 - (id)initWithName:(NSString *)name {
     if (self = [super init]) {
         _name = name;
@@ -16,8 +26,8 @@
     return [self initWithName:@"The God"];
 }
 
-- (NSString *)description {
-    return [NSString stringWithFormat:@"I am %@", self.name];
-}
+//- (NSString *)description {
+//    return [NSString stringWithFormat:@"I am %@", self.name];
+//}
 
 @end
