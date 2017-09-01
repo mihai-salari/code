@@ -18,6 +18,9 @@ int main(int argc, const char * argv[]) {
         Hydrogen *h = [[Hydrogen alloc] init];
         
         NSLog(@"Hydrogen chemical element name: %@", h.chemicalElement);
+        
+        Atom *hydrogen = [Hydrogen hydrogenWithNeutrons:0];
+        [hydrogen logInfo];
     }
     
     return 0;

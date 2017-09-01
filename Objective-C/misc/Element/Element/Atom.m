@@ -14,6 +14,10 @@
     return self.protons + self.neutrons;
 }
 
+- (void)logInfo {
+    NSLog(@"\n%@:", self.chemicalElement);
+}
+
 #pragma mark - Writer protocol
 
 - (void)writeToFile:(NSFileHandle *)file {

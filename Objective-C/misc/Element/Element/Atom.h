@@ -20,4 +20,6 @@
 
 - (NSUInteger)massNumber;
 
+- (void)logInfo;
+
 @end
