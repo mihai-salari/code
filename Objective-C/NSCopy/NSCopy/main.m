@@ -2,6 +2,8 @@
 #import "Person.h"
 #import "Doctor.h"
 
+// Implementing copying in custom class
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Person *foo = [Person new];
