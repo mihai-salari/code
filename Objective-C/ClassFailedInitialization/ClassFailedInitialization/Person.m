@@ -25,6 +25,8 @@
 
 - (void)dealloc {
     NSLog(@"deallocating Person");
+    
+    //[super dealloc];
 }
 
 @end
