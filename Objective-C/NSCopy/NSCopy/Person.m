@@ -6,4 +6,11 @@
     NSLog(@"Name is %@", self.name);
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    // Note the use of `self class`, so that it will works with subclass
+    id obj = [[[self class] allocWithZone:zone] init];
+    
+    return obj;
+}
+
 @end

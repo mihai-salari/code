@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface Person : NSObject
+@interface Person : NSObject <NSCopying>
 
 @property NSString *name;
 
