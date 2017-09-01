@@ -18,4 +18,12 @@ static int availableCoupons = INITIAL_COUPON_ALLOCATION; // visible to this file
     return self;
 }
 
++ (int)numberCouponsLeft {
+    return availableCoupons;
+}
+
++ (void)resetCoupon {
+    availableCoupons = INITIAL_COUPON_ALLOCATION;
+}
+
 @end
