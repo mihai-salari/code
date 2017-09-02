@@ -2,4 +2,6 @@
 
 @interface Person : NSObject
 
+@property NSString *name;
+
 @end
