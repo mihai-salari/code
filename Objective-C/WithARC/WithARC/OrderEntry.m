@@ -5,6 +5,9 @@
 - (id)initWithOrderID:(NSString *)oid {
     if (self = [super init]) {
         NSLog(@"Initializing OrderEntry object...");
+        // Is it a good practice to use 'self' here,
+        // or should we just refer to the instance variable directly?
+        // e.g. _orderID
         self.orderID = oid;
         self.item = [[OrderItem alloc] initWithName:@"Something"];
         self.shippingAddress = [[Address alloc] init];
