@@ -17,6 +17,11 @@ int main(int argc, const char * argv[]) {
         entry = nil;
         
         NSLog(@"%@", entry);
+        
+        OrderEntry *newEntry = [[OrderEntry alloc] initWithOrderID:@"222"];
+        newEntry.item.entry = newEntry;
+        
+        newEntry = nil; // introduce reference cycle, unless we use 'weak'
     }
     
     return 0;

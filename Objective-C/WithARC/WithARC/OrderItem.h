@@ -8,5 +8,6 @@
 @property (weak) OrderEntry *entry;
 
 - (id)initWithName:(NSString *)itemName;
+- (id)initWithEntry:(OrderEntry *)entry andName:(NSString *)itemName;
 
 @end
