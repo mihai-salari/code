@@ -17,7 +17,8 @@ int main(int argc, const char * argv[]) {
         entry = nil;
         
         NSLog(@"%@", entry);
-        
+
+        // To test reference cycle, first remove the weak qualifier in OrderItem
         OrderEntry *newEntry = [[OrderEntry alloc] initWithOrderID:@"222"];
         newEntry.item.entry = newEntry;
         
