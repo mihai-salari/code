@@ -1,13 +1,13 @@
 #import <Foundation/Foundation.h>
 
-struct SomeStruct {
+typedef struct SomeStruct {
     int a;
     int b;
-};
+} SomeStruct;
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        struct SomeStruct *foo;
+        SomeStruct *foo = malloc(sizeof(SomeStruct));
         
         foo->a = 10;
         foo->b = 20;
