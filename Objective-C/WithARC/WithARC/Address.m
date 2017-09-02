@@ -12,4 +12,8 @@
     return nil;
 }
 
+- (void)dealloc {
+    NSLog(@"Deallocating Addess object...");
+}
+
 @end
