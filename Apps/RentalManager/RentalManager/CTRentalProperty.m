@@ -28,4 +28,8 @@
     self.rentalPrice = fmax(self.rentalPrice, min);
 }
 
+- (void)handleLowMemoryWarning:(NSNotification *)notification {
+    NSLog(@"handleLowMemoryWarning was called");
+}
+
 @end

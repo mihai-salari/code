@@ -23,4 +23,7 @@ typedef enum CTPropertyType {
 - (void)increaseRentalByPercent:(float)percent withMaximum:(float)max;
 - (void)decreaseRentalByPercent:(float)percent withMinimum:(float)min;
 
+// Notification
+- (void)handleLowMemoryWarning:(NSNotification *)notification;
+
 @end
