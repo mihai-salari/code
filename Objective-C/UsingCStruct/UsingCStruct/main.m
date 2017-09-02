@@ -1,3 +1,6 @@
+// To understand with ARC whehter we can still use
+// C struct or not...
+
 #import <Foundation/Foundation.h>
 
 typedef struct SomeStruct {
@@ -16,7 +19,6 @@ int main(int argc, const char * argv[]) {
         printf("b is %d\n", foo->b);
         
         free(foo);
-        
     }
     
     return 0;
