@@ -15,6 +15,8 @@ int main(int argc, const char * argv[]) {
         printf("a is %d\n", foo->a);
         printf("b is %d\n", foo->b);
         
+        free(foo);
+        
     }
     
     return 0;
