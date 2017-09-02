@@ -18,11 +18,11 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"%@", entry);
 
-        // To test reference cycle, first remove the weak qualifier in OrderItem
+        // To test strong reference cycle, first remove the weak qualifier in OrderItem
         OrderEntry *newEntry = [[OrderEntry alloc] initWithOrderID:@"222"];
         newEntry.item.entry = newEntry;
         
-        newEntry = nil; // introduce reference cycle, unless we use 'weak'
+        newEntry = nil; // strong reference cycle will not deallocate the object properly, unless we use 'weak'
     }
     
     return 0;
