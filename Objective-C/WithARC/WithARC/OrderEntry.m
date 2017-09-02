@@ -26,8 +26,8 @@
     NSLog(@"Deallocating OrderEntry object...");
 }
 
-- (NSString *)description {
-    return [NSString stringWithFormat:@"%@ %@ %@", self.orderID, self.item.name, self.shippingAddress];
-}
+//- (NSString *)description {
+//    return [NSString stringWithFormat:@"%@ %@ %@", self.orderID, self.item.name, self.shippingAddress];
+//}
 
 @end
