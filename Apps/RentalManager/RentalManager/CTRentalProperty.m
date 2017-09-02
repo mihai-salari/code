@@ -1,3 +1,4 @@
+#import <UIKit/UIKit.h>
 #import "CTRentalProperty.h"
 
 @implementation CTRentalProperty
@@ -13,6 +14,13 @@
         self.address = address;
         self.rentalPrice = price;
         self.propertyType = type;
+        
+        // Register self with notification center that we are interested with
+        // low memory warning notification.
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(handleLowMemoryWarning:)
+                                                     name:UIApplicationDidReceiveMemoryWarningNotification
+                                                   object:nil];
     }
     
     return self;
@@ -30,6 +38,13 @@
 
 - (void)handleLowMemoryWarning:(NSNotification *)notification {
     NSLog(@"handleLowMemoryWarning was called");
+}
+
+- (void)dealloc {
+    // Clean up
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIApplicationDidReceiveMemoryWarningNotification
+                                                  object:nil];
 }
 
 @end
