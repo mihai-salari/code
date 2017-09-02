@@ -5,7 +5,7 @@
 - (id)initWithName:(NSString *)itemName {
     if (self = [super init]) {
         NSLog(@"Initializing OrderItem object...");
-        _name = itemName;
+        self.name = itemName;
         
         return self;
     }

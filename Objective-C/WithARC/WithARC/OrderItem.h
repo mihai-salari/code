@@ -3,6 +3,7 @@
 @interface OrderItem : NSObject
 
 @property NSString *name;
+@property (weak) OrderEntry *entry;
 
 - (id)initWithName:(NSString *)itemName;
 
