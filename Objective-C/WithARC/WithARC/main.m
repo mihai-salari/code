@@ -1,6 +1,4 @@
 #import <Foundation/Foundation.h>
-#import "Address.h"
-#import "OrderItem.h"
 #import "OrderEntry.h"
 
 int main(int argc, const char * argv[]) {
