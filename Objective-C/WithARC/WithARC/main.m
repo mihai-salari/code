@@ -9,6 +9,7 @@ int main(int argc, const char * argv[]) {
         NSString *a123 = @"a123";
         
         OrderEntry *entry = [[OrderEntry alloc] initWithOrderID:a123];
+        entry = [[OrderEntry alloc] initWithOrderID:@"222" orderItem:@"3 Sausages"];
         
         a123 = nil; // to test the ARC
         
