@@ -24,6 +24,12 @@ int main(int argc, const char * argv[]) {
         newEntry.item.entry = newEntry;
         
         newEntry = nil; // strong reference cycle will not deallocate the object properly, unless we use 'weak'
+        
+        OrderEntry *entry2 = [[OrderEntry alloc] initWithOrderID:@"999" orderItem:@"100 cheeseburgers"];
+        
+        NSLog(@"New order, ID = %@, item = %@", entry2.orderID, entry2.item.name); // Note that this is releas after we left autorelease pool, and WHY :)
+        
+        NSLog(@"Leaving autorelease pool, fasten seat belt please!");
     }
     
     return 0;
