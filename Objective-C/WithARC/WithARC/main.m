@@ -29,6 +29,8 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"New order, ID = %@, item = %@", entry2.orderID, entry2.item.name); // Note that this is releas after we left autorelease pool, and WHY :)
         
+        // The reason is due to how ARC works with property getter...
+        
         NSLog(@"Leaving autorelease pool, fasten seat belt please!");
     }
     
