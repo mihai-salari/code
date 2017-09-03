@@ -9,6 +9,8 @@ int main(int argc, const char * argv[]) {
         NSArray *data = [NSArray arrayWithObject:(__bridge_transfer NSString *)cstr];
         
         NSLog(@"data is %@", data);
+        
+        
     }
     
     return 0;
