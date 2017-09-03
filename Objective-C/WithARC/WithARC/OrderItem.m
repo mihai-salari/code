@@ -19,7 +19,7 @@
     if (self = [super init]) {
         NSLog(@"Initializing OrderItem object...");
         self.entry = entry;
-        self.name = itemName;
+        _name = itemName; // We cannot use self.name because the property is read only, direct access to instance variable is needed
         
         return self;
     }
