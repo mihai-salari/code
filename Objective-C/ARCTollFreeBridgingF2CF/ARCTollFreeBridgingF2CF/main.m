@@ -1,17 +1,11 @@
-//
-//  main.m
-//  ARCTollFreeBridgingF2CF
-//
-//  Created by Lee Choon Siong on 2017/09/04.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
+// Cast a Foundation framework object to CoreFoundation type
 
 #import <Foundation/Foundation.h>
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
     }
+    
     return 0;
 }
