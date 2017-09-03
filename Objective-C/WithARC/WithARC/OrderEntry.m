@@ -3,14 +3,31 @@
 @implementation OrderEntry
 
 - (id)initWithOrderID:(NSString *)oid {
+    /*
     if (self = [super init]) {
         NSLog(@"Initializing OrderEntry object...");
         // Is it a good practice to use 'self' here,
         // or should we just refer to the instance variable directly?
         // e.g. _orderID
-        self.orderID = oid;
-        self.item = [[OrderItem alloc] initWithName:@"Something"];
+        _orderID = oid;
+        _item = [[OrderItem alloc] initWithName:@"Something"];
         self.shippingAddress = [[Address alloc] init];
+        
+        return self;
+    }
+    
+    return nil;
+    */
+    
+    return [self initWithOrderID:oid orderItem:@"Unknown"];
+}
+
+- (id)initWithOrderID:(NSString *)oid orderItem:(NSString *)item {
+    if (self = [super init]) {
+        NSLog(@"Initializing OrderEntry object...");
+        _orderID = oid;
+        _item = [[OrderItem alloc] initWithName:item];
+        _shippingAddress = [[Address alloc] init];
         
         return self;
     }
@@ -23,7 +40,7 @@
 }
 
 - (void)dealloc {
-    NSLog(@"Deallocating OrderEntry object...");
+    NSLog(@"Deallocating OrderEntry object with ID %@...", self.orderID);
 }
 
 //- (NSString *)description {

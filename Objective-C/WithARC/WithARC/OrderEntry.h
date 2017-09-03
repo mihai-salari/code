@@ -4,10 +4,11 @@
 
 @interface OrderEntry : NSObject
 
-@property OrderItem *item;
-@property NSString *orderID;
+@property (readonly) OrderItem *item;
+@property (readonly) NSString *orderID;
 @property Address *shippingAddress;
 
 - (id)initWithOrderID:(NSString *)oid;
+- (id)initWithOrderID:(NSString *)oid orderItem:(NSString *)item;
 
 @end
