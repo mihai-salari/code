@@ -26,6 +26,7 @@ int main(int argc, const char * argv[]) {
             // Examining userInfo dictionary
             NSLog(@"userInfo = %@", [error userInfo]);
             
+            // A more complicated way to examining the error
             NSDictionary *userInfo = [error userInfo];
             NSString *errorMsg;
             
