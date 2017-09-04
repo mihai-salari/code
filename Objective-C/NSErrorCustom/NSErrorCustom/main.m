@@ -6,7 +6,16 @@ int main(int argc, const char * argv[]) {
         Person *foo = [Person new];
         NSError *error;
         
-        [Person printPersonInfo:foo error:&error];
+        //foo = nil;
+        
+        if ([Person printPersonInfo:foo error:&error] == NO) {
+            NSLog(@"Something wrong...");
+            NSLog(@"Error: %@", [error localizedDescription]);
+            NSLog(@"Error: %@", [error localizedRecoverySuggestion]);
+            NSLog(@"Error: %@", [error userInfo]);
+        } else {
+            NSLog(@"Nothing wrong...");
+        }                
     }
     
     return 0;
