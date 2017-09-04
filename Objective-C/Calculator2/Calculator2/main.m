@@ -10,6 +10,7 @@ int main(int argc, const char * argv[]) {
         NSNumber *n3 = @88;
         
         NSLog(@"Sum of %@ + %@ = %@", n1, n2, [cal sumAdd:n1 and:n2]);
+        NSLog(@"Sum of %@ + %@ = %@", n1, n3, [cal sumAdd:n1 :n3]);
     }
     
     return 0;
