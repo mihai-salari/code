@@ -21,7 +21,7 @@ NSString * const LCSAccountExpirationDateKey = @"LCSAccountExpirationDateKey";
     
     NSMutableArray *missingValues = [NSMutableArray array];
     
-    //NSLog(@"%@", [ad objectForKey:@"name"]);
+    // Somehow following code didn't work...
     
 //    for (NSString *key in [@"name city price" componentsSeparatedByString:@" "]) {
 //        NSLog(@"%@ is %@", key, [ad objectForKey:key]);
@@ -33,19 +33,25 @@ NSString * const LCSAccountExpirationDateKey = @"LCSAccountExpirationDateKey";
 //        }
 //    }
     
-    if (![ad objectForKey:@"name"]) {
+    if ([[ad objectForKey:@"name"] length] == 0) {
         NSLog(@"missing name");
         [missingValues addObject:@"name"];
+    } else {
+        NSLog(@"name = %@", [ad objectForKey:@"name"]);
     }
     
-    if (![ad objectForKey:@"city"]) {
+    if ([[ad objectForKey:@"city"] length] == 0) {
         NSLog(@"missing city");
         [missingValues addObject:@"city"];
+    } else {
+        NSLog(@"city = %@", [ad objectForKey:@"city"]);
     }
     
-    if (![ad objectForKey:@"price"]) {
+    if ([[ad objectForKey:@"price"] length] == 0) {
         NSLog(@"missing price");
-        [missingValues addObject:@"price"]; 
+        [missingValues addObject:@"price"];
+    } else {
+        NSLog(@"price = %@", [ad objectForKey:@"price"]);
     }
     
     
@@ -116,6 +122,31 @@ NSString * const LCSAccountExpirationDateKey = @"LCSAccountExpirationDateKey";
         [av show];
     } else {
         NSLog(@"Error!");
+        
+        NSString *message;
+        
+        if ([error domain] == LCSErrorDomain) {
+            switch ([error code]) {
+                case LCSValidationError:
+                    message = [NSString stringWithFormat:@"%@\nMissing values: %@", [error localizedDescription], [[[error userInfo] objectForKey:LCSMissingValuesKey] componentsSeparatedByString:@", "]];
+                    break;
+                case LCSWrongCredentialsError:
+                    break;
+                default:
+                    message = [error localizedDescription];
+                    break;
+            }
+        } else {
+            message = [error localizedDescription];
+        }
+        
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                     message:message
+                                                    delegate:nil
+                                           cancelButtonTitle:@"OK"
+                                           otherButtonTitles:nil];
+        
+        [av show];
     }
 }
 
