@@ -3,7 +3,7 @@
 @implementation KlassA
 
 - (void)sayHelloTo:(NSString *)name {
-    NSLog(@"Hello, %@!", name);
+    NSLog(@"Hello %@, from Klass A!", name);
 }
 
 @end
