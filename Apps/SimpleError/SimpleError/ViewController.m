@@ -65,7 +65,13 @@ NSString * const LCSAccountExpirationDateKey = @"LCSAccountExpirationDateKey";
             NSArray *keys = [NSArray arrayWithObjects:NSLocalizedDescriptionKey, NSLocalizedRecoverySuggestionErrorKey, LCSMissingValuesKey, nil];
             NSArray *values = [NSArray arrayWithObjects:description, recoverySuggestion, missingValues, nil];
             
-            NSDictionary *userDict = [NSDictionary dictionaryWithObject:values forKey:keys];
+            //NSDictionary *userDict = [NSDictionary dictionaryWithObject:values forKey:keys];
+            
+            NSDictionary *userDict = @{
+                                       NSLocalizedDescriptionKey: description,
+                                       NSLocalizedRecoverySuggestionErrorKey: recoverySuggestion,
+                                       LCSMissingValuesKey: missingValues
+                                       };
             
             *err = [[NSError alloc] initWithDomain:LCSErrorDomain
                                               code:LCSValidationError
@@ -128,7 +134,8 @@ NSString * const LCSAccountExpirationDateKey = @"LCSAccountExpirationDateKey";
         if ([error domain] == LCSErrorDomain) {
             switch ([error code]) {
                 case LCSValidationError:
-                    message = [NSString stringWithFormat:@"%@\nMissing values: %@", [error localizedDescription], [[[error userInfo] objectForKey:LCSMissingValuesKey] componentsSeparatedByString:@", "]];
+                    //message = [NSString stringWithFormat:@"%@\nMissing values: %@", [error localizedDescription], [[[error userInfo] objectForKey:LCSMissingValuesKey] componentsSeparatedByString:@", "]];
+                    message = [NSString stringWithFormat:@"%@\nMissing values: %@", [error localizedDescription], [[error userInfo] objectForKey:LCSMissingValuesKey]];
                     break;
                 case LCSWrongCredentialsError:
                     break;
