@@ -3,6 +3,8 @@
 
 @implementation Calculator
 
+// Dynamic method resolution
+
 id absoluteValue(id self, SEL _cmd, id value) {
     NSInteger intVal = [value integerValue];
     
