@@ -6,3 +6,4 @@ To demonstrate the use of NSError.
 > Note
 >
 > There's some problem with the use of NSDictionary which need to be check further.
+> https://github.com/choonsiong/code/blob/master/Objective-C/NSDictionaryMore/NSDictionaryMore/main.m
