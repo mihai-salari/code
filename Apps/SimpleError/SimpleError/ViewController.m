@@ -15,17 +15,43 @@ NSString * const LCSAccountExpirationDateKey = @"LCSAccountExpirationDateKey";
         @throw [NSException exceptionWithName:@"LCSBadAPICall"
                                        reason:@"ad dictionary is nil"
                                      userInfo:nil];
+    } else {
+        NSLog(@"ad is %@", ad);
     }
     
     NSMutableArray *missingValues = [NSMutableArray array];
     
-    for (NSString *key in [@"name city price" componentsSeparatedByString:@" "]) {
-        if ([[ad objectForKey:key] length] == 0) {
-            [missingValues addObject:key];
-        }
+    //NSLog(@"%@", [ad objectForKey:@"name"]);
+    
+//    for (NSString *key in [@"name city price" componentsSeparatedByString:@" "]) {
+//        NSLog(@"%@ is %@", key, [ad objectForKey:key]);
+//        
+//        if ([[ad objectForKey:key] length] == 0) {
+//            NSLog(@"Missing = %@", key);
+//            
+//            [missingValues addObject:key];
+//        }
+//    }
+    
+    if (![ad objectForKey:@"name"]) {
+        NSLog(@"missing name");
+        [missingValues addObject:@"name"];
     }
     
+    if (![ad objectForKey:@"city"]) {
+        NSLog(@"missing city");
+        [missingValues addObject:@"city"];
+    }
+    
+    if (![ad objectForKey:@"price"]) {
+        NSLog(@"missing price");
+        [missingValues addObject:@"price"]; 
+    }
+    
+    
     if ([missingValues count] > 0) {
+        NSLog(@"Missing values!");
+        
         if (err != NULL) {
             NSString *description = @"The ad could not be published because some required values are missing.";
             NSString *recoverySuggestion = @"Please provide the missing values and try again.";
@@ -61,9 +87,20 @@ NSString * const LCSAccountExpirationDateKey = @"LCSAccountExpirationDateKey";
     NSLog(@"Ooops, click me...");
     
     NSArray *keys = [NSArray arrayWithObjects:@"name", @"city", @"price", nil];
-    NSArray *values = [NSArray arrayWithObjects:self.name.text, self.city.text, self.price.text, nil];
+    NSLog(@"keys = %@", keys);
     
-    NSDictionary *ad = [NSDictionary dictionaryWithObject:values forKey:keys];
+    NSArray *values = [NSArray arrayWithObjects:self.name.text, self.city.text, self.price.text, nil];
+    NSLog(@"values = %@", values);
+    
+    //NSDictionary *ad = [NSDictionary dictionaryWithObject:values forKey:keys];
+    
+    NSDictionary *ad = @{
+                        @"name": self.name.text,
+                        @"city": self.city.text,
+                        @"price": self.price.text
+                        };
+    
+    NSLog(@"ad is %@", ad);
     
     NSError *error;
     
@@ -74,7 +111,11 @@ NSString * const LCSAccountExpirationDateKey = @"LCSAccountExpirationDateKey";
                                            cancelButtonTitle:@"OK"
                                            otherButtonTitles:nil];
         
+        NSLog(@"No error, preparing to show av...");
+        
         [av show];
+    } else {
+        NSLog(@"Error!");
     }
 }
 
