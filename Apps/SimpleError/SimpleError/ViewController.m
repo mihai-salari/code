@@ -34,6 +34,10 @@ NSString * const LCSAccountExpirationDateKey = @"LCSAccountExpirationDateKey";
             NSArray *values = [NSArray arrayWithObjects:description, recoverySuggestion, missingValues, nil];
             
             NSDictionary *userDict = [NSDictionary dictionaryWithObject:values forKey:keys];
+            
+            *err = [[NSError alloc] initWithDomain:LCSErrorDomain
+                                              code:LCSValidationError
+                                          userInfo:userDict];
         }
         
         return NO;
@@ -53,5 +57,8 @@ NSString * const LCSAccountExpirationDateKey = @"LCSAccountExpirationDateKey";
     // Dispose of any resources that can be recreated.
 }
 
+- (void)publishAd:(id)sender {
+    NSLog(@"Ooops, click me...");
+}
 
 @end

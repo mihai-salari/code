@@ -19,5 +19,7 @@ enum {
 
 + (BOOL)publishAd:(NSDictionary *)ad error:(NSError **)err;
 
+- (IBAction)publishAd:(id)sender;
+
 @end
 
