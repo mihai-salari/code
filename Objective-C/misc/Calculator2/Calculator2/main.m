@@ -11,6 +11,10 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"Sum of %@ + %@ = %@", n1, n2, [cal sumAdd:n1 and:n2]);
         NSLog(@"Sum of %@ + %@ = %@", n1, n3, [cal sumAdd:n1 :n3]);
+        
+        SEL selector1 = @selector(sumAdd:and:);
+        id sum1 = [cal performSelector:selector1 withObject:n1 withObject:n2];
+        NSLog(@"Sum of %@ + %@ = %@", n1, n2, sum1);
     }
     
     return 0;
