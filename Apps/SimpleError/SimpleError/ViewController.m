@@ -59,6 +59,23 @@ NSString * const LCSAccountExpirationDateKey = @"LCSAccountExpirationDateKey";
 
 - (void)publishAd:(id)sender {
     NSLog(@"Ooops, click me...");
+    
+    NSArray *keys = [NSArray arrayWithObjects:@"name", @"city", @"price", nil];
+    NSArray *values = [NSArray arrayWithObjects:self.name.text, self.city.text, self.price.text, nil];
+    
+    NSDictionary *ad = [NSDictionary dictionaryWithObject:values forKey:keys];
+    
+    NSError *error;
+    
+    if ([[self class] publishAd:ad error:&error]) {
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Success"
+                                                     message:@"Ad published successfully"
+                                                    delegate:nil
+                                           cancelButtonTitle:@"OK"
+                                           otherButtonTitles:nil];
+        
+        [av show];
+    }
 }
 
 @end
