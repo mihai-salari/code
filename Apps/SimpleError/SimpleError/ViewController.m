@@ -66,6 +66,7 @@ NSString * const LCSAccountExpirationDateKey = @"LCSAccountExpirationDateKey";
             NSArray *values = [NSArray arrayWithObjects:description, recoverySuggestion, missingValues, nil];
             
             // I think following line create a dictionary with an array of keys and an array of values...
+            // Check https://github.com/choonsiong/code/blob/master/Objective-C/NSDictionaryMore/NSDictionaryMore/main.m
             //NSDictionary *userDict = [NSDictionary dictionaryWithObject:values forKey:keys];
             
             // And below is a simple dictionary with one to one mapping...
