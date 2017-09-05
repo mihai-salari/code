@@ -2,12 +2,18 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSString *name = nil;
+        @try {
+            NSLog(@"Trying to add nil to an array...");
+            NSMutableArray *array = [NSMutableArray array];
+            [array addObject:nil];
+        }
         
-        if (name == nil) {
-            @throw [NSException exceptionWithName:NSInvalidArgumentException
-                                           reason:@"name is nil"
-                                         userInfo:nil];
+        @catch (NSException *e) {
+            NSLog(@"Caught exception: %@, Reason: %@", [e name], [e reason]);
+        }
+        
+        @finally {
+            NSLog(@"Executed whether an exception was thrown or not.");
         }
     }
     
