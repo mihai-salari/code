@@ -24,7 +24,7 @@ int main(int argc, const char * argv[]) {
         // Now use the class - create an instance and send it a message
         id dynamicObject = [DynamicClass new];
         
-        NSLog(@"%@", objc_msgSend(dynamicObject, NSSelectorFromString(@"greeting")));        
+        NSLog(@"%@", [dynamicObject performSelector:@selector(greeting) withObject:dynamicObject]);
     }
     
     return 0;
