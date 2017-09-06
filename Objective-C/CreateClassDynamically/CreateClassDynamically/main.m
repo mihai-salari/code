@@ -2,7 +2,8 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
-// A function
+// A function - will be used for the method implementation that will be dynamically
+// added to the class.
 NSString *greeting(id self, SEL _cmd) {
     return [NSString stringWithFormat:@"Hello, World!"];
 }
@@ -16,6 +17,8 @@ int main(int argc, const char * argv[]) {
         Method description = class_getInstanceMethod([NSObject class], @selector(description));
         
         const char *types = method_getTypeEncoding(description);
+        
+        printf("types: %s\n", types);
         
         class_addMethod(DynamicClass, @selector(greeting), (IMP)greeting, types);
         
