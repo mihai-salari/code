@@ -9,6 +9,9 @@ NSString *greeting(id self, SEL _cmd) {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // Dynamically create a class
+        Class DynamicClass = objc_allocateClassPair([NSObject class], "DynamicClass", 0);
+        
+        // Dynamically add a method
         
     }
     
