@@ -2,6 +2,7 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
+// A function
 NSString *greeting(id self, SEL _cmd) {
     return [NSString stringWithFormat:@"Hello, World!"];
 }
