@@ -34,14 +34,25 @@ int main(int argc, const char * argv[]) {
         NSLog(@"TestClass1 memory address = %p", [TestClass1 class]);
     }
     
+    // Retrieve and display the data for the TestClass1 class object
+    id testClz = objc_getClass("TestClass1"); // class object
+    long tcSize = class_getInstanceSize([testClz class]);
+    
+    NSData *tcData = [NSData dataWithBytes:(__bridge const void *)(testClz) length:tcSize];
+    
+    NSLog(@"TestClass1 class contains %@", tcData);
+    NSLog(@"TestClass1 superclass memory address %p", [TestClass1 superclass]);
+    
     return 0;
 }
 
 /*
 
- 2017-09-06 21:13:43.065925+0800 ObjCRuntime[6141:367259] TestClass1 object tc1 contains <d1110000 01801d00 a5a5a5a5 00000000>
- 2017-09-06 21:13:43.066125+0800 ObjCRuntime[6141:367259] TestClass1 object tc2 contains <d1110000 01801d00 c3c3c3c3 00000000>
- 2017-09-06 21:13:43.066136+0800 ObjCRuntime[6141:367259] TestClass1 memory address = 0x1000011d0
+ 2017-09-06 22:01:50.234822+0800 ObjCRuntime[6743:402575] TestClass1 object tc1 contains <21120000 01801d00 a5a5a5a5 00000000>
+ 2017-09-06 22:01:50.234999+0800 ObjCRuntime[6743:402575] TestClass1 object tc2 contains <21120000 01801d00 c3c3c3c3 00000000>
+ 2017-09-06 22:01:50.235011+0800 ObjCRuntime[6743:402575] TestClass1 memory address = 0x100001220
+ 2017-09-06 22:01:50.235047+0800 ObjCRuntime[6743:402575] TestClass1 class contains <f9110000 01801d00 40711bef ff7f0000>
+ 2017-09-06 22:01:50.235107+0800 ObjCRuntime[6743:402575] TestClass1 superclass memory address 0x7fffef1b7140
  Program ended with exit code: 0
 
 */
