@@ -18,6 +18,13 @@ int main(int argc, const char * argv[]) {
         
         class_addMethod(DynamicClass, @selector(greeting), (IMP)greeting, types);
         
+        // Register the class
+        objc_registerClassPair(DynamicClass);
+        
+        // Now use the class - create an instance and send it a message
+        id dynamicObject = [DynamicClass new];
+        
+        NSLog(@"%@", objc_msgSend(dynamicObject, NSSelectorFromString(@"greeting")));        
     }
     
     return 0;
