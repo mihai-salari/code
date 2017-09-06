@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 
+///////////////////////////////////////////
+
 @interface TestClass1: NSObject {
     
 @public int myInt;
@@ -12,6 +14,8 @@
 @implementation TestClass1
 
 @end
+
+/////////////////////////////////////////// 
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
