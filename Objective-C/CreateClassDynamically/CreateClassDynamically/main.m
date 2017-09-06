@@ -14,6 +14,10 @@ int main(int argc, const char * argv[]) {
         // Dynamically add a method, using existing method (description) to retrieve signature
         Method description = class_getInstanceMethod([NSObject class], @selector(description));
         
+        const char *types = method_getTypeEncoding(description);
+        
+        class_addMethod(DynamicClass, @selector(greeting), (IMP)greeting, types);
+        
     }
     
     return 0;
