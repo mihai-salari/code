@@ -1,8 +1,6 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 
-// Test Class 1
-
 @interface TestClass1: NSObject {
     
 @public int myInt;
