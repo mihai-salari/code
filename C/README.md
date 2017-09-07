@@ -45,6 +45,7 @@ The __volatile__ keyword declares that a variable's contents may be changed by s
 
 [Go To statement considered harmful: a retrospective](http://david.tribble.com/text/goto.html) - _David R. Tribble_
 
-#### Books ####
+#### Misc ####
 
 - [C: A Reference Manual](http://careferencemanual.com)
+- [Undefined Behavior](https://www.securecoding.cert.org/confluence/display/c/CC.+Undefined+Behavior)
