@@ -10,6 +10,10 @@ int main(int argc, const char * argv[]) {
     printf("Address of numPtr = %d\nValue = %d\n", &numPtr, numPtr);
     printf("Address of numPtr (hex) = %p\nValue (hex) = %p\n", &numPtr, numPtr);
     
+    // Dereferencing the pointer variable
+    
+    printf("Dereferencing numPtr gives us %d\n", *numPtr);
+    
     return 0;
 }
 
