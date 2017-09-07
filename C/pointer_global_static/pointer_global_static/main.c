@@ -1,7 +1,8 @@
 #include <stdio.h>
 
-int *globalPtr;
+// Global or static pointer is initialized to NULL when the program starts.
 
+int *globalPtr;
 static int* staticPtr;
 
 int main(int argc, const char * argv[]) {
