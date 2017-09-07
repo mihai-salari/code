@@ -14,6 +14,10 @@ int main(int argc, const char * argv[]) {
     
     printf("Dereferencing numPtr gives us %d\n", *numPtr);
     
+    *numPtr = 8;
+    
+    printf("Dereferencing numPtr gives us %d\n", *numPtr);
+    
     return 0;
 }
 
