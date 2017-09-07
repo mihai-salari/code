@@ -21,7 +21,7 @@ int main(int argc, const char * argv[]) {
         head = head->next; // assign next person to head
         
         head->age = arc4random_uniform(100) + 1;
-        head->next = NULL;
+        head->next = NULL; // to mark end of the linked list
     }
     
     head = first;
