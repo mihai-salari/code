@@ -10,5 +10,9 @@ int main(int argc, const char * argv[]) {
     
     voidPtr = numPtr;
     
+    numPtr = (int *)voidPtr;
+    
+    printf("Value of numPtr = %p\n", numPtr);
+    
     return 0;
 }
