@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
             head->age = arc4random_uniform(100) + 1;
         }
         
-        head->next = NULL; // to mark end of the linked list
+        head->next = NULL; // to mark end of the linked list with the use of null pointer
     }
     
     head = first;
