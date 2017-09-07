@@ -1,5 +1,7 @@
 #### Notes ####
 
+__Pointer__ is a variable that stores the address of a memory location.
+
 __Automatic variables or local variables__
 
 - Variables you declare in a function or subroutine.
