@@ -1,6 +1,6 @@
 #### Notes ####
 
-__Pointer__ is a variable that stores the address of a memory location.
+__Pointer__ is a variable that stores the address of a memory location. A _pointer variable_ contains the address in memory of another variable, object, or function.
 
 __Automatic variables or local variables__
 
