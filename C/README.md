@@ -13,6 +13,10 @@ A _pointer to void_ is a general-purpose pointer used to hold references to any 
 
 #### Memory Models ####
 
+```I In L Ln LL LLn P Pn```
+
+Each capital letter corresponds to an integer, long, or pointer. The lowercase letters represent the number of bits allocated for the data type.
+
 ![picture](http://choonsiong.com/public/pic/machine_memory_model.png)
 
 - - -
