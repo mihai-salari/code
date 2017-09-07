@@ -6,6 +6,8 @@ Reading the pointer declaration backward:
 
 ![picture](http://choonsiong.com/public/pic/pointer1.png)
 
+A _pointer to void_ is a general-purpose pointer used to hold references to any data type.
+
 - - -
 
 
