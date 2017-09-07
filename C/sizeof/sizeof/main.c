@@ -17,3 +17,13 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
+
+/*
+
+ size is 8 bytes
+ size of d is 4 bytes
+ size of dPtr is 8 bytes
+ size of value at dPtr is 4 bytes
+ Program ended with exit code: 0
+
+*/
