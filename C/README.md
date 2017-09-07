@@ -8,6 +8,13 @@ Reading the pointer declaration backward:
 
 A _pointer to void_ is a general-purpose pointer used to hold references to any data type.
 
+
+- - -
+
+#### Memory Models ####
+
+![picture](http://choonsiong.com/public/pic/machine_memory_model.png)
+
 - - -
 
 
