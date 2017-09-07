@@ -19,7 +19,7 @@ Each capital letter corresponds to an integer, long, or pointer. The lowercase l
 
 ![picture](http://choonsiong.com/public/pic/machine_memory_model.png)
 
-*_number is the size in bits_
+*_the number is the size in bits_
 
 - - -
 
