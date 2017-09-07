@@ -12,5 +12,11 @@ int main(int argc, const char * argv[]) {
         printf("global pointer is null\n");
     }
     
+    if (staticPtr) {
+        printf("static pointer is not null\n");
+    } else {
+        printf("static pointer is null\n");
+    }
+    
     return 0;
 }
