@@ -2,6 +2,8 @@
 
 __Pointer__ is a variable that stores the address of a memory location. A _pointer variable_ contains the address in memory of another variable, object, or function. A pointer is normally declared to be of a specific type depending on what it points to. The object may be any C data type such as _integer_, _character_, _string_, or _structure_. However, nothing inherent in a pointer indicates what type of data the pointer is referencing. A pointer only contains an address.
 
+- - -
+
 __Automatic variables or local variables__
 
 - Variables you declare in a function or subroutine.
