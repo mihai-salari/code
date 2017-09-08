@@ -2,4 +2,6 @@
 
 @interface Foo : Person
 
+- (void)printName;
+
 @end

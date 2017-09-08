@@ -29,4 +29,8 @@
     return _age;
 }
 
+- (void)printPersonName {
+    NSLog(@"My name is %@", self->_name); // we can access ivar directly here, but subclass cannot
+}
+
 @end
