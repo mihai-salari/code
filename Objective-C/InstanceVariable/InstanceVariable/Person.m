@@ -19,15 +19,14 @@
     return [self initWithName:@"unknown" andAge:0];
 }
 
-// setter and getter for age
-// note that we are not accessing the instance variable directly,
-// we set or get via accessors
+// note that we are accessing the instance variable directly here, because
+// age is not created via property
 - (void)setAge:(int)age {
-    self.age = age;
+    _age = age;
 }
 
 - (int)age {
-    return self.age;
+    return _age;
 }
 
 @end
