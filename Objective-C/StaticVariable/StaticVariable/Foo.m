@@ -21,4 +21,8 @@ static int fooCount = 0;
     return nil;
 }
 
+- (int)fooCount {
+    return fooCount;
+}
+
 @end
