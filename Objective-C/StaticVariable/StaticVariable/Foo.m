@@ -6,7 +6,8 @@ static int fooCount = 0;
 @implementation Foo
 
 + (Foo *)allocFoo {
-    extern int fooCount;
+    extern int fooCount; // extern is not needed, but for clarification purpose
+    
     fooCount += 1;
     
     return [Foo alloc];
