@@ -1,13 +1,15 @@
-//
-//  Foo.h
-//  ClassInitializeMethod
-//
-//  Created by Lee Choon Siong on 2017/09/10.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 @interface Foo : NSObject
+
+@property NSString *name;
+
++ (Foo *)allocFoo;
++ (instancetype)fooWithName:(NSString *)name;
++ (int)fooCount; // getter to access static variable fooCount
+
+- (instancetype)initWithName:(NSString *)name;
+
+
 
 @end
