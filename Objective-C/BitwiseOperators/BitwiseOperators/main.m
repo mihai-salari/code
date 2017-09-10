@@ -7,6 +7,9 @@ int main(int argc, const char * argv[]) {
         
         printf("a is %d\n", a);
         printf("b is %d\n", b);
+        
+        printf("a & b is %d\n", a & b);
+        printf("a | b is %d\n", a | b);
     }
     
     return 0;
