@@ -12,6 +12,11 @@ static int fooCount = 0;
     return foo;
 }
 
+// It makes more sense to ask the class itself
++ (int)fooCount {
+    return fooCount;
+}
+
 - (instancetype)initWithName:(NSString *)name {
     if (self = [super init]) {
         self.name = name;
@@ -19,10 +24,6 @@ static int fooCount = 0;
     }
     
     return nil;
-}
-
-- (int)fooCount {
-    return fooCount;
 }
 
 @end
