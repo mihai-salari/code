@@ -8,8 +8,12 @@ int main(int argc, const char * argv[]) {
         printf("a is %d\n", a);
         printf("b is %d\n", b);
         
-        printf("a & b is %d\n", a & b);
-        printf("a | b is %d\n", a | b);
+        printf("a AND b is %d\n", a & b);
+        printf("a OR b is %d\n", a | b);
+        printf("a XOR b is %d\n", a ^ b);
+        
+        printf("~a is %d\n", ~a);
+        printf("~b is %d\n", ~b);
     }
     
     return 0;
