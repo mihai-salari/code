@@ -6,7 +6,7 @@ int main(int argc, const char * argv[]) {
         Foo *foo = [Foo fooWithName:@"Foo"];
         
         NSLog(@"I am %@", foo.name);
-        NSLog(@"There is %i foo", [foo fooCount]);
+        NSLog(@"There is %i foo", [Foo fooCount]);
     }
     
     return 0;

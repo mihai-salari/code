@@ -5,15 +5,29 @@ static int fooCount = 0;
 
 @implementation Foo
 
-+ (instancetype)fooWithName:(NSString *)name {
-    Foo *foo = [[Foo alloc] initWithName:name];
++ (Foo *)allocFoo {
+    extern int fooCount;
     fooCount += 1;
+    
+    return [Foo alloc];
+}
+
++ (instancetype)fooWithName:(NSString *)name {
+    //extern int fooCount;
+    
+    //Foo *foo = [[Foo alloc] initWithName:name];
+    
+    //fooCount += 1;
+    
+    Foo *foo = [[Foo allocFoo] initWithName:name];
     
     return foo;
 }
 
 // It makes more sense to ask the class itself
 + (int)fooCount {
+    extern int fooCount;
+    
     return fooCount;
 }
 
