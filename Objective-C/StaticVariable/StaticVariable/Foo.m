@@ -1,7 +1,8 @@
 #import "Foo.h"
 
 // Static variable only accessible via this module (a module is a source file in this example)
-static int fooCount = 0;
+//static int fooCount = 0;
+static int fooCount;
 
 @implementation Foo
 
@@ -23,6 +24,11 @@ static int fooCount = 0;
     Foo *foo = [[Foo allocFoo] initWithName:name];
     
     return foo;
+}
+
+// Initialization of the class
++ (void)initialize {
+    fooCount = 100;
 }
 
 // It makes more sense to ask the class itself
