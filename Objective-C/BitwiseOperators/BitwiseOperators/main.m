@@ -18,3 +18,16 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
+
+/*
+
+ a is 1
+ b is 2
+ a AND b is 0
+ a OR b is 3
+ a XOR b is 3
+ ~a is -2
+ ~b is -3
+ Program ended with exit code: 0
+
+*/
