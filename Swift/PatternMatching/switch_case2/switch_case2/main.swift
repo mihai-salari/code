@@ -16,3 +16,6 @@ func process(population: Int) -> String {
         return "too many people"
     }
 }
+
+let population = 8
+print("There's \(process(population: population)) in the room.")
