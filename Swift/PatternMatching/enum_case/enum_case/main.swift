@@ -1,12 +1,21 @@
-//
-//  main.swift
-//  enum_case
-//
-//  Created by Lee Choon Siong on 2017/09/11.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 import Foundation
 
-print("Hello, World!")
+enum Direction {
+    case east
+    case south
+    case west
+    case north
+}
 
+let heading = Direction.east
+
+switch heading {
+case .east:
+    print("East")
+case .south:
+    print("South")
+case .west:
+    print("West")
+case .north:
+    print("North")
+}
