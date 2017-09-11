@@ -6,16 +6,21 @@ enum ErrorCode {
     case other(message: String?)
 }
 
-var result = ErrorCode.other(message: nil)
-result = ErrorCode.other(message: "Stupid user")
-
-switch result {
-case .invalidUserName:
-    print("Invalid user name")
-case .invalidPassword:
-    print("Invalid password")
-case .other(let value?): // This case will only execute if value is not nil
-    print("Error: \(value)")
-default:
-    print("Unknown error")
+func evaluateError(code: ErrorCode) {
+    switch result {
+    case .invalidUserName:
+        print("Invalid user name")
+    case .invalidPassword:
+        print("Invalid password")
+    case .other(let value?): // This case will only execute if value is not nil
+        print("\(value) error")
+    default:
+        print("Unknown error")
+    }
 }
+
+var result = ErrorCode.other(message: nil)
+evaluateError(code: result)
+
+result = ErrorCode.other(message: "Stupid user")
+evaluateError(code: result)
