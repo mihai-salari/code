@@ -17,3 +17,6 @@ if case list = number {
 } else {
     print("\(number) is not in the list")
 }
+
+let isInList = (list ~= number)
+print(isInList)
