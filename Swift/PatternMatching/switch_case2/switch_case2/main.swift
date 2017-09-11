@@ -17,5 +17,5 @@ func process(population: Int) -> String {
     }
 }
 
-let population = 8
-print("There's \(process(population: population)) in the room.")
+let population = 3
+print("There \(population <= 1 ? "is" : "are") \(process(population: population)) in the room.")
