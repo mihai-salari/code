@@ -16,3 +16,12 @@ if (coordinate.y == 0) && (coordinate.z == 0) {
 if case (_, 0, 0) = coordinate {
     printMessage()
 }
+
+/*
+ 
+ (x: 1, y: 0, z: 0)
+ along the x-axis
+ along the x-axis
+ Program ended with exit code: 0
+ 
+*/
