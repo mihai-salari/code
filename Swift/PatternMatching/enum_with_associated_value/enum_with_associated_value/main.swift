@@ -15,6 +15,4 @@ case .black:
     print("Black - 0x000000")
 case .hexValue(let value):
     print("??? - 0x\(value)")
-default:
-    print("Unknown color")
 }
