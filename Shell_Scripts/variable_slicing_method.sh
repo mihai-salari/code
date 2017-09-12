@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -
 
 message="hello world"
 
