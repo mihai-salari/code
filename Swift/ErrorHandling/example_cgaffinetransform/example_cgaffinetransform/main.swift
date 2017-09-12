@@ -24,9 +24,11 @@ extension CGAffineTransform {
     }
 }
 
+// Testing...
 print(CGAffineTransform().isInvertable)
 print(CGAffineTransform.identity.isInvertable)
 
+// Singular matrix, won't be able to invert
 let a = CGAffineTransform(a: 1, b: 1, c: 1, d: 1, tx: 2, ty: 2)
 print(a.inverted())
 
@@ -37,3 +39,10 @@ if let result = b.safeInverted() {
 } else {
     print("result: nil")
 }
+
+let scaleByTwo = CGAffineTransform.identity.scaledBy(x: 2, y: 2)
+print(scaleByTwo)
+
+// Invert and invert again, back to original value
+let b2 = b.safeInverted()?.safeInverted()
+print(b2!)
