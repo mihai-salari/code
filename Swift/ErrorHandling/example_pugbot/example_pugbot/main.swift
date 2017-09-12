@@ -43,3 +43,18 @@ let result = moveSafely {
 }
 
 print(result)
+
+// Using rethrows - it indicates that it will only rethrow errors
+// thrown by the function passed into it, but never errors of its own
+
+func perform(movement: () throws -> ()) rethrows {
+    try movement()
+}
+
+do {
+    try perform {
+        try myPug.moveForward()
+    }
+} catch {
+    print("An error occurred!")
+}
