@@ -73,3 +73,17 @@ for person in persons {
         print("No sound")
     }
 }
+
+// Normal map
+let petnames = persons.map { $0.pet?.name }
+
+for pet in petnames {
+    print(pet)
+}
+
+// With flatmap
+let flatpetnames = persons.flatMap { $0.pet?.name }
+
+for petname in flatpetnames {
+    print(petname)
+}
