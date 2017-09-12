@@ -67,6 +67,7 @@ if (remaining != nil) {
     print("remaining is nil")
 }
 
+// Stop the program on an error
 // We cannot failed, if failed then well just crash!
 
 do {
@@ -75,4 +76,5 @@ do {
     fatalError("An error is encountered")
 }
 
-try! try bakery.orderPastry(item: "Albatross", amountRequested: 1, flavor: "AlbatrossWithWafer")
+// Below line is not working
+//try! try bakery.orderPastry(item: "Albatross", amountRequested: 1, flavor: "AlbatrossWithWafer")
