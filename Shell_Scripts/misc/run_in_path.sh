@@ -2,7 +2,7 @@
 
 # Supporting script to run in_path.sh
 
-. in_path.sh
+source in_path.sh
 
 if [ $# -ne 1 ] ; then
 	echo "Usage: ${0:2} command" >&2
