@@ -42,3 +42,17 @@ class Bakery {
         return pastry.numberOnHand
     }
 }
+
+let bakery = Bakery()
+
+// With do-catch block
+
+do {
+    try bakery.orderPastry(item: "Albatross", amountRequested: 1, flavor: "AlbatrossWithWafer")
+} catch BakeryError.doNotSell {
+    print("Sorry, we don't sell this item")
+} catch BakeryError.wrongFlavor {
+    print("Sorry, the flavor requested is not available")
+} catch BakeryError.tooFew {
+    print("Sorry, we don't have enough ordered item")
+}
