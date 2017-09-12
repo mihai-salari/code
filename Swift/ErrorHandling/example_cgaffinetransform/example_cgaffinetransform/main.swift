@@ -1,5 +1,9 @@
 import Foundation
 
+enum MathError: Error {
+    case singularMaxtrix
+}
+
 extension CGAffineTransform {
     var isInvertable: Bool {
         return abs(a*b - b*c) > CGFloat.ulpOfOne
@@ -21,6 +25,14 @@ extension CGAffineTransform {
         }
         
         return nil
+    }
+    
+    func checkInverted() throws -> CGAffineTransform {
+        guard self.isInvertable else {
+            throw MathError.singularMaxtrix
+        }
+        
+        return self.inverted()
     }
 }
 
