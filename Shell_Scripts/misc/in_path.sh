@@ -39,3 +39,5 @@ check_for_cmd_in_path() {
 		fi
 	fi
 }
+
+#echo executing in_path.sh
