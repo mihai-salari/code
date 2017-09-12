@@ -43,6 +43,12 @@ class PugBot {
             throw PugBotError.endOfPath
         }
         
-        let nextDirection
+        let nextDirection = correctPath[currentStepInPath]
+        
+        guard nextDirection == .forward else {
+            throw PugBotError.invalidMove(found: .forward, expected: nextDirection)
+        }
+        
+        currentStepInPath += 1
     }
 }
