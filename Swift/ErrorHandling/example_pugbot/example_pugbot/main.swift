@@ -2,6 +2,8 @@ import Foundation
 
 let myPug = PugBot(name: "Pug", correctPath: [.forward, .left, .forward, .right])
 
+// With following method, we have to include all possible movement and also a 
+// separate error handling do-catch
 func goHome() throws {
     try myPug.moveForward()
     try myPug.turnLeft()
@@ -19,7 +21,8 @@ do {
     print("Invalid move error")
 }
 
-// Using a function that accept a function to handle error
+// Using a function that accept a move function or closure, and taking care of
+// error handling inside the function
 func moveSafely(move: () throws -> ()) -> String {
     do {
         try move()
