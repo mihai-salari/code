@@ -20,5 +20,5 @@ func_load_config() {
 	exit 0
 }
 
-func_load_config "/Users/choonsiong/Code/Shell_Scripts/tmp/config.txt"
+# func_load_config "/Users/choonsiong/Code/Shell_Scripts/tmp/config.txt"
 # func_load_config
