@@ -8,6 +8,12 @@ in_path() {
 	# if found and executable; 1 if not. Note that this temporarily modifies
 	# the IFS (internal field separator) but restores it upon completion.
 	
+	# Note:
+	# The original script try to replace the IFS with : so that it can retrieves
+	# each directory in the for-loop, but somehow it is not working. Therefore,
+	# I have use tr command to replace : with newline character and use echo
+	# to get the list of directory in the for-loop.
+	
 	cmd=$1
 	ourpath=$2
 	fixpath=$(echo $2 | tr ':' '\n')
@@ -15,6 +21,7 @@ in_path() {
 	#oldIFS=$IFS
 	#IFS=":"
 		
+	#for directory in "$ourpath"
 	for directory in `echo $fixpath`
 	do
 		#echo "$directory/$cmd"
