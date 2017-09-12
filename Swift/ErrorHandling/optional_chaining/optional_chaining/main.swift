@@ -87,3 +87,21 @@ let flatpetnames = persons.flatMap { $0.pet?.name }
 for petname in flatpetnames {
     print(petname)
 }
+
+/*
+ 
+ Sound bell
+ optional_chaining.Person
+ Sound bell
+ optional_chaining.Person
+ No sound
+ optional_chaining.Person
+ No sound
+ Optional("Delia")
+ Optional("Evil Cat Overlord")
+ nil
+ Delia
+ Evil Cat Overlord
+ Program ended with exit code: 0
+ 
+ */
