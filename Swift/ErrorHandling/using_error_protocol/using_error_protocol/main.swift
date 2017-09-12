@@ -56,3 +56,13 @@ do {
 } catch BakeryError.tooFew {
     print("Sorry, we don't have enough ordered item")
 }
+
+// With try?
+
+let remaining = try? bakery.orderPastry(item: "Albatross", amountRequested: 1, flavor: "AlbatrossWithWafer")
+
+if (remaining != nil) {
+    print("remaining is not nil")
+} else {
+    print("remaining is nil")
+}
