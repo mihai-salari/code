@@ -1,9 +1,10 @@
 #!/bin/bash -
-name=$0
-echo executing ${name:2}
 
 # Verifies that a specified program is either valid as is or can
 # be found in the PATH directory list.
+
+name=$0
+echo executing ${name:2}
 
 in_path() {
 	# Given a command and the PATH, tries to find the command. Returns 0
