@@ -16,13 +16,13 @@ in_path() {
 	
 	cmd=$1
 	ourpath=$2
-	fixpath=$(echo $2 | tr ':' '\n')
+	mypath=$(echo $2 | tr ':' '\n')
 	result=1
 	#oldIFS=$IFS
 	#IFS=":"
 		
 	#for directory in "$ourpath"
-	for directory in `echo $fixpath`
+	for directory in `echo $mypath`
 	do
 		#echo "$directory/$cmd"
 		#echo ""
