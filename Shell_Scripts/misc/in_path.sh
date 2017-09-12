@@ -10,13 +10,16 @@ in_path() {
 	
 	cmd=$1
 	ourpath=$2
+	fixpath=$(echo $2 | tr ':' '\n')
 	result=1
-	oldIFS=$IFS
-	IFS=":"
-	
-	for directory in "$ourpath"
+	#oldIFS=$IFS
+	#IFS=":"
+		
+	for directory in `echo $fixpath`
 	do
-		if [ -x $directory/$cmd ]; then
+		#echo "$directory/$cmd"
+		#echo ""
+		if [ -x $directory/$cmd ] ; then
 			result=0 # If we're here, we found the command.
 		fi
 	done
@@ -29,9 +32,9 @@ in_path() {
 check_for_cmd_in_path() {
 	var=$1
 	
-	if [ "$var" != "" ]; then
-		if [ "${var:0:1}" = "/" ]; then # check whether var has a leading slash
-			if [ ! -x $var ]; then # absolute path, check whether it is exists
+	if [ "$var" != "" ] ; then
+		if [ "${var:0:1}" = "/" ] ; then # check whether var has a leading slash
+			if [ ! -x $var ] ; then # absolute path, check whether it is exists
 				return 1
 			fi
 		elif ! in_path $var "$PATH" ; then # not exist, so we check in PATH
