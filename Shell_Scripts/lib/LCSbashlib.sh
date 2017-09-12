@@ -1,7 +1,4 @@
 func_load_config() {
-	# Load configuration file
-	# func_load_config config_file
-	
 	config_file=$1
 	
 	if [ "$config" = "" ]; then
@@ -18,10 +15,6 @@ func_load_config() {
 }
 
 func_is_cmd_in_path() {
-	# Given a command and the PATH, tries to find the command. Returns 0
-	# if found and executable; 1 if not. Note that this temporarily modifies
-	# the IFS (internal field separator) but restores it upon completion.
-	
 	cmd=$1
 	mypath=$(echo $2 | tr ':' '\n')
 	result=1
@@ -29,7 +22,7 @@ func_is_cmd_in_path() {
 	for directory in `echo $mypath`
 	do
 		if [ -x $directory/$cmd ] ; then
-			result=0 # If we're here, we found the command.
+			result=0
 		fi
 	done
 	
@@ -40,11 +33,11 @@ func_check_for_cmd_in_path() {
 	var=$1
 	
 	if [ "$var" != "" ] ; then
-		if [ "${var:0:1}" = "/" ] ; then # check whether var has a leading slash
-			if [ ! -x $var ] ; then # absolute path, check whether it is exists
+		if [ "${var:0:1}" = "/" ] ; then
+			if [ ! -x $var ] ; then
 				return 1
 			fi
-		elif ! func_is_cmd_in_path $var "$PATH" ; then # not exist, so we check in PATH
+		elif ! func_is_cmd_in_path $var "$PATH" ; then
 			return 2
 		fi
 	fi
