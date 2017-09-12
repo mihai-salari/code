@@ -10,3 +10,6 @@ echo ${message%world} # hello
 # is a call to delete the first instance of a given pattern and ? is a
 # regex that matches exactly one character.
 echo ${message#?} # ello world
+
+# to extract the first character only
+echo ${message%${message#?}} # h
