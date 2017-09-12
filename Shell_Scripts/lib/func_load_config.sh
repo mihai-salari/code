@@ -2,22 +2,23 @@
 # func_load_config config_file
 
 func_load_config() {
-	config=$1
+	config_file=$1
+	result=0
 	
-	if [ "$config" = "" ]; then
-		echo "Error: missing argument - configuration file name is required"
-		exit 1
+	if [ "$config_file" = "" ]; then
+		echo "Error: missing argument - configuration filename is required"
+		result=1
 	fi
 	
-	if ! . $config; then
+	if ! . "$config_file"; then
 		echo "Error: failed to load configuration file"
-		exit 1
-	fi
+		result=1
+	fi	
 	
 	echo $NAME
 	echo $AGE
 	
-	exit 0
+	return $result
 }
 
 # func_load_config "/Users/choonsiong/Code/Shell_Scripts/tmp/config.txt"
