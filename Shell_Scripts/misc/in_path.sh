@@ -1,4 +1,6 @@
 #!/bin/bash -
+name=$0
+echo executing ${name:2}
 
 # Verifies that a specified program is either valid as is or can
 # be found in the PATH directory list.
@@ -49,5 +51,3 @@ check_for_cmd_in_path() {
 		fi
 	fi
 }
-
-#echo executing in_path.sh

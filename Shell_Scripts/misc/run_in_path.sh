@@ -2,10 +2,12 @@
 
 # Supporting script to run in_path.sh
 
+name=$0
+
 . in_path.sh
 
 if [ $# -ne 1 ] ; then
-	echo "Usage: $0 command" >&2
+	echo "Usage: ${name:2} command" >&2
 	exit 1
 fi
 
