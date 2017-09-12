@@ -58,3 +58,4 @@ print(scaleByTwo)
 // Invert and invert again, back to original value
 let b2 = b.safeInverted()?.safeInverted()
 print(b2!) // Force unwrap is not encourage ;)
+
