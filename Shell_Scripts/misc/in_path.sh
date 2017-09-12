@@ -30,11 +30,11 @@ check_for_cmd_in_path() {
 	var=$1
 	
 	if [ "$var" != "" ]; then
-		if [ "${var:0:1}" = "/" ]; then
-			if [ ! -x $var ]; then
+		if [ "${var:0:1}" = "/" ]; then # check whether var has a leading slash
+			if [ ! -x $var ]; then # absolute path, check whether it is exists
 				return 1
 			fi
-		elif ! in_path $var "$PATH" ; then
+		elif ! in_path $var "$PATH" ; then # not exist, so we check in PATH
 			return 2
 		fi
 	fi

@@ -7,3 +7,11 @@
 var="hello world is a big big world"
 echo ${var:1}
 echo ${var:1:4}
+
+dir="/bin/foo"
+
+if [ "${dir:0:1}" = "/" ]; then
+	echo "true with /"
+else
+	echo "false without /"
+fi
