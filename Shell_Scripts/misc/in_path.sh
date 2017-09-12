@@ -31,7 +31,7 @@ in_path() {
 		fi
 	done
 	
-	IFS=$oldIFS
+	#IFS=$oldIFS
 	
 	return $result
 }
