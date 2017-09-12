@@ -3,6 +3,7 @@ import Foundation
 class PugBot {
     let name: String
     let correctPath: [Direction]
+    
     private var currentStepInPath = 0
     
     init(name: String, correctPath: [Direction]) {

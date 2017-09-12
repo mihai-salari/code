@@ -7,6 +7,8 @@ func goHome() throws {
     try myPug.turnLeft()
     try myPug.moveForward()
     try myPug.turnRight()
+    
+    print("Yeah, we are home!")
 }
 
 do {
