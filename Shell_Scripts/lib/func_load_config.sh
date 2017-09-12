@@ -1,3 +1,6 @@
+# Load configuration file
+# func_load_config config_file
+
 func_load_config() {
 	config=$1
 	
