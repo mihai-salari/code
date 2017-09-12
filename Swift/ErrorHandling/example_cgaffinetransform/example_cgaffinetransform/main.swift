@@ -59,3 +59,10 @@ print(scaleByTwo)
 let b2 = b.safeInverted()?.safeInverted()
 print(b2!) // Force unwrap is not encourage ;)
 
+// Test out error throwing
+do {
+    let result = try b.checkInverted()
+    print(result)
+} catch {
+    print("Error encountered")
+}
