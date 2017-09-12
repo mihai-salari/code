@@ -2,11 +2,15 @@ func_load_config() {
 	config_file=$1
 	result=0
 	
-	if [ "$config_file" != "" ]; then
-		if ! . $config_file; then
-			result=1
-		fi
+	if [ "$config_file" = "" ]; then
+		echo "Error: missing argument - configuration filename is required"
+		result=1
 	fi
+	
+	if ! . "$config_file"; then
+		echo "Error: failed to load configuration file"
+		result=1
+	fi	
 		
 	return $result
 }
