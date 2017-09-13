@@ -1,6 +1,6 @@
 #!/bin/bash -
 
-# Supporting script for valid_alphanum.sh
+# run script for valid_alphanum.sh
 
 source valid_alphanum.sh
 

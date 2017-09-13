@@ -1,6 +1,6 @@
 #!/bin/bash -
 
-# Supporting script for in_path.sh
+# run script for in_path.sh
 
 source in_path.sh
 
