@@ -14,4 +14,3 @@ valid_alphanum() {
 		return 1
 	fi
 }
-
