@@ -43,3 +43,13 @@ func_check_for_cmd_in_path() {
 		fi
 	fi
 }
+
+func_check_input_is_alphanum() {
+	valid_chars="$(echo $1 | sed -e 's/[^[:alnum:]]//g')"
+	
+	if [ "$valid_chars" = "$1" ]; then
+		return 0
+	else
+		return 1
+	fi	
+}
