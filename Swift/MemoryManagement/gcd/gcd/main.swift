@@ -20,17 +20,26 @@ print(result)
 let queue = DispatchQueue(label: "queue")
 
 func execute<T>(backgroundWorkd: @escaping () -> T, mainWork: @escaping (T) -> ()) {
+    print("executing...")
     queue.async {
+        print("in background queue...")
         let result = backgroundWorkd()
         
         DispatchQueue.main.async {
+            print("in main queue...")
             mainWork(result)
         }
     }
 }
 
-execute(backgroundWorkd: {
-    addNumbers(range: 100)
-}, mainWork: {
-    log(message: "The sum is \($0)")
-})
+var count = 0
+
+while count <= 1000 {
+    execute(backgroundWorkd: {
+        addNumbers(range: 100)
+    }, mainWork: {
+        log(message: "The sum is \($0)")
+    })
+    
+    count += 1
+}
