@@ -8,7 +8,7 @@ valid_alphanum() {
 	# Remove all unacceptable characters
 	valid_chars="$(echo $1 | sed -e 's/[^[:alnum:]]//g')"
 	
-	if [ "valid_chars" = "$1" ]; then
+	if [ "$valid_chars" = "$1" ]; then
 		return 0
 	else
 		return 1
