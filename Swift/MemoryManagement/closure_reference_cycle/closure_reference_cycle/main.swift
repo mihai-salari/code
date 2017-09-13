@@ -9,7 +9,8 @@ author?.tutorial = tutorial
 tutorial?.editor = editor
 editor?.tutorial = tutorial
 
-print(tutorial!.tutorialDescription())
+//print(tutorial!.tutorialDescription())
+print(tutorial!.safeTutorialDescription())
 
 author = nil
 tutorial = nil

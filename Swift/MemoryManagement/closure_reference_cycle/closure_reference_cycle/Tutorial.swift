@@ -14,6 +14,12 @@ class Tutorial {
         return "\(self.title) \(self.category)"
     }
     
+    lazy var safeTutorialDescription: () -> String = {
+        // with capture list
+        [unowned self] in
+        return "\(self.title) \(self.category)"
+    }
+    
     init(author: Author, title: String, category: String, date: Date) {
         self.author = author
         self.title = title
