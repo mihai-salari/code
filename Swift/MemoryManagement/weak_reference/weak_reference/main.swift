@@ -7,6 +7,5 @@ var editor: Editor? = Editor(name: "Ray", email: "ray@example.com")
 tutorial?.editor = editor
 editor?.tutorial = tutorial
 
-// Both object's deinit never get call due to strong reference cycle
 tutorial = nil
 editor = nil
