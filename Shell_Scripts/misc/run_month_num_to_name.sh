@@ -2,6 +2,7 @@
 
 . month_num_to_name.sh
 
+# To compensate for / or - formats
 if [ $# -eq 1 ]; then
 	echo $1
 	set -- $(echo $1 | sed 's/[\/\-]/ /g')
