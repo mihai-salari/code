@@ -1,3 +1,7 @@
+if [ "$LCS_DEBUG" = "ON" ]; then
+	echo DEBUG: ... ${0:2} loaded
+fi
+
 func_load_config() {
 	config_file=$1
 	result=0
