@@ -2,6 +2,12 @@
 
 . month_num_to_name.sh
 
+if [ $# -eq 1 ]; then
+	echo $1
+	set -- $(echo $1 | sed 's/[\/\-]/ /g')
+	echo $1
+fi
+
 if [ $# -ne 3 ]; then
 	echo "Usage: ${0:2} month day year" >&2
 	echo "Formats are August 3 1962 and 8 3 1962" >&2
