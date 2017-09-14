@@ -11,7 +11,7 @@ int main(int argc, const char * argv[]) {
             i--;
         }
         
-        printf("Beep done");
+        printf("Beep done\n");
     }
     
     return 0;
