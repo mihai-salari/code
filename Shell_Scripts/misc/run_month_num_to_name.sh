@@ -4,9 +4,9 @@
 
 # To compensate for / or - formats
 if [ $# -eq 1 ]; then
-	echo $1
-	set -- $(echo $1 | sed 's/[\/\-]/ /g')
-	echo $1
+	#echo $1
+	set -- $(echo $1 | sed 's/[\/\-]/ /g') # replace / or - with spaces
+	#echo $1 $2 $3
 fi
 
 if [ $# -ne 3 ]; then
