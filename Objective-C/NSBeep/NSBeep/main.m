@@ -2,10 +2,10 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int i = 100;
+        int i = 10;
         
         while (i >= 0) {
-            printf("Beeping...\n");
+            printf("Beeping... %d\n", i);
             NSBeep();
             sleep(2);
             i--;
