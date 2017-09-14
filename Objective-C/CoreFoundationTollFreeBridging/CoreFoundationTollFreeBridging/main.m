@@ -20,3 +20,11 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
+
+/*
+
+ The length of the string is 5
+ 2017-09-14 21:27:42.187895+0800 CoreFoundationTollFreeBridging[3489:174728] \M-8\M-!Đ\M^?\^? World
+ Program ended with exit code: 0
+
+*/
