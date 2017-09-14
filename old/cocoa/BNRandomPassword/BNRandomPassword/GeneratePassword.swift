@@ -12,7 +12,7 @@ func generateRandomCharacter() -> Character {
 
 // Calls generateRandomCharacter multiple times and concatenates the results
 // to create a string of the requested length
-func generateRandomString(withLength length: Int) -> String {
+func generateRandomStringWithLength(_ length: Int) -> String {
     var string = ""
     
     for _ in 0..<length {

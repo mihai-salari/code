@@ -20,7 +20,7 @@ class ViewController: NSViewController {
 
     @IBAction func generatePassword(_ sender: NSButton) {
         let length = 8
-        let password = generateRandomString(withLength: length)        
+        let password = generateRandomStringWithLength(length);
         self.textField.stringValue = password
     }
 
