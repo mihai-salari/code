@@ -13,11 +13,16 @@ if [ $3 -le 99 ]; then
 	exit 1
 fi
 
+# Strips out all digits, test whether it is blank with -z
+# If it is blank, then the month is digit and we call the function directly
 if [ -z $(echo $1 | sed 's/[[:digit:]]//g') ]; then
 	month_num_to_name $1
 else
+	# We got a month string...
 	# Normalize the first 3 letters, first upper and then lowercase
-	month="$(echo $1 | cut -c1 | tr '[:lower:]' '[:upper:]')"
+	#month="$(echo $1 | cut -c1 | tr '[:lower:]' '[:upper:]')"
+	# Using POSIX method below
+	month="$(echo ${1%${1#?}} | tr '[:lower:]' '[:upper:]')"
 	month="$month$(echo $1 | cut -c2-3 | tr '[:upper:]' '[:lower:]')"
 fi
 
