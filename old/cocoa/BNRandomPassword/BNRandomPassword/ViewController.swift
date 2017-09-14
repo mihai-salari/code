@@ -1,5 +1,7 @@
 import Cocoa
 
+// Storyboard is the default setting now...
+
 class ViewController: NSViewController {
     
     @IBOutlet weak var textField: NSTextField!
@@ -23,4 +25,3 @@ class ViewController: NSViewController {
     }
 
 }
-
