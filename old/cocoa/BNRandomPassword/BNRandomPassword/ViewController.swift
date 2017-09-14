@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  BNRandomPassword
-//
-//  Created by Lee Choon Siong on 2017/05/08.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 import Cocoa
 
 class ViewController: NSViewController {
@@ -25,11 +17,8 @@ class ViewController: NSViewController {
     }
 
     @IBAction func generatePassword(_ sender: AnyObject) {
-        //self.textField.stringValue = "password generated"
-        
         let length = 8
-        let password = generateRandomString(withLength: length)
-        
+        let password = generateRandomString(withLength: length)        
         self.textField.stringValue = password
     }
 

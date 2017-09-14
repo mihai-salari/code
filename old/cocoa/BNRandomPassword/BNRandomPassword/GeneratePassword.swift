@@ -1,11 +1,3 @@
-//
-//  GeneratePassword.swift
-//  BNRandomPassword
-//
-//  Created by Lee Choon Siong on 2017/05/08.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 import Foundation
 
 private let characters = Array("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$@#".characters)
