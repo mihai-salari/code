@@ -8,7 +8,9 @@ char *getFullName(char *firstName, char *lastName) {
 }
 
 int main(int argc, const char * argv[]) {
+    char *fullName = getFullName("Foo", "Bar");
     
+    printf("%s\n", fullName);
     
     return 0;
 }
