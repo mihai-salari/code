@@ -1,0 +1,6 @@
+= test
+
+Describe your project here
+
+:include:test.rdoc
+
