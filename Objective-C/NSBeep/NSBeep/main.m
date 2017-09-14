@@ -10,6 +10,8 @@ int main(int argc, const char * argv[]) {
             sleep(2);
             i--;
         }
+        
+        printf("Beep done");
     }
     
     return 0;
