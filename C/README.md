@@ -30,6 +30,8 @@ _Variable declaration_ is any statement that specifies a variable's name and typ
 
 _Variable definition_ is a declaration that causes memory to be allocated for the variable.
 
+A variable that has been declared, but that has not had a value assigned to it, is said to be uninitialized. You initialize a variable the first time you assign a value to it.
+
 __Automatic variables or local variables__
 
 - Variables you declare in a function or subroutine.
