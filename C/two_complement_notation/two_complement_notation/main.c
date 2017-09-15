@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 /*
+ 
  Two's Complement Notation
  =========================
  
@@ -37,3 +38,12 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
+
+/*
+
+ sizeof int = 4 bytes
+ 10
+ -10
+ Program ended with exit code: 0
+
+*/
