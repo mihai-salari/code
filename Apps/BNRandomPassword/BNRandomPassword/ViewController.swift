@@ -4,7 +4,8 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    var passwordLength: Int32 = 0
+    var passwordLength: Int32 = 8
+    var isSpecialCharacter: Bool = true
     
     @IBOutlet weak var textField: NSTextField!
     @IBOutlet weak var passwordLengthLabel: NSTextField!
@@ -14,7 +15,9 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        passwordLength = self.passwordLengthSlider.intValue
+        self.passwordLengthSlider.intValue = passwordLength
+        self.passwordLengthLabel.stringValue = "\(passwordLength)"
+        
     }
 
     override var representedObject: Any? {
@@ -24,8 +27,9 @@ class ViewController: NSViewController {
     }
 
     @IBAction func generatePassword(_ sender: NSButton) {
-        let length = 8
-        let password = generateRandomStringWithLength(length);
+        let length = passwordLength
+        //let password = generateRandomStringWithLength(length);
+        let password = generatePasswordWithLength(length, isSpecial: isSpecialCharacter)
         self.textField.stringValue = password
     }
     
@@ -33,6 +37,19 @@ class ViewController: NSViewController {
         passwordLength = sender.intValue
         print("DEBUG: password length = \(passwordLength)")
         self.passwordLengthLabel.stringValue = "\(passwordLength)"
+    }
+    
+    @IBAction func specialCharacterToggle(_ sender: NSButton) {
+        print("DEBUG: special character = \(sender.state)")
+        
+        switch sender.state {
+        case 0:
+            isSpecialCharacter = false
+        case 1:
+            isSpecialCharacter = true
+        default:
+            fatalError("ERROR: invalid special character's state")
+        }
     }
 
 }
