@@ -8,7 +8,7 @@
  
  1. Start with the binary representation of the positive version of the number.
  2. Complement all the bits (turn the ones into zeros and the zeros into ones).
- 3. Add one to the result. 
+ 3. Add one to the result.
  
  */
 
@@ -22,7 +22,8 @@ int main(int argc, const char * argv[]) {
     // To get -10
     // 1) reverse the binary digit of 10
     
-    int aComplement = 0b11111111111111111111111111110101;
+    int aComplement = 0b11111111111111111111111111110101; // caveman way
+    //int aComplement = ~a; // using bitwise one complement operator
     
     // 2) add 1 to the complement bits, use hex here for the sake of simplicity
     aComplement += 0x1;
