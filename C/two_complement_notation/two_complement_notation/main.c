@@ -10,6 +10,11 @@
  2. Complement all the bits (turn the ones into zeros and the zeros into ones).
  3. Add one to the result.
  
+ One side effect of this scheme is that the most-significant bit (the bit on the far
+ left, so called because it has the largest value) is 1 whenever the number is
+ negative and is 0 when the number is zero or positive. Consequently, it's often
+ referred to as the sign bit.
+ 
  */
 
 int main(int argc, const char * argv[]) {
