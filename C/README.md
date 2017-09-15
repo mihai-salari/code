@@ -26,6 +26,10 @@ Each capital letter corresponds to an integer, long, or pointer. The lowercase l
 
 #### Variables ####
 
+_Variable declaration_ is any statement that specifies a variable's name and type.
+
+_Variable definition_ is a declaration that causes memory to be allocated for the variable.
+
 __Automatic variables or local variables__
 
 - Variables you declare in a function or subroutine.
