@@ -11,6 +11,8 @@ int main(int argc, const char * argv[]) {
     
     printf("myCase = %d\n", myCase);
     
+    myCase = 100;
+    
     switch (myCase) {
         case 0:
             printf("A");
@@ -23,7 +25,6 @@ int main(int argc, const char * argv[]) {
             break;
         default:
             printf("Invalid case");
-            break;
     }
     
     printf("\n");
