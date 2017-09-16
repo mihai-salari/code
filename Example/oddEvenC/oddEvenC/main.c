@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #define kMAX 100
 
 // To tell a number is even or odd
