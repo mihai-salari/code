@@ -114,3 +114,41 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
+
+/*
+
+ 2017-09-17 05:31:50.689563+0800 sieveOfEratosthenesObjC[15724:811340] Prime numbers = (
+ 2,
+ 3,
+ 5,
+ 7,
+ 11,
+ 13,
+ 17,
+ 19,
+ 23,
+ 29,
+ 31,
+ 37,
+ 41,
+ 43,
+ 47,
+ 53,
+ 59,
+ 61,
+ 67,
+ 71,
+ 73,
+ 79,
+ 83,
+ 89,
+ 97,
+ 101,
+ 103,
+ 107,
+ 109,
+ 113
+ ) (30)
+ Program ended with exit code: 0
+
+*/
