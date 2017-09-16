@@ -8,7 +8,7 @@ int main(int argc, const char * argv[]) {
     bool isPrime;
     int startingPoint, candidate, last, i;
     
-    startingPoint = 9;
+    startingPoint = 42;
     
     if (startingPoint < 2) {
         candidate = 2; // 2 is the smaller prime number
