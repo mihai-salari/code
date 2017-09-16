@@ -25,6 +25,8 @@
  In the program below, instead of marking the numbers, I removed those numbers in
  the list and I have created a new list to hold all p.
  
+ https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+ 
  */
 
 int main(int argc, const char * argv[]) {
