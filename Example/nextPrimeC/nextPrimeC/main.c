@@ -30,6 +30,11 @@ int main(int argc, const char * argv[]) {
             
             // if you don't find a factor by the time you hit the square root,
             // there won't be a factor, and the candidate is prime
+            // e.g. factors of 12 is 1, 2, 3, 4, 6, 12
+            // square root of 12 is around 3.46, and each factor pair with another
+            // factor greater than the square root to get the value of 3, i.e 2 x 6, 3 x 4, etc
+            // therefore, we don't need to check all the factors, just need to check all
+            // factors that are less than the square root
             last = sqrt(candidate);
             printf("do: last = %d\n", last);
             
