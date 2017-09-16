@@ -28,12 +28,15 @@ int main(int argc, const char * argv[]) {
             candidate += 2; // bump up to next number, because we minus one above, and we don't need to check for that number
             printf("do: candidate = %d\n", candidate);
             
+            // if you don't find a factor by the time you hit the square root,
+            // there won't be a factor, and the candidate is prime
             last = sqrt(candidate);
             printf("do: last = %d\n", last);
             
             // check to see candidate has any factors, from 3 to last
             // loop through odd numbers only
             for (i = 3; (i <= last) && isPrime; i += 2) {
+                // verify candidate has no factors other than 1 and candidate
                 if ((candidate % i) == 0) {
                     isPrime = false;
                 }
