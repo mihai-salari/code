@@ -10,6 +10,10 @@
 
 @interface ViewController : NSViewController
 
+@property (nonatomic, weak) IBOutlet NSTextField *textField;
+
+- (IBAction)seed:(id)sender;
+- (IBAction)generate:(id)sender;
 
 @end
 
