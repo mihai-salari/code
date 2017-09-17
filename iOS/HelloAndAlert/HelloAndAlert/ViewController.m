@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+//#define kDEBUG
+
 @interface ViewController ()
 
 @end
@@ -26,7 +28,18 @@
 }
 
 - (void)showAlert:(id)sender {
+#ifdef kDEBUG
     NSLog(@"Ouch!");
+#endif
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello"
+                                                    message:@"Hello, World!"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Close"
+                                          otherButtonTitles:nil, nil];
+    
+    [alert show];
+    [self.helloButton setTitle:@"Click" forState:UIControlStateNormal];
 }
 
 @end
