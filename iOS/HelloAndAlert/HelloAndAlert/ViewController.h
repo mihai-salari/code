@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (weak) IBOutlet UIButton *helloButton;
+
+- (IBAction)showAlert:(id)sender;
 
 @end
 
