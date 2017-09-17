@@ -14,7 +14,13 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
-    [self.textField setStringValue:@"n/a"];
+    NSDate *now = [NSDate date];
+    
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateStyle:NSDateFormatterMediumStyle];
+    [df setTimeStyle:NSDateFormatterMediumStyle];
+    
+    [self.textField setStringValue:[df stringFromDate:now]];
 }
 
 
