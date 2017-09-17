@@ -23,5 +23,10 @@
     // Update the view, if already loaded.
 }
 
+- (void)seed:(id)sender {
+    // Seed the random number generator with the time.
+    srandom((unsigned)time(NULL));
+    [self.textField setStringValue:@"Generator seeded"];
+}
 
 @end
