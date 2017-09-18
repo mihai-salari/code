@@ -1,0 +1,11 @@
+program booleanVariable;
+#include("stdlib.hhf")
+
+static
+	isSuck: boolean := true;
+
+begin booleanVariable;
+
+	stdout.put("It is sucks? ", isSuck, nl);
+
+end booleanVariable;
