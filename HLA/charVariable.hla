@@ -2,7 +2,7 @@ program charVariable;
 #include("stdlib.hhf")
 
 static
-	c: char := 'C';
+	c: char := 'C'; // single ASCII character only
 
 begin charVariable;
 
