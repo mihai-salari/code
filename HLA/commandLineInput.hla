@@ -1,0 +1,16 @@
+program commandLineInput;
+#include("stdlib.hhf")
+
+static
+	// Uninitialize variable
+	age: int8;
+
+begin commandLineInput;
+
+	stdout.put("Enter an intege value: ");
+	
+	// Get input from command-line
+	stdin.get(age);
+	stdout.put("You are ", age, " years old.", nl);
+	
+end commandLineInput;

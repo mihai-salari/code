@@ -3,6 +3,6 @@ program helloWorld;
 
 begin helloWorld;
 
-	stdout.put("Hello World of Assembly Language!", nl);
+	stdout.put("Hello World of Assembly Language!", nl); // nl is newline constant
 	
 end helloWorld;
