@@ -1,0 +1,12 @@
+program charInput;
+#include("stdlib.hhf")
+
+static
+	reply: char;
+	
+begin charInput;
+
+	stdin.get(reply);
+	stdout.put("Reply is: ", reply, nl);
+
+end charInput;
