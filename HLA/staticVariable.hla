@@ -1,0 +1,21 @@
+program staticVariable;
+#include("stdlib.hhf")
+
+static
+	// Initialize 3 different integer types
+	i8: int8 := 8;
+	i16: int16 := 16;
+	i32: int32 := 32;
+	
+	// Uninitialize variable
+	age: int8;
+
+begin staticVariable;
+
+	stdout.put("Signed static integer variables...", nl);
+	stdout.put("i8 is ", i8, nl);
+	stdout.put("i16 is ", i16, nl);
+	stdout.put("i32 is ", i32, nl);
+	stdout.put("age is ", age, nl);
+	
+end staticVariable;
