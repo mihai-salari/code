@@ -1,0 +1,11 @@
+program charVariable;
+#include("stdlib.hhf")
+
+static
+	c: char := 'C';
+
+begin charVariable;
+
+	stdout.put("The character is ", c, ".", nl);
+
+end charVariable;
