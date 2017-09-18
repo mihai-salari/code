@@ -28,24 +28,18 @@ NSString *getBinaryRepresentation(int decimalNumber) {
     NSString *binary = [NSString string];
     
     while (count < [decimalNumbers count]) {
-        NSLog(@"%@", [decimalNumbers objectAtIndex:count]);
         NSString *digit = [decimalNumbers objectAtIndex:count];
-        
-        [binary stringByAppendingString:digit];
-        
-        NSLog(@"%@", binary);
+        binary = [binary stringByAppendingString:digit];
         count++;
     }
-    
-    NSLog(@"Decimal = %d", decimalNumber);
-    NSLog(@"Binary = %@", binary);
     
     return binary;
 }
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        getBinaryRepresentation(10);
+        NSLog(@"Decimal 10 = %@", getBinaryRepresentation(10));
     }
+    
     return 0;
 }
