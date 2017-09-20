@@ -1,0 +1,24 @@
+program char_in_CH;
+#include("stdlib.hhf")
+
+static
+	input: char;
+
+begin char_in_CH;
+	
+	stdout.put("Select a menu item - a, b, or c: ");
+	stdin.get(input);
+	
+	mov(input, ch);
+	
+	if(ch == 'a') then
+		stdout.put("You selected the 'a' menu item.", nl);
+	elseif(ch == 'b') then
+		stdout.put("You selected the 'b' menu item.", nl);
+	elseif(ch == 'c') then
+		stdout.put("You selected the 'c' menu item.", nl);
+	else
+		stdout.put("Error: illegal menu item selection", nl);
+	endif;
+
+end char_in_CH;
