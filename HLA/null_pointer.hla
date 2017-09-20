@@ -1,0 +1,15 @@
+program null_pointer;
+#include("stdlib.hhf")
+
+static
+	n1: int8 := 0;
+
+begin null_pointer;
+	
+	if (al == 0) then
+		stdout.put("error: NULL pointer encountered", nl);
+	else
+		stdout.put("Pointer is valid", nl);
+	endif;
+
+end null_pointer;
