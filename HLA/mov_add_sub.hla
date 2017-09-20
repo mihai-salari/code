@@ -32,5 +32,10 @@ begin mov_add_sub;
 	mov(eax, i32);
 	
 	stdout.put(nl, "After negation: i8=", i8, " i16=", i16, " i32=", i32, nl);
+	
+	// Demonstrate add and constant-to-memory operations
+	add(32323200, i32);
+	
+	stdout.put(nl, "After add: i32=", i32, nl);
 
 end mov_add_sub;
