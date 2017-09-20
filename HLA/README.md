@@ -1,4 +1,4 @@
-You need to install the HLA (_High Level Assembler_) program in order to build the source here. One way to get it is by installing the HIDE (_HLA IDE_) for your Windows machine, and compile it from the command prompt.
+You need to install the HLA (_High Level Assembler_) program in order to build the source here. One way to get it is by installing the HIDE (_HLA IDE_) for your Windows machine. After that you can compile the code from the Window's command prompt if you don't want to use the built-in features with the IDE.
 
 To compile the soure code, type ```hla hello.hla```, and executable (```hello.exe```) will be generated accordingly.
 
