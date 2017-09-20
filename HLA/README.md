@@ -2,6 +2,8 @@ You need to install the HLA (_High Level Assembler_) program in order to build t
 
 To compile the soure code from Windows command prompt, type ```hla hello.hla```, and the executable file (```hello.exe```) will be generated accordingly.
 
+Uesful links:
+
 - HLA wiki - [https://en.wikipedia.org/wiki/High_Level_Assembly](https://en.wikipedia.org/wiki/High_Level_Assembly)
 - HIDE for HLA - [https://sites.google.com/site/highlevelassembly/](https://sites.google.com/site/highlevelassembly/)
 - NASM wiki - [https://en.wikipedia.org/wiki/Netwide_Assembler](https://en.wikipedia.org/wiki/Netwide_Assembler)
