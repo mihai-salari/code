@@ -9,6 +9,28 @@ static
 begin mov_add_sub;
 
 	// First, print the initial values of our variables
-	stdout.put(nl, "Initialized values: i8=", i8, "i16=", i16, "i32=", i32, nl);
+	stdout.put(nl, "Initialized values: i8=", i8, " i16=", i16, " i32=", i32, nl);
+	
+	// Compute the absolute value of the three different variables, and print the result
+	// Note: Because all the numbers are negative, we have to negate them.
+	// Using only the mov, add, and sub instructions, we can negate the value by
+	// subtracting it from zero.
+	
+	// compute i8 := -8
+	mov(0, al); // al = 0
+	sub(i8, al); // sub(src, dest) -> dest -= src -> 0 - (-8) -> al = 8
+	mov(al, i8); // i8 = 8
+	
+	// compute i16 := -16
+	mov(0, ax);
+	sub(i16, ax);
+	mov(ax, i16);
+	
+	// compute i32 := -32
+	mov(0, eax);
+	sub(i32, eax);
+	mov(eax, i32);
+	
+	stdout.put(nl, "After negation: i8=", i8, " i16=", i16, " i32=", i32, nl);
 
 end mov_add_sub;
