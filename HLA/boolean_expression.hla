@@ -1,0 +1,24 @@
+program boolean_expression;
+#include("stdlib.hhf")
+
+static
+	n1: int8 := 10;
+	n2: int8 := 20;
+
+begin boolean_expression;
+
+	// Follow lines will cause runtime exception and crash the program,
+	// due to memory to memory comparison is illegal
+	//if (n1 < n2) then
+	//	stdout.put("n1 < n2", nl);
+	//endif;
+	
+	mov(n1, al);
+	
+	if (al < n2) then
+		stdout.put("n1 < n2", nl);
+	else
+		stdout.put("n1 > n2", nl);
+	endif;
+
+end boolean_expression;
