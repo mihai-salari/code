@@ -7,7 +7,7 @@ static
 begin null_pointer;
 	
 	if (al == 0) then
-		stdout.put("error: NULL pointer encountered", nl);
+		stdout.put("Error: NULL pointer encountered", nl);
 	else
 		stdout.put("Pointer is valid", nl);
 		stdout.put("al = ", al, nl);
