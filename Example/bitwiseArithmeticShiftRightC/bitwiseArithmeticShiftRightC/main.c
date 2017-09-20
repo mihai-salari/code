@@ -19,23 +19,22 @@ int main(int argc, const char * argv[]) {
     printf("a = %d\n", a);
     printf("a = %c\n", a);
     
-    // logical shift right
+    // arithmetic shift right
     
-    // compute bit 6 (start with bit 0, end with bit 7)
     char bit67 = ((a & 0x800) != 0) ? 0xC0 : 0; // 0x4 = 1100, 0x8 = 1000
     
-    //printf("aAnd = %x\n", a & 0x800);
-    printf("bit6 = %x\n", bit67);
+    printf("a & 0x800 = 0x%x\n", a & 0x800);
+    printf("bit67 = 0x%x\n", bit67);
     
-    printf("aAnd = %x\n", a & 0x7f); // 0x48
+    printf("a & 0x7f = 0x%x\n", a & 0x7f); // 0x48
     
     // shifts bits 0...6, 0x7 = 0111
     a = (a & 0x7f) >> 1; // 0x48 -> 0x24
     
     // merge in bit #6
-    a = a | bit6;
+    a = a | bit67;
     
-    printf("a = %x\n", a);
+    printf("a = 0x%x\n", a);
 
     return 0;
 }

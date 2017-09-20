@@ -13,8 +13,8 @@ int main(int argc, const char * argv[]) {
     
     printf("a = %d\n", a);
     printf("a = %c\n", a);
-    printf("a = %x\n", a);
-    printf("a >> 1 = %x\n", a >> 1);
+    printf("a = 0x%x\n", a);
+    printf("a >> 1 = 0x%x\n", a >> 1);
     
     // logical shift right
     
@@ -22,8 +22,8 @@ int main(int argc, const char * argv[]) {
     // 0x4 = 0100, 0x8 = 1000
     char bit6 = ((a & 0x800) != 0) ? 0x40 : 0;
     
-    printf("a & 0x800 = %x\n", a & 0x800);
-    printf("bit_6 = %x\n", bit6);
+    printf("a & 0x800 = 0x%x\n", a & 0x800);
+    printf("bit_6 = 0x%x\n", bit6);
     
     // 0x7 = 0111, 0x7f = 01111111
     // 0111_1111 & 01001000 = 01001000
@@ -38,7 +38,7 @@ int main(int argc, const char * argv[]) {
     // 00100100 | 0
     a = a | bit6;
     
-    printf("a = %x\n", a);
+    printf("a = 0x%x\n", a);
 
     return 0;
 }
