@@ -44,5 +44,8 @@ int main(int argc, const char * argv[]) {
         printf("%d ", cntr);
     }
     
+    // Interestingly, from the profiler, it tooks 2ms for the tradition way and
+    // 5ms for the bitwise-AND (supposed to be faster) way.
+    
     return 0;
 }
