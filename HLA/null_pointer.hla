@@ -10,6 +10,11 @@ begin null_pointer;
 		stdout.put("error: NULL pointer encountered", nl);
 	else
 		stdout.put("Pointer is valid", nl);
+		stdout.put("al = ", al, nl);
+		mov(n1, al);
+		stdout.put("al = ", al, nl);
+		mov(9, al);
+		stdout.put("al = ", al, nl);
 	endif;
 
 end null_pointer;

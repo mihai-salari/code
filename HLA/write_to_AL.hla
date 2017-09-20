@@ -1,0 +1,17 @@
+program write_to_AL;
+#include("stdlib.hhf")
+
+static
+	n1: int8 := 88;
+	n2: int8 := 0;
+
+begin write_to_AL;
+
+	mov(n1, al);
+	mov(al, n2);
+	
+	stdout.put("n1 = ", n1, nl);
+	stdout.put("al = ", al, nl); // al register will not output 88 here, you don't have control while the program want to print the value of al
+	stdout.put("n2 = ", n2, nl);
+
+end write_to_AL;
