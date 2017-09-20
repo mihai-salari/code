@@ -31,7 +31,7 @@ int main(int argc, const char * argv[]) {
     // shifts bits 0...6, 0x7 = 0111
     a = (a & 0x7f) >> 1; // 0x48 -> 0x24
     
-    // merge in bit #6
+    // merge in bit #6 or #7
     a = a | bit67;
     
     printf("a = 0x%x\n", a);
