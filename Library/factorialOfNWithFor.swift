@@ -5,14 +5,12 @@ import Foundation
 */
 
 func factorialOf(n: Int) -> Int {
-    var n = n
     var result = 1
-    
-    while n != 0 {
-        result *= n
-        n -= 1
-    }
-    
+		
+	for i in 1...n {
+		result *= i					
+	}
+        
     return result
 }
 
