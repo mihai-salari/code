@@ -1,5 +1,7 @@
 import Foundation
 
+// function overloading for different parameters
+
 func printMultipleOf(multiplier: Int, andValue: Int) {
     print("\(multiplier) x \(andValue) = \(multiplier * andValue)")
 }
@@ -20,3 +22,19 @@ printMultipleOf(multiplier: 2, and: 4)
 printMultipleOf(multiplier: 2, andValue: 4)
 printMultipleOf(2, and: 4)
 printMultipleOf(2, 4)
+
+// overloading for different return type
+
+func getValue() -> Int {
+    return 8
+}
+
+func getValue() -> String {
+    return "eight"
+}
+
+let intValue: Int = getValue()
+let stringValue: String = getValue()
+
+print(intValue)
+print(stringValue)
