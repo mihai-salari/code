@@ -38,3 +38,15 @@ let stringValue: String = getValue()
 
 print(intValue)
 print(stringValue)
+
+/*
+ 
+ 2 x 4 = 8
+ 2 x 4 = 8
+ 2 x 4 = 8
+ 2 x 4 = 8
+ 8
+ eight
+ Program ended with exit code: 0
+ 
+ */
