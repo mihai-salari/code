@@ -2,8 +2,7 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-    //let world = SKNode() // create the world as a generic node
-    let world = SKNode()
+    let world = SKNode() // create the world as a generic node
     let bee = SKSpriteNode(imageNamed: "bee.png")
     
     func addTheFlyingBee() {
