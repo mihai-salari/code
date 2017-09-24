@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Hello SpriteKit
-//
-//  Created by Lee Choon Siong on 2017/09/24.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
