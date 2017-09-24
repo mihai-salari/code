@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Fly Penguin Fly
-//
-//  Created by Lee Choon Siong on 2017/09/22.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
