@@ -40,8 +40,18 @@ class GameScene: SKScene {
     }
     
     override func didSimulatePhysics() {
+        // To center our bee
+        // To find the correct position, subtract half of the scene size from the
+        // bee's position, adjusted for any world scaling
+        // Multiply by -1 and you have the adjustment to keep our sprite
+        // centered
+        
         let worldXPosition = -(bee.position.x * world.xScale - (self.size.width/2))
         let worldYPosition = -(bee.position.y * world.yScale - (self.size.height/2))
+        
+        print(world.xScale, bee.position.x, self.size.width, self.size.width/2, worldXPosition)
+        print(world.yScale, bee.position.y, self.size.height, self.size.height/2, worldYPosition)
+        
         world.position = CGPoint(x: worldXPosition, y: worldYPosition)
     }
 }
