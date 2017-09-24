@@ -39,6 +39,10 @@ class GameScene: SKScene {
         self.addTheFlyingBee()
     }
     
+    // To simulate the effect of centering the camera on a sprite
+    // Here, the sprite is actually moving as usual, but our world node is
+    // continuously changing is x and y position to simulate the visual effect
+    // that the sprite is centered always
     override func didSimulatePhysics() {
         // To center our bee
         // To find the correct position, subtract half of the scene size from the
