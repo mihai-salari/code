@@ -34,7 +34,26 @@ class GameScene: SKScene {
         // Create our bee sprite node
         let bee = SKSpriteNode(imageNamed: "bee.png")
         //bee.size = CGSize(width: 56, height: 48)
-        bee.position = CGPoint(x: 200, y: 200)
+        bee.position = CGPoint(x: 400, y: 200)
         self.addChild(bee)
+        
+        let beeAtlas = SKTextureAtlas(named: "beeAtlas")
+        let beeFrames: [SKTexture] = [beeAtlas.textureNamed("bee.png"), beeAtlas.textureNamed("beeFly.png")]
+        let beeFlyAction = SKAction.animate(with: beeFrames, timePerFrame: 0.14)
+        let beeRepeatFlyAction = SKAction.repeatForever(beeFlyAction)
+        
+        bee.run(beeRepeatFlyAction)
+        
+        let flyRightAction = SKAction.moveBy(x: 200, y: 20, duration: 2)
+        let flyLeftAction = SKAction.moveBy(x: -200, y: -20, duration: 2)
+        
+        // Flip the texture back and forth
+        let flipBeeNegative = SKAction.scaleX(to: -1, duration: 0)
+        let flipBeePositive = SKAction.scaleX(to: 1, duration: 0)
+        
+        let flightOfTheBee = SKAction.sequence([flyLeftAction, flipBeeNegative, flyRightAction, flipBeePositive])
+        let neverEndingFlight = SKAction.repeatForever(flightOfTheBee)
+        
+        bee.run(neverEndingFlight)
     }
 }
