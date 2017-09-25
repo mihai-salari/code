@@ -4,9 +4,10 @@ import GameplayKit
 class GameScene: SKScene {
     let world = SKNode() // create the world as a generic node
     let ground = Ground()
+    let player = Player()
     
-    let bee = SKSpriteNode(imageNamed: "bee.png")
-    
+    //let bee = SKSpriteNode(imageNamed: "bee.png")
+    /*
     func addTheFlyingBee() {
         self.bee.position = CGPoint(x: 250, y: 250)
         world.addChild(bee)
@@ -30,6 +31,7 @@ class GameScene: SKScene {
         
         self.bee.run(neverEndingFlight)
     }
+ */
 
     // This function fires every time the game switches to this scene
     override func didMove(to view: SKView) {
@@ -38,7 +40,7 @@ class GameScene: SKScene {
         
         // Add the world node as a child of the scene
         self.addChild(world)
-        self.addTheFlyingBee()
+        //self.addTheFlyingBee()
         
         let bee1 = Bee()
         let bee2 = Bee()
@@ -59,6 +61,9 @@ class GameScene: SKScene {
         
         // Spawn the ground
         ground.spawn(parentNode: world, position: groundPosition, size: groundSize)
+        
+        // Spawn the player
+        player.spawn(parentNode: world, position: CGPoint(x: 150, y: 250))
     }
     
     // To simulate the effect of centering the camera on a sprite
@@ -72,8 +77,10 @@ class GameScene: SKScene {
         // Multiply by -1 and you have the adjustment to keep our sprite
         // centered
         
-        let worldXPosition = -(bee.position.x * world.xScale - (self.size.width/2))
-        let worldYPosition = -(bee.position.y * world.yScale - (self.size.height/2))
+        //let worldXPosition = -(bee.position.x * world.xScale - (self.size.width/2))
+        let worldXPosition = -(player.position.x * world.xScale - (self.size.width/2))
+        //let worldYPosition = -(bee.position.y * world.yScale - (self.size.height/2))
+        let worldYPosition = -(player.position.y * world.yScale - (self.size.height/2))
         
         //print(world.xScale, bee.position.x, self.size.width, self.size.width/2, worldXPosition)
         //print(world.yScale, bee.position.y, self.size.height, self.size.height/2, worldYPosition)
