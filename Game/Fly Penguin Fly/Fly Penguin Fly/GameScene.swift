@@ -3,6 +3,8 @@ import GameplayKit
 
 class GameScene: SKScene {
     let world = SKNode() // create the world as a generic node
+    let ground = Ground()
+    
     let bee = SKSpriteNode(imageNamed: "bee.png")
     
     func addTheFlyingBee() {
@@ -37,6 +39,26 @@ class GameScene: SKScene {
         // Add the world node as a child of the scene
         self.addChild(world)
         self.addTheFlyingBee()
+        
+        let bee1 = Bee()
+        let bee2 = Bee()
+        let bee3 = Bee()
+        
+        bee1.spawn(parentNode: world, position: CGPoint(x: 325, y: 325))
+        bee2.spawn(parentNode: world, position: CGPoint(x: 200, y: 325))
+        bee3.spawn(parentNode: world, position: CGPoint(x: 50, y: 200))
+        
+        // Size and position the ground based on the screen size
+        // Position X: Negative one screen width
+        // Position Y: 100 above the bottom (remember the ground's top left anchor point)
+        let groundPosition = CGPoint(x: -self.size.width, y: 100)
+        
+        // Width: 3x the width of the screen
+        // Height: 0 - our child node will provide the height
+        let groundSize = CGSize(width: self.size.width * 3, height: 0)
+        
+        // Spawn the ground
+        ground.spawn(parentNode: world, position: groundPosition, size: groundSize)
     }
     
     // To simulate the effect of centering the camera on a sprite
