@@ -67,6 +67,10 @@ class GameScene: SKScene {
         
         // Spawn the player
         player.spawn(parentNode: world, position: CGPoint(x: 150, y: 250))
+        
+        bee1.physicsBody?.mass = 0.2 // 200g
+        bee2.physicsBody?.mass = 10.0 // 10kg
+        bee1.physicsBody?.applyImpulse(CGVector(dx: -3, dy: 0))
     }
     
     // To simulate the effect of centering the camera on a sprite
