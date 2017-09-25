@@ -19,10 +19,6 @@ class Bee: SKSpriteNode, GameSprite {
         flyAnimation = SKAction.repeatForever(flyAction)
     }
     
-    func onTap() {
-        // not implement yet
+    func onTap() {       
     }
-    
-    
-    
 }

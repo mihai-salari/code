@@ -51,6 +51,5 @@ class Ground: SKSpriteNode, GameSprite {
     }
     
     func onTap() {
-        // not yet...
     }
 }
