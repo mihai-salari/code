@@ -29,6 +29,14 @@ for codePoint in cafe2.unicodeScalars {
 
 print("")
 
+let a = 0x301
+let b = 769
+
+if a == b {
+    print("a == b")
+    print(a)
+}
+
 /*
 
  café
@@ -45,6 +53,8 @@ print("")
  é
  99 97 102 233
  99 97 102 101 769
- Program ended with exit code: 0
+ a == b
+ 769
  
+ Program ended with exit code: 0
 */
