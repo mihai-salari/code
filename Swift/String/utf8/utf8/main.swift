@@ -1,5 +1,7 @@
 import Foundation
 
+// utf8 - 8 code units
+
 let c = "\u{00bd}"
 print(c)
 
