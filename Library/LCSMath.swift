@@ -1,3 +1,5 @@
+import Foundation
+
 enum LCSMath {
 	static func factorial(of number: Int) -> Int {
 		return (1...number).reduce(1, *)
@@ -33,8 +35,14 @@ enum LCSMath {
 		
 		return primes
 	}
+	
+	// Double is not a good type for money
+	static func calculateTotalReturn(of capital: Double, at interestRate: Double, for years: Int) -> Double {
+		return capital * pow(M_E, interestRate * Double(years))
+	}
 }
 
 print(LCSMath.factorial(of: 10))
 print(LCSMath.triangleNumber(of: 10))
 print(LCSMath.primeFactors(of: 864))
+print(LCSMath.calculateTotalReturn(of: 25000, at: 0.07, for: 7))
