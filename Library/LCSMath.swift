@@ -1,4 +1,4 @@
-struct LCSMath {
+enum LCSMath {
 	static func factorial(of number: Int) -> Int {
 		return (1...number).reduce(1, *)
 	}
