@@ -36,6 +36,7 @@ enum LCSMath {
 		return primes
 	}
 	
+	// Calculate the return of compound interest investment for n years.
 	// Double is not a good type for money
 	static func calculateTotalReturn(of capital: Double, at interestRate: Double, for years: Int) -> Double {
 		return capital * pow(M_E, interestRate * Double(years))
