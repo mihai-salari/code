@@ -1,6 +1,15 @@
 import Foundation
 
 enum LCSMath {
+	static func average(of numbers: [Double]) -> Double {
+		let sum = numbers.reduce(0, {
+			x, y in
+			x + y
+		})
+		
+		return sum/Double(numbers.count)
+	}
+	
 	static func factorial(of number: Int) -> Int {
 		return (1...number).reduce(1, *)
 	}
@@ -43,6 +52,7 @@ enum LCSMath {
 	}
 }
 
+print(LCSMath.average(of: [1, 2, 3, 4, 5]))
 print(LCSMath.factorial(of: 10))
 print(LCSMath.triangleNumber(of: 10))
 print(LCSMath.primeFactors(of: 864))
