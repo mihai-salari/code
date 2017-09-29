@@ -1,6 +1,14 @@
 import Foundation
 
 enum LCSMath {
+	static func calculateFahrenheit(from celsius: Double) -> Double {
+		return (celsius * 9 / 5) + 32
+	}
+	
+	static func calculateCelsius(from fahrenheit: Double) -> Double {
+		return (fahrenheit - 32) * 5 / 9
+	}
+	
 	static func average(of numbers: [Double]) -> Double {
 		let sum = numbers.reduce(0, {
 			x, y in
@@ -52,6 +60,8 @@ enum LCSMath {
 	}
 }
 
+print(LCSMath.calculateFahrenheit(from: 30))
+print(LCSMath.calculateCelsius(from: 86))
 print(LCSMath.average(of: [1, 2, 3, 4, 5]))
 print(LCSMath.factorial(of: 10))
 print(LCSMath.triangleNumber(of: 10))
