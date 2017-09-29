@@ -27,3 +27,9 @@ extension Record: Comparable {
 }
 
 r1 < r2
+
+// free function
+let r3 = Record(wins: 5, losses: 15)
+let records = [r1, r2, r3]
+
+print(records.sorted())
