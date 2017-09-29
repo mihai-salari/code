@@ -21,5 +21,7 @@ class DoubleWeightType: WeightCalculatable {
 class IntWeightType: WeightCalculatable {
     typealias WeightType = Int
     
-    var weight: Int = 25
+    var weight: Int = {
+        return 100
+    }
 }
