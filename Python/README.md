@@ -4,6 +4,6 @@ The folder edx contains the learning stuff from _edX - [Introduction to Computer
 
 You can download the Anaconda platform [here](https://www.anaconda.com/download/), and read [here](https://www.anaconda.com/what-is-anaconda/) if you want to know more about this data science platform.
 
-Screenshot from Anaconda's Spyder:
+Screenshot from __Anaconda's Spyder__:
 
 ![Anaconda's Spyder screenshot](http://choonsiong.com/public/pic/anaconda-spyder.png)
