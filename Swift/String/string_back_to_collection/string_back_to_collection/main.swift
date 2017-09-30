@@ -25,7 +25,7 @@ index = name.index(name.startIndex, offsetBy: 4)
 
 let lastName = name[index...]
 print(lastName)
-print(type(of: lastName))
+print(type(of: lastName)) // Substring is a new type in Swift 4
 
 let lastNameUppercased = lastName.uppercased()
 print(lastNameUppercased)
