@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/Users/choonsiong/anaconda3/bin/python3
 
 x = int(input('Enter an integer: '))
 
