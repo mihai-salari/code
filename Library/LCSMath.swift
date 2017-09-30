@@ -85,7 +85,7 @@ enum LCSMath {
 }
 
 print(LCSMath.isRelativelyPrime(1, and: 2))
-print(LCSMath.factors(of: 56))
+print(LCSMath.factors(of: 89))
 print(LCSMath.calculateFahrenheit(from: 30))
 print(LCSMath.calculateCelsius(from: 86))
 print(LCSMath.average(of: [1, 2, 3, 4, 5]))
