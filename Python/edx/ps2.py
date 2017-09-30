@@ -1,4 +1,4 @@
-s = 'bobobobbob'
+# s = 'bobobobbob'
 # s = 'azcbobobegghaklbobbbobbobkl'
 # s = 'bobtobobeobobobobobbobobbobbbobbbobobooiobobo'
 # s = 'jboobfobobbobbxhoboblbzogobob'
@@ -6,6 +6,7 @@ s = 'bobobobbob'
 # s = 'obobmobobobobbbobbbyobooobobobywllbolz'
 # s = 'oboboobobosuztp'
 # s = 'bobobobobboeboobcboobazqedobobcsbobo'
+s = 'bbbxbobob'
 
 count = 0
 weight = 0
@@ -15,6 +16,10 @@ for c in s:
     print('c is ' + c)
         
     if c == 'b':
+        if string == 'b':
+            # We got duplicate 'b', so reset string and weight
+            string = ''
+            weight = 0
         if weight == 0:
             # First encounter
             string = string + 'b'
