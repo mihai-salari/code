@@ -1,12 +1,16 @@
 //
-//  main.swift
-//  one_sided_range
-//
-//  Created by Lee Choon Siong on 2017/10/01.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
+// SE-0172
+// https://github.com/apple/swift-evolution/blob/master/proposals/0172-one-sided-ranges.md
 //
 
 import Foundation
 
-print("Hello, World!")
+// Collection
+let cities = ["Tokyo", "Taipei", "London", "Singapore", "Kuala Lumpur", "Bangkok", "New York"]
+print(cities[0...1])
 
+print(cities[4...]) // Swift 4
+print(cities[4..<cities.endIndex]) // Swift 3
+
+print(cities[...4])
+print(cities[..<4])
