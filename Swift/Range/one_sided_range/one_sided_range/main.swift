@@ -52,3 +52,20 @@ func sentiment(_ rating: Double) -> String {
 print(sentiment(0.1))
 print(sentiment(0.4))
 print(sentiment(0.9))
+
+/*
+ ["Tokyo", "Taipei"]
+ ["Kuala Lumpur", "Bangkok", "New York"]
+ ["Kuala Lumpur", "Bangkok", "New York"]
+ ["Tokyo", "Taipei", "London", "Singapore", "Kuala Lumpur"]
+ ["Tokyo", "Taipei", "London", "Singapore"]
+ [(65, "A"), (66, "B"), (67, "C"), (68, "D"), (69, "E")]
+ Oldie but goodie
+ Oldie but goodie
+ Awesome-sauce!
+ Meh
+ Meh
+ 😩
+ 😔
+ 😙
+ */
