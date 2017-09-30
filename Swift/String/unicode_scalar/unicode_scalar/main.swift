@@ -38,7 +38,6 @@ if a == b {
 }
 
 /*
-
  café
  café
  4
@@ -55,6 +54,4 @@ if a == b {
  99 97 102 101 769
  a == b
  769
- 
- Program ended with exit code: 0
 */
