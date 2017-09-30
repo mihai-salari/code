@@ -43,7 +43,10 @@ for char in s:
         
         cur_char = next_char
     
-
+# Final test to make sure we get the longest substring from answer into
+# our longest variable (esp. important for the s when s = 'a...z' as will never 
+# have chance to record down the longest if s is a string from smallest character
+# to largest)
 if len(answer) > len(longest):
     longest = answer
 
