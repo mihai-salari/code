@@ -1,6 +1,6 @@
 # s = 'azcbobobegghakl'
 # s = 'abcbcd'
-# s = 'abcdefghijklmnopqrstuvwxyz'
+s = 'abcdefghijklmnopqrstuvwxyz'
 
 cur_char = ''
 next_char = ''
