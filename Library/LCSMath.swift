@@ -1,6 +1,15 @@
 import Foundation
 
 enum LCSMath {
+	static func isRelativelyPrime(_ number: Int, and anotherNumber: Int) -> Bool {
+		// Coprime, GCF is 1 only
+		
+		let factor1 = Set(factors(of: number))
+		let factor2 = Set(factors(of: anotherNumber))
+		
+		return ((factor1.intersection(factor2)).count == 1)
+	}
+		
 	static func factors(of number: Int) -> [Int] {
 		var result: [Int] = []
 		var current = 1
@@ -75,7 +84,8 @@ enum LCSMath {
 	}
 }
 
-print(LCSMath.factors(of: 60))
+print(LCSMath.isRelativelyPrime(1, and: 2))
+print(LCSMath.factors(of: 56))
 print(LCSMath.calculateFahrenheit(from: 30))
 print(LCSMath.calculateCelsius(from: 86))
 print(LCSMath.average(of: [1, 2, 3, 4, 5]))
