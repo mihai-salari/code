@@ -1,6 +1,24 @@
 import Foundation
 
 enum LCSMath {
+	static func useEuclidsAlgorithm(_ number1: Int, _ number2: Int) -> Int {
+		// Keep replacing the bigger number with the difference of the two numbers,
+		// when the numbers are equal, that's the GCF
+		
+		var number1 = number1
+		var number2 = number2
+		
+		while number1 != number2 {
+			if number1 > number2 {
+				number1 = number1 - number2
+			} else {
+				number2 = number2 - number1
+			}
+		}
+		
+		return number1
+	}
+	
 	static func isRelativelyPrime(_ number: Int, and anotherNumber: Int) -> Bool {
 		// Coprime, GCF is 1 only
 		
@@ -84,6 +102,7 @@ enum LCSMath {
 	}
 }
 
+print(LCSMath.useEuclidsAlgorithm(30, 12))
 print(LCSMath.isRelativelyPrime(1, and: 2))
 print(LCSMath.factors(of: 89))
 print(LCSMath.calculateFahrenheit(from: 30))
