@@ -18,3 +18,18 @@ print('world'[:-1])
 print('helloworld'[1:9])
 print('helloworld'[1:9:2])
 print('helloworld'[::-1])
+
+# foo bar
+# f
+# r
+# bar
+# oo bar
+# foo
+# foo bar
+# <class 'str'>
+# True
+# True
+# worl
+# elloworl
+# elwr
+# dlrowolleh
