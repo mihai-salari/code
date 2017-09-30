@@ -8,7 +8,7 @@ import Foundation
 // the code point value
 
 let c: Character = "🍏"
-let e: Character = "e\u{0301}"
+let e: Character = "e\u{0301}" // é
 
 for codePoint in c.unicodeScalars {
     print(codePoint.value)
