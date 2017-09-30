@@ -1,6 +1,21 @@
 import Foundation
 
 enum LCSMath {
+	static func factors(of number: Int) -> [Int] {
+		var result: [Int] = []
+		var current = 1
+		
+		while current <= number {
+			if number % current == 0 {
+				result.append(current)
+			}
+			
+			current += 1
+		}
+		
+		return result
+	}
+	
 	static func calculateFahrenheit(from celsius: Double) -> Double {
 		return (celsius * 9 / 5) + 32
 	}
@@ -60,6 +75,7 @@ enum LCSMath {
 	}
 }
 
+print(LCSMath.factors(of: 60))
 print(LCSMath.calculateFahrenheit(from: 30))
 print(LCSMath.calculateCelsius(from: 86))
 print(LCSMath.average(of: [1, 2, 3, 4, 5]))
