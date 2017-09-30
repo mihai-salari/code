@@ -17,3 +17,6 @@ for codePoint in c.unicodeScalars {
 for codePoint in e.unicodeScalars {
     print(codePoint.value)
 }
+
+print("♠︎♣︎♥︎♦︎♩♪♫♬".count)
+print("👋".count)
