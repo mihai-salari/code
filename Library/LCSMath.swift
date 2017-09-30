@@ -1,6 +1,37 @@
 import Foundation
 
 enum LCSMath {
+	static func leastCommonMultiple(of numbers: Int...) -> Int {
+	    var numbers = numbers
+	    numbers = numbers.sorted() // sort the numbers from smallest to largest
+    
+	    let largest = numbers[numbers.count-1] // get the largest number
+    
+	    numbers.remove(at: numbers.count - 1) // and remove the largest number from the list
+
+	    var n = 0
+	    var leastCommonMultiple = 0
+	    var found: Bool = false // start will lcm found false
+    
+	    while !found { // loop while we are not able to find a lcm still
+	        n += 1
+	        leastCommonMultiple = largest * n // get multiples of largest number
+        
+	        for number in numbers { // test each remaining number in the list 
+	            if leastCommonMultiple % number != 0 { // check whether number is a factor of multiple of largest, if not continue
+	                found = false
+	            } else {
+	                found = true // number is a factor of largest multiple
+	            }
+	        }
+			
+			// The loop will end once we found the lcm, because unless all the numbers 
+			// tested above produce 'true', else we won't able to exit from the while loop
+	    }
+    
+	    return leastCommonMultiple
+	}
+
 	static func useEuclidsAlgorithm(_ number1: Int, _ number2: Int) -> Int {
 		// Keep replacing the bigger number with the difference of the two numbers,
 		// when the numbers are equal, that's the GCF
@@ -102,6 +133,7 @@ enum LCSMath {
 	}
 }
 
+print(LCSMath.leastCommonMultiple(of: 2, 9, 4, 3, 1))
 print(LCSMath.useEuclidsAlgorithm(30, 12))
 print(LCSMath.isRelativelyPrime(1, and: 2))
 print(LCSMath.factors(of: 89))
