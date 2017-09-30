@@ -16,7 +16,7 @@ print('low' in 'helloworld')
 
 print('world'[:-1])
 print('helloworld'[1:9])
-print('helloworld'[1:9:2])
+print('helloworld'[1:9:2]) # String slicing - [start:end:step], not included end
 print('helloworld'[::-1])
 
 # foo bar
