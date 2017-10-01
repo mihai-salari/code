@@ -91,3 +91,13 @@ print(marryCheckingAccount.balance)
 
 marryCheckingAccount.deposit(fooCheck) // Let's cheat the bank and see ;)
 print(marryCheckingAccount.balance)
+
+// A malicious user / stupid coder can create a check directly (we will solve this ;p)
+print(fooCheckingAccount.balance)
+let illegalCheck = CheckingAccount.Check(amount: 1000.00, from: fooCheckingAccount)
+print(fooCheckingAccount.balance)
+
+let illegalCheckAccount = CheckingAccount()
+illegalCheckAccount.deposit(illegalCheck)
+print(fooCheckingAccount.balance)
+print(illegalCheckAccount.balance)
