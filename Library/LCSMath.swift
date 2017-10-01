@@ -1,6 +1,25 @@
 import Foundation
 
 enum LCSMath {
+	static func isFraction(_ f1: (n: Int, d: Int), equal f2: (n: Int, d: Int)) -> Bool {
+		// When cross-multiplying fractions, if the products are equal
+		// then the fractions are equal
+		// (numerator, denominator), e.g. 1/2 = (1, 2)
+		
+		return f1.n * f2.d == f1.d * f2.n
+	}
+	
+	static func isFraction(_ f1: (n: Int, d: Int), greaterThan f2: (n: Int, d: Int)) -> Bool {
+		// When cross-multiplying fractions, the numerator with the bigger
+		// product tells you the bigger fraction
+		
+		if f1.n * f2.d >= f2.n * f1.d {
+			return true
+		}
+		
+		return false
+	}
+	
 	static func leastCommonMultiple(of numbers: Int...) -> Int {
 	    var numbers = numbers
 	    numbers = numbers.sorted() // sort the numbers from smallest to largest
@@ -133,6 +152,9 @@ enum LCSMath {
 	}
 }
 
+print(LCSMath.isFraction((1, 2), equal: (2, 4)))
+print(LCSMath.isFraction((1, 2), equal: (3, 4)))
+print(LCSMath.isFraction((1, 2), greaterThan: (3, 4)))
 print(LCSMath.leastCommonMultiple(of: 2, 9, 4, 3, 1))
 print(LCSMath.useEuclidsAlgorithm(30, 12))
 print(LCSMath.isRelativelyPrime(1, and: 2))
