@@ -43,3 +43,15 @@ public class CheckingAccount: BasicAccount {
         check.cash()
     }
 }
+
+private extension CheckingAccount {
+    func inspectForFraud(with checkNumber: Int) -> Bool {
+        return issuedChecks.contains(checkNumber)
+    }
+    
+    func nextNumber() -> Int {
+        let next = currentCheck
+        currentCheck += 1
+        return next
+    }
+}
