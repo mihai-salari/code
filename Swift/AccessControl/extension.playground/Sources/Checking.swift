@@ -59,6 +59,7 @@ private extension CheckingAccount {
 }
 
 // Organize extension according to protocol conformance
+// Note that extension that mark protocol conformance cannot have access modifier
 extension CheckingAccount: CustomStringConvertible {
     public var description: String {
         return "Checking Balance: $\(balance)"
