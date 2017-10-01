@@ -44,6 +44,8 @@ public class CheckingAccount: BasicAccount {
     }
 }
 
+// When access modifiers are applied to extensions, all members of the
+// extension receive that access level
 private extension CheckingAccount {
     func inspectForFraud(with checkNumber: Int) -> Bool {
         return issuedChecks.contains(checkNumber)
