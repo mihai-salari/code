@@ -1,5 +1,12 @@
 import Foundation
 
+/// The original purpose is to try the access control for different modules,
+/// for example, using Playground. But, since this is implemented in the same
+/// module, we cannot completely hide the implementation of our GameCharacter,
+/// because we won't be able to use the factory method either. Therefore,
+/// to overcome that, the initializers for GameCharacters are marked as fileprivate
+/// to prevent outsider from initialize the class without using the factory method.
+
 func battle(_ a: GameCharacter, vs b: GameCharacter) {
     var loser: String = ""
     var a = a, b = b
