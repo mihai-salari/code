@@ -1,12 +1,18 @@
-//
-//  main.swift
-//  Stack
-//
-//  Created by Lee Choon Siong on 2017/10/01.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 import Foundation
 
-print("Hello, World!")
+let mystack = Stack<Int>()
+print(mystack.count)
 
+mystack.push(item: 10)
+print(mystack.count)
+
+mystack.push(item: 8)
+mystack.push(item: 2)
+mystack.push(item: 4)
+mystack.push(item: 3)
+mystack.pop()
+mystack.pop()
+
+if let last = mystack.peep() {
+    print("Last item is \(last)")
+}
