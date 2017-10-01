@@ -57,10 +57,21 @@ class ViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    
+    // Move below items off the screen first, for animation purpose
+    heading.center.x -= view.bounds.width
+    username.center.x -= view.bounds.width
+    password.center.x -= view.bounds.width
+    
   }
 
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
+    
+    UIView.animate(withDuration: 0.5, animations: {
+        self.heading.center.x += self.view.bounds.width
+    })
+    
   }
 
   // MARK: further methods
