@@ -34,3 +34,5 @@ class TestAccount: BasicAccount {
     // BasicAccount has to be marked as 'open'
 }
 
+print(fooCheckingAccount)
+print(marryCheckingAccount)

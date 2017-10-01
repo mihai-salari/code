@@ -55,3 +55,10 @@ private extension CheckingAccount {
         return next
     }
 }
+
+// Organize extension according to protocol conformance
+extension CheckingAccount: CustomStringConvertible {
+    public var description: String {
+        return "Checking Balance: $\(balance)"
+    }
+}
