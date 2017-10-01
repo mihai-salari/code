@@ -1,7 +1,3 @@
-> NOTE
->
-> In the midst of moving all code to this directory.
-
 #### About ####
 
-I keep everything (almost ;p) of my programming stuff here, some of them are related to my work, some of them just because I have interest on it and I am learning it.
+I keep everything (almost ;p) of my programming stuff here, some of them are related to my work, some of them are just because I have interests on it, and I have lots of fun while I am learning it. Computing is always a vast topic, whereas human life is such short and fragile.
