@@ -4,6 +4,8 @@
 
 import Foundation
 
+let producer = "Escape Plan"
+
 let lyric = """
 夜空中最亮的星 ✶✶✶✶✶✶✶
  夜空中最亮的星 ✶✶✶✶✶✶✶
@@ -11,7 +13,7 @@ let lyric = """
    夜空中最亮的星 ✶✶✶✶✶✶✶
   夜空中最亮的星 ✶✶✶✶✶✶✶
  夜空中最亮的星 ✶✶✶✶✶✶✶
-夜空中最亮的星 ✶✶✶✶✶✶✶
+夜空中最亮的星 ✶✶✶✶✶✶✶ \(producer)
 """
 
 print(lyric)
