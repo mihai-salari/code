@@ -12,20 +12,21 @@ fileprivate protocol GameCharacter {
     var attackPoints: Int { get }
 }
 
-class Elf: GameCharacter {
+fileprivate class Elf: GameCharacter {
     var name: String = "Elf"
     var hitPoints: Int = 3
     var attackPoints: Int = 10
 }
 
-class Giant: GameCharacter {
+fileprivate class Giant: GameCharacter {
     var name: String = "Giant"
     var hitPoints: Int = 10
     var attackPoints: Int = 3
 }
 
-class Wizard: GameCharacter {
+fileprivate class Wizard: GameCharacter {
     var name: String = "Wizard"
     var hitPoints: Int = 5
     var attackPoints: Int = 5
 }
+
