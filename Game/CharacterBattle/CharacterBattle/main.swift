@@ -14,6 +14,8 @@ func battle(_ a: GameCharacter, vs b: GameCharacter) {
     while true {
         b.hitPoints -= a.attackPoints
         
+        // The hitPoints will become negative if it is already zero,
+        // and still someone want to challenge it :(
         if b.hitPoints <= 0 {
             loser = b.name
             break
