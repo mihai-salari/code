@@ -2,6 +2,8 @@ import Foundation
 
 public class CheckingAccount: BasicAccount {
     private let accountNumber = UUID().uuidString
+    private var issuedChecks: [Int] = []
+    private var currentCheck = 1
     
     public class Check {
         let account: String

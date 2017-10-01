@@ -1,6 +1,6 @@
 import Cocoa
 
-// In playground, all files under 'Sources' directory is treated as a single different module
+// Using extension for access control
 
 let account = BasicAccount()
 print(account.balance)
