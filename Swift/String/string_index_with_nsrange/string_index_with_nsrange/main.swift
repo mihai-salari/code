@@ -1,3 +1,5 @@
+// Swift 4 update
+
 import Cocoa
 
 // Converting between Range<String.Index> and NSRange
@@ -31,3 +33,13 @@ display.addAttribute(.font, value: NSFont.systemFont(ofSize: 40), range: nsRange
 range = fiveIndex..<sevenIndex
 nsRange = NSRange(range, in: population)
 display.addAttribute(.font, value: NSFont.systemFont(ofSize: 30), range: nsRange)
+
+let textInput = "You've traveled 483.2 miles."
+let pattern = "[0-9]+(\\.([0-9])?)?"
+let regex = try! NSRegularExpression(pattern: pattern, options: [])
+nsRange = NSRange(textInput.startIndex..., in: textInput)
+let mileage = regex.rangeOfFirstMatch(in: textInput, range: nsRange)
+
+// From NSRange to Range<String.Index>
+range = Range(mileage, in: textInput)!
+print(textInput[range])
