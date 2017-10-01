@@ -48,6 +48,8 @@ class CheckingAccount: BasicAccount {
     }
     
     func writeCheck(amount: Dollars) -> Check? {
+        // Check for sufficient balance before withdrawing the amount
+        // and creating the check
         guard balance > amount else {
             return nil
         }
@@ -59,6 +61,7 @@ class CheckingAccount: BasicAccount {
     }
     
     func deposit(_ check: Check) {
+        // Will not deposit the check if it has already been cashed!
         guard !check.cashed else {
             return
         }
@@ -70,3 +73,6 @@ class CheckingAccount: BasicAccount {
 
 let account = BasicAccount()
 print(account.balance)
+
+// Test checking account
+
