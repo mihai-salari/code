@@ -1,17 +1,40 @@
 import Foundation
 
 enum LCSMath {
-	static func isFraction(_ f1: (n: Int, d: Int), equal f2: (n: Int, d: Int)) -> Bool {
+	static func isFraction(_ f1: (n: Int, d: Int), equal f2: (n: Int, d: Int)) -> Bool? {
 		// When cross-multiplying fractions, if the products are equal
 		// then the fractions are equal
 		// (numerator, denominator), e.g. 1/2 = (1, 2)
 		
+		// Make sure fractions are positive value (this will not work perfectly for negative fractions)
+		guard f1.n > 0, f1.d > 0 else {
+			return nil
+		}
+		
+		guard f2.n > 0, f2.d > 0 else {
+			return nil
+		}
+		
 		return f1.n * f2.d == f1.d * f2.n
 	}
 	
-	static func isFraction(_ f1: (n: Int, d: Int), greaterThan f2: (n: Int, d: Int)) -> Bool {
+	static func isFraction(_ f1: (n: Int, d: Int), greaterThan f2: (n: Int, d: Int)) -> Bool? {
 		// When cross-multiplying fractions, the numerator with the bigger
 		// product tells you the bigger fraction
+		
+		// Make sure fractions are positive value (this will not work perfectly for negative fractions)
+		guard f1.n > 0, f1.d > 0 else {
+			return nil
+		}
+		
+		guard f2.n > 0, f2.d > 0 else {
+			return nil
+		}
+		
+		// Check whether both fractions are equal
+		guard !isFraction(f1, equal: f2)! else {
+			return nil
+		}
 		
 		if f1.n * f2.d >= f2.n * f1.d {
 			return true
@@ -152,9 +175,6 @@ enum LCSMath {
 	}
 }
 
-print(LCSMath.isFraction((1, 2), equal: (2, 4)))
-print(LCSMath.isFraction((1, 2), equal: (3, 4)))
-print(LCSMath.isFraction((1, 2), greaterThan: (3, 4)))
 print(LCSMath.leastCommonMultiple(of: 2, 9, 4, 3, 1))
 print(LCSMath.useEuclidsAlgorithm(30, 12))
 print(LCSMath.isRelativelyPrime(1, and: 2))
@@ -166,3 +186,19 @@ print(LCSMath.factorial(of: 10))
 print(LCSMath.triangleNumber(of: 10))
 print(LCSMath.primeFactors(of: 864))
 print(LCSMath.calculateTotalReturn(of: 25000, at: 0.07, for: 7))
+
+if let result = LCSMath.isFraction((1, 2), equal: (2, 4)) {
+	print(result)
+}
+
+if let result = LCSMath.isFraction((1, 2), equal: (3, 4)) {
+	print(result)
+}
+
+if let result = LCSMath.isFraction((1, 2), greaterThan: (3, 4)) {
+	print(result)
+}
+
+if let result = LCSMath.isFraction((1, 2), greaterThan: (1, 2)) {
+	print(result)
+}
