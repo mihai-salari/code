@@ -75,7 +75,6 @@ let account = BasicAccount()
 print(account.balance)
 
 // Test checking account
-
 let fooCheckingAccount = CheckingAccount()
 fooCheckingAccount.deposit(amount: 500.00)
 print(fooCheckingAccount.balance)
