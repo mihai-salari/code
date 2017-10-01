@@ -1,7 +1,5 @@
 import Foundation
 
-// In playground, this is treat as a different module
-
 public class CheckingAccount: BasicAccount {
     private let accountNumber = UUID().uuidString
     

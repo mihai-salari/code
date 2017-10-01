@@ -1,6 +1,6 @@
-// In playground, this is treat as a different module
-
 import Cocoa
+
+// In playground, all files under 'Sources' directory is treated as a single different module
 
 let account = BasicAccount()
 print(account.balance)
