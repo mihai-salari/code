@@ -1,11 +1,3 @@
-//
-//  ExtensionDelegate.swift
-//  Password WatchKit Extension
-//
-//  Created by Lee Choon Siong on 2017/07/02.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 import WatchKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {

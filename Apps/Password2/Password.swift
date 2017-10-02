@@ -1,11 +1,3 @@
-//
-//  Password.swift
-//  Password
-//
-//  Created by Lee Choon Siong on 2017/07/02.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 import Foundation
 
 struct Password {
