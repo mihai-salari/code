@@ -8,7 +8,7 @@ precedencegroup ExponentiationPrecedence {
 infix operator **: ExponentiationPrecedence
 infix operator **=
 
-func **<T: Integer>(lhs: T, rhs: Int) -> T {
+func **<T: BinaryInteger>(lhs: T, rhs: Int) -> T {
     var result = lhs
     
     for _ in 2...rhs {
@@ -18,7 +18,7 @@ func **<T: Integer>(lhs: T, rhs: Int) -> T {
     return result
 }
 
-func **=<T: Integer>(lhs: inout T, rhs: Int) {
+func **=<T: BinaryInteger>(lhs: inout T, rhs: Int) {
     lhs = lhs ** rhs
 }
 
