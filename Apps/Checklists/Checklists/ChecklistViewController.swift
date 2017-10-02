@@ -4,6 +4,7 @@ class ChecklistViewController: UITableViewController {
     
     var checklistItems: [ChecklistItem]
     
+    // Dummy data
     var row0text = "Walk the fish"
     var row1text = "Feed the tree"
     var row2text = "Sleep for two days"
@@ -19,49 +20,39 @@ class ChecklistViewController: UITableViewController {
     required init?(coder aDecoder: NSCoder) {
         checklistItems = [ChecklistItem]()
         
-        for i in 0...100 {
-            let foo  = ChecklistItem()
-            foo.text = "I am fool #\(i)"
-            foo.isChecked = false
-            checklistItems.append(foo)
-        }
+//        for i in 0...100 {
+//            let foo  = ChecklistItem()
+//            foo.text = "I am fool #\(i)"
+//            foo.isChecked = false
+//            checklistItems.append(foo)
+//        }
         
-//        let row0item = ChecklistItem()
-//        row0item.text = row0text
-//        row0item.isChecked = row0checked
-//        checklistItems.append(row0item)
-//        
-//        let row1item = ChecklistItem()
-//        row1item.text = row1text
-//        row1item.isChecked = row1checked
-//        checklistItems.append(row1item)
-//        
-//        let row2item = ChecklistItem()
-//        row2item.text = row2text
-//        row2item.isChecked = row2checked
-//        checklistItems.append(row2item)
-//        
-//        let row3item = ChecklistItem()
-//        row3item.text = row3text
-//        row3item.isChecked = row3checked
-//        checklistItems.append(row3item)
-//        
-//        let row4item = ChecklistItem()
-//        row4item.text = row4text
-//        row4item.isChecked = row4checked
-//        checklistItems.append(row4item)
+        let row0item = ChecklistItem()
+        row0item.text = row0text
+        row0item.isChecked = row0checked
+        checklistItems.append(row0item)
+        
+        let row1item = ChecklistItem()
+        row1item.text = row1text
+        row1item.isChecked = row1checked
+        checklistItems.append(row1item)
+        
+        let row2item = ChecklistItem()
+        row2item.text = row2text
+        row2item.isChecked = row2checked
+        checklistItems.append(row2item)
+        
+        let row3item = ChecklistItem()
+        row3item.text = row3text
+        row3item.isChecked = row3checked
+        checklistItems.append(row3item)
+        
+        let row4item = ChecklistItem()
+        row4item.text = row4text
+        row4item.isChecked = row4checked
+        checklistItems.append(row4item)
         
         super.init(coder: aDecoder)
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,7 +66,6 @@ class ChecklistViewController: UITableViewController {
         
         configureText(for: cell, with: item)
         configureCheckmark(for: cell, with: item)
-
         //configureCheckmark(for: cell, at: indexPath)
         
         return cell
