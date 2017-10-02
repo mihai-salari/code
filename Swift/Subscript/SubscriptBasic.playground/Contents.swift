@@ -14,11 +14,11 @@ extension Person {
     subscript(key: String) -> String? {
         switch key {
             case "name":
-            return name
+                return name
             case "age":
-            return String(age)
-        default:
-            return nil
+                return String(age)
+            default:
+                return nil
         }
     }
 }
