@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  AlertWindow
-//
-//  Created by Lee Choon Siong on 2017/06/11.
-//  Copyright © 2017 Lee Choon Siong. All rights reserved.
-//
-
 import UIKit
 import QuartzCore
 
@@ -49,11 +41,6 @@ class ViewController: UIViewController {
         
         self.startNewGame()
         self.updateLabels()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Functions
