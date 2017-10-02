@@ -5,7 +5,9 @@ infix operator **=
 
 // Notice the Integer type constraint on the generic parameter T, *=
 // is available only on all types that conform to the Integer protocol.
-func **<T: Integer>(lhs: T, rhs: Int) -> T {
+func **<T: BinaryInteger>(lhs: T, rhs: Int) -> T {
+    precondition(rhs >= 2)
+    
     var result = lhs
     
     for _ in 2...rhs {
@@ -15,7 +17,7 @@ func **<T: Integer>(lhs: T, rhs: Int) -> T {
     return result
 }
 
-func **=<T: Integer>(lhs: inout T, rhs: Int) {
+func **=<T: BinaryInteger>(lhs: inout T, rhs: Int) {
     lhs = lhs ** rhs
 }
 
