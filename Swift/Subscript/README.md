@@ -1,3 +1,5 @@
+##### Subscript Syntax #####
+
 ```
 subscript(parameterList) -> ReturnType {
     get {
