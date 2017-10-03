@@ -58,11 +58,11 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func toggleSpecialButton(_ sender: WKInterfaceButton) {
         if password.isSpecial {
-            print("DEBUG: turn off special characters")
+            debugPrint("special characters is off")
             self.specialCharButton.setAttributedTitle(specialCharacterOffFont)
             password.isSpecial = false
         } else {
-            print("DEBUG: turn on special characters")
+            debugPrint("special characters is on")
             self.specialCharButton.setAttributedTitle(specialCharacterOnFont)
             password.isSpecial = true
         }
